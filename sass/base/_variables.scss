@@ -10,6 +10,7 @@ $bp-larger-than-desktop   : "min-width: 1000px" !default;
 $bp-larger-than-desktophd : "min-width: 1200px" !default;
 
 $bp-smaller-than-desktop : "max-width: 1060px" !default;
+$bp-smaller-than-desktophd : "max-width: 1200px" !default;
 $bp-smaller-than-tablet : "max-width: 750px" !default;
 $bp-smaller-than-mobile : "max-width: 480px" !default;
 $bp-smaller-than-phablet   : "max-width: 550px" !default;
@@ -17,12 +18,36 @@ $bp-smaller-than-phablet   : "max-width: 550px" !default;
 // Colors
 $red: #a42126 !default;
 $white: #FFFFFF !default;
-$black: #000000 !default;
+$black: #1C1C1C!default;
+$black_a: rgba(28,28,28,.6);
+$champagne : #B8A483;
+$champagne_a : rgba(184, 164, 131, .6);
+$gold: #B59360;
+$gold_a: rgba(181, 147, 96, .6);
+$ochre: #BC7D42;
+$ochre_a: rgba(188, 125, 66, .6);
+$brown: #96664E;
+$brown_a: rgba(150, 102, 78, .6);
+$light_gray: #DBD8D6;
+$light_gray_a: rgba(219, 216, 214, .6);
+$dark_gray: #C3BFBC;
+$dark_gray_a: rgba(195, 191, 188,.6);
+$orange: #E28C61;
+$orange_a: rgba(226, 140, 97, .6);
 
 
 //Fonts
 $proxima: "proxima-nova",sans-serif;
+$source: 'Source Sans Pro', sans-serif;
 
+@mixin source-sans{
+	font-family:$source;
+}
+
+@mixin source-bold{
+	@include source-sans;
+	font-weight:700;
+}
 
 // Misc
 //$global-radius: 4px !default;

@@ -6,7 +6,14 @@
 
 //enqueue scripts and styles *use production assets. Dev assets are located in  /css and /js
 function loadup_scripts() {
-	wp_enqueue_script( 'theme-js', get_template_directory_uri().'/js/mesh.js', array('jquery'), '1.0.0', true );
+    //wp_enqueue_script( 'tools-js', '//cdnjs.cloudflare.com/ajax/libs/jquery-tools/1.2.7/jquery.tools.min.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'slick-js', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'sidr-js', get_template_directory_uri().'/js/jquery.sidr.min.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'theme-js', get_template_directory_uri().'/js/mesh.js', array('jquery'), '1.0.0', true );
+
+    wp_enqueue_style( 'slick-style', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', true );
+    wp_enqueue_style( 'sidr-style', get_template_directory_uri().'/css/jquery.sidr.bare.css', true );
+    //wp_enqueue_style( 'slick-theme', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css', true );
 }
 add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
 
@@ -26,6 +33,7 @@ add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call usi
 register_nav_menus(
     array(
         'main_nav' => 'Header and breadcrumb trail heirarchy',
+        'footer_nav' => 'Navigation located in footer',
         'social_nav' => 'Social menu used throughout'
     )
 );

@@ -1,29 +1,21 @@
-<?php get_header(); ?>
+<?php 
+	$banner_bg = get_field('banner_background');
+	$banner_bg_URL = $banner_bg['sizes']['short-banner'];
+	$banner_callout = get_field('page_intro_text');
 
-<main id="content">
+	$event = '';
 
+	if(is_singular('mc_event')){
+		$event = 'event';
+	}
+?>
+
+<div class="banner has-background <?php echo $event; ?>" style="background-image:url('<?php echo $banner_bg_URL; ?>'); ">
+	
 	<div class="container">
-		<div class="row">
-			<div class="columns-9">
-				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-					<h1><?php the_title(); ?></h1>
-
-					<?php the_content(); ?>
-
-				<?php endwhile; ?>
-			</div>
-
-			<div class="columns-3">
-
-				<!-- Change this to repeater of custom fields -->
-
-				<?php get_sidebar(); ?>
-			</div>
-
+		<div class="footer">
+			<h1 class="page-title"><?php echo the_title();?></h1>
+			<p class="page-callout"><?php echo $banner_callout; ?></p>
 		</div>
 	</div>
-
-</main><!-- End of Content -->
-
-<?php get_footer(); ?>
+</div>

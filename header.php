@@ -17,10 +17,18 @@
 	================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+	<!-- Fonts
+	================================================== -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+	<style>
+	*{font-family: 'Source Sans Pro', sans-serif;}
+	</style>
+
 	<!-- CSS
 	================================================== -->
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="images/favicon.ico">
@@ -28,20 +36,44 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
+	<!-- Bugherd -->
+
+	<?php $bugherd = true; 
+
+	if ($bugherd == true){ ?>
+
+	<script type='text/javascript'>
+	(function (d, t) {
+	  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+	  bh.type = 'text/javascript';
+	  bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=dxlyyguwbvm1mjnfxdxuvw';
+	  s.parentNode.insertBefore(bh, s);
+	  })(document, 'script');
+	</script>
+
+	<?php } ?>
+
 	<?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
  
-	<header>
-		<div class="container">
+	<header class="site-header">
+		<div class="">
 
-			<div class="columns-12">
-				<div class="logo">
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<div class=""> <!-- columns-12 -->
+				<div class="sidr-trigger">
+					<i class="fa fa-fw fa-4x fa-bars"></i>
 				</div>
-				<nav class="main-navigation">
+				<div class="logo">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<h1 class="site-title sr-only" ><?php bloginfo( 'name' ); ?></h1>
+						<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_ShortLogo@2x.png">
+					</a>
+				</div>
+
+				<nav class="main-navigation" style="display:none;">
 					<?php if(has_nav_menu('main_nav')){
 								$defaults = array(
 									'theme_location'  => 'main_nav',
@@ -65,7 +97,11 @@
 								echo "<p><em>main_nav</em> doesn't exist! Create it and it'll render here.</p>";
 							} ?>
 				</nav>
+				<nav class="gateway-nav">
+					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_icons_Calendar.png"></a>
+				</nav>
 			</div>
 
 		</div>
+		
 	</header>

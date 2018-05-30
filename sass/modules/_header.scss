@@ -1,0 +1,37 @@
+header{
+	padding:2em 1em;
+	.logo{
+		text-align:center;
+		img{
+			width:50px;
+			height:auto;
+		}
+	}
+
+	&.site-header{
+		position:absolute;
+		width:100%;
+		top:0;
+		z-index:5;
+	}
+	
+	.sidr-trigger{
+		color:$white;
+		cursor:pointer;
+	}
+
+	.gateway-nav{
+		text-align:right;
+		img{
+			width:30px;
+		}
+	}
+
+	.sidr-trigger,
+	.logo,
+	.gateway-nav{
+		display:inline-block;
+		vertical-align:top;
+		width:32.33333%;
+	}
+}
