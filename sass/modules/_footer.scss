@@ -50,6 +50,18 @@ footer{
 		padding:0;
 	}
 
+	p.contact{
+		a{
+			color:$white;
+			&:active,
+			&:focus,
+			&:hover{
+				color:$light_gray;
+				text-decoration:none;
+			}
+		}
+	}
+
 	p.signature{
 		a{
 			color:$white;

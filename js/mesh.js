@@ -149,20 +149,20 @@ for(var i = 0; i < divs.length; i+=3) {
    nextArrow: '<button type="button" class="slick-next" title="See Next"><div class="content"><span>Next</span></div></button>'
   });
 
-  $('.events').slick({
-    accessibility: true,
-    autoplay: false,
-    //swipeToSlide: true,
-    slidesToShow: 3,
-  	//slidesToScroll: 1,
-  	variableWidth: true,
-    appendArrows: $('.events-nav'),
- 	  arrows: true,
-    draggable: true,
- // prevArrow: '<button type="button" class="slick-prev"><span>Previous</span></button>',
-  // nextArrow: '<button type="button" class="slick-next"><span>Next</span></button>'
+ //  $('.events').slick({
+ //    accessibility: true,
+ //    autoplay: false,
+ //    //swipeToSlide: true,
+ //    slidesToShow: 3,
+ //  	//slidesToScroll: 1,
+ //  	variableWidth: true,
+ //    appendArrows: $('.events-nav'),
+ // 	  arrows: true,
+ //    draggable: true,
+ // // prevArrow: '<button type="button" class="slick-prev"><span>Previous</span></button>',
+ //  // nextArrow: '<button type="button" class="slick-next"><span>Next</span></button>'
 
-  });
+ //  });
 
 $('.hz-shows').slick({
     accessibility: true,

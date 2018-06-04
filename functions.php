@@ -57,4 +57,16 @@ function hide_text_editor() {
   }
 }
 
+//Add ajax functionality to pages, all not just in admin
+add_action('wp_head','pluginname_ajaxurl');
+function pluginname_ajaxurl() {
+    ?>
+    <script type="text/javascript">
+    var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+    </script>
+    <?php
+    }
+
+ define( 'DISALLOW_FILE_EDIT', true );
+
 ?>
