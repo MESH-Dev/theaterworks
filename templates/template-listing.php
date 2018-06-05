@@ -37,7 +37,7 @@ echo get_template_part('/partials/banner');?>
 				<?php } ?>
 			</div>
 		</div>
-		<div class="row ">
+		<div class="row <?php if ($season_cnt >1){ echo 'show-listing';} ?>">
 			<?php if($season_cnt > 1) {?>
  			<div class="hz-shows">
  			<?php } ?>

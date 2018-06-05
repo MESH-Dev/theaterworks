@@ -20,6 +20,7 @@
 	<!-- Fonts
 	================================================== -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 
 	<style>
 	*{font-family: 'Source Sans Pro', sans-serif;}
@@ -28,8 +29,8 @@
 	<!-- CSS
 	================================================== -->
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<!-- Favicons
+<!-- 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+ -->	<!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -72,8 +73,11 @@
 						<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_ShortLogo@2x.png">
 					</a>
 				</div>
-
+				
 				<nav class="main-navigation" style="display:none;">
+					<div class="close">
+						Close <i class="fa fa-fw fa-times"></i>
+					</div>
 					<?php if(has_nav_menu('main_nav')){
 								$defaults = array(
 									'theme_location'  => 'main_nav',
@@ -98,7 +102,10 @@
 							} ?>
 				</nav>
 				<nav class="gateway-nav">
-					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_icons_Calendar.png"></a>
+					<a class="ticket-cal" href="<?php echo esc_url( home_url( '/' ) ); ?>/calendar">
+						<!-- <img class="ticket-cal" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Calendar.png"> -->
+						<i class="fa fa-fw fa-calendar-alt fa-4x"></i>
+					</a>
 				</nav>
 			</div>
 

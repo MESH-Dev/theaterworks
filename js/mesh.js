@@ -98,11 +98,38 @@ $(window).resize(_resize);
 
 console.log('Width :'+ $wW);
 
+
+//Separate events on single event pages into divs so that we can scroll
 var divs = $(".events > .event");
 for(var i = 0; i < divs.length; i+=3) {
   divs.slice(i, i+3).wrapAll("<div class='instance'></div>");
 }
 
+// $('.separator .trigger').click(function(){
+//   console.log('clicked');
+//   //$(this).closest('.row.show-listing').addClass('fast');
+//   $(this).parent().parent().parent().find('.show-listing').slideDown('fast');
+// });
+
+$('.sidr ul li a').append()
+
+$l_clk=0;
+$('.separator .trigger').each(function(){
+      $(this).click(function(){
+      $l_clk++;
+      //console.log('clicked');
+      //$(this).closest('.row.show-listing').addClass('fast');
+      if($l_clk == 1){
+        $(this).find('img').css({'transform':'rotate(180deg)'});
+        $(this).parent().parent().parent().find('.show-listing').slideDown(400);
+      }else{
+        $(this).find('img').css({'transform':'rotate(0)'});
+        $(this).parent().parent().parent().find('.show-listing').slideUp(400);
+        
+        $l_clk = 0;
+      }
+    });
+  });
 // $('.promo').scrollable({
 // 		circular: 	 false,
 // 		next:		'#nextbtn',
@@ -180,12 +207,51 @@ $('.hz-shows').slick({
 //Sidr
 $('.sidr-trigger').sidr({
       name: 'sidr-main',
-      source: '.main-navigation',
+      source: '.main-navigation, .gateway-nav',
       renaming: false,
       side: 'left',
-      displace: false,     
+      displace: false,
+      // onOpen: function(){
+      //   $('.sidr ul li a').append('<span class="open"><img src="../img/TheaterWorks_Icons_Arrow-Bronze.png" ></span>')
+      // }     
 
  });//end sidr onOpen function
 
+$('.close').click(
+    function(){
+      $.sidr('close', 'sidr-main');
+       //console.log("Sidr should be closed");
+    });
+
+// Hide subnavs so that we can accordion them later
+    $('.sidr ul.sub-menu').hide();
+
+    //Save the location of the first li and link that has children
+    $topLink = $('.sidr-inner ul.menu > li.menu-item-has-children > a');
+
+    //Add a 'button' to just after the link in any top level li that has children
+    $('<span class="open"><i class="fa fa-fw fa-chevron-down fa-lg"></i> </span>').insertAfter($topLink);
+    
+    //Now we get all of the peices together
+
+    //1 Create a counter to act as a toggle, we will be setting this counter to 1, then back to 
+    //  zero with each click
+    $openCnt = 0;
+
+    $('.open').click(function(e){
+      //Increment our counter
+      $openCnt++;
+
+      //Perform an action on our submenus based on the counter value,
+      //setting back to 0 each 'even' numbered click
+      if($openCnt == 1){
+        $(this).next('.sub-menu').slideDown();
+        $(this).html(' <i class="fa fa-fw fa-chevron-up"></i> ');
+      }else{
+        $(this).next('.sub-menu').slideUp();
+        $(this).html(' <i class="fa fa-fw fa-chevron-down"></i> ');
+        $openCnt = 0;
+      }
+   });
 
 });
