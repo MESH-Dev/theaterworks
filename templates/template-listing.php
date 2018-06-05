@@ -32,7 +32,7 @@ echo get_template_part('/partials/banner');?>
 				<h2><?php echo $season->name; ?> <?php //echo $season_cnt; ?></h2>
 				<?php if($season_cnt > 1){ ?>
 					<div class="trigger">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_icons_arrow.png">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_arrow.png">
 					</div>
 				<?php } ?>
 			</div>

@@ -100,7 +100,7 @@ console.log('Width :'+ $wW);
 
 
 //Separate events on single event pages into divs so that we can scroll
-var divs = $(".events > .event");
+var divs = $(".events-slide > .event");
 for(var i = 0; i < divs.length; i+=3) {
   divs.slice(i, i+3).wrapAll("<div class='instance'></div>");
 }
@@ -176,20 +176,20 @@ $('.separator .trigger').each(function(){
    nextArrow: '<button type="button" class="slick-next" title="See Next"><div class="content"><span>Next</span></div></button>'
   });
 
- //  $('.events').slick({
- //    accessibility: true,
- //    autoplay: false,
- //    //swipeToSlide: true,
- //    slidesToShow: 3,
- //  	//slidesToScroll: 1,
- //  	variableWidth: true,
- //    appendArrows: $('.events-nav'),
- // 	  arrows: true,
- //    draggable: true,
- // // prevArrow: '<button type="button" class="slick-prev"><span>Previous</span></button>',
- //  // nextArrow: '<button type="button" class="slick-next"><span>Next</span></button>'
+  $('.events-slide').slick({
+    accessibility: true,
+    autoplay: false,
+    //swipeToSlide: true,
+    slidesToShow: 3,
+  	//slidesToScroll: 1,
+  	variableWidth: true,
+    appendArrows: $('.events-nav'),
+ 	  arrows: true,
+    draggable: true,
+ // prevArrow: '<button type="button" class="slick-prev"><span>Previous</span></button>',
+  // nextArrow: '<button type="button" class="slick-next"><span>Next</span></button>'
 
- //  });
+  });
 
 $('.hz-shows').slick({
     accessibility: true,

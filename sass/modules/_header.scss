@@ -13,6 +13,35 @@ header{
 		}
 	}
 
+	.gateway-nav{
+
+		ul{
+			padding:0;
+			margin:0;
+			li{
+				list-style-type:none;
+				display:inline-block;
+				margin-right:1em;
+
+				a{
+					&:active,
+					&:focus,
+					&:hover{
+						opacity:.6;
+					}
+				}
+			}
+		}
+		a{
+			color:$white;
+			&:active,
+			&:focus,
+			&:hover{
+				color:$light_gray;
+			}
+		}
+	}
+
 	&.site-header{
 		position:absolute;
 		width:100%;

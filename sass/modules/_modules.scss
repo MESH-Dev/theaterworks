@@ -330,6 +330,7 @@ p.callout{
 }
 
 .events-slide{
+
 	@media ($bp-smaller-than-tablet){
 			width:95vw;
 			margin: 0 auto;
@@ -730,7 +731,10 @@ section[class*="navigation__month"]{
 		border-bottom:1px solid $tw_gold !important;
 		border-left:1px solid $tw_gold !important;
 
-
+		img{
+			display:none;
+		}
+		
 		&:hover,
 		&:active,
 		&:focus{
@@ -757,7 +761,7 @@ section[class*="navigation__month"]{
 		background-color:$dark_gray !important;
 	}
 	
-	.xdgp-calendar-main main.month .day--present, .xdgp-calendar-main .month .day--present
+	//.xdgp-calendar-main main.month .day--present, .xdgp-calendar-main .month .day--present
 
 	main.month ul.performances, 
 	.month ul.performances{

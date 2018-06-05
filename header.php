@@ -102,10 +102,18 @@
 							} ?>
 				</nav>
 				<nav class="gateway-nav">
-					<a class="ticket-cal" href="<?php echo esc_url( home_url( '/' ) ); ?>/calendar">
-						<!-- <img class="ticket-cal" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Calendar.png"> -->
-						<i class="fa fa-fw fa-calendar-alt fa-4x"></i>
-					</a>
+					<ul>
+						<li>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/seasons">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Get_Tickets.png">
+							</a>
+						</li>
+						<li>
+							<a class="ticket-cal" href="<?php echo esc_url( home_url( '/' ) ); ?>/calendar">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Calendar.png">
+							</a>
+						</li>
+					</ul>
 				</nav>
 			</div>
 
