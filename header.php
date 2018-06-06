@@ -19,7 +19,7 @@
 
 	<!-- Fonts
 	================================================== -->
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 
 	<style>
@@ -104,12 +104,12 @@
 				<nav class="gateway-nav">
 					<ul>
 						<li>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/seasons">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>seasons">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Get_Tickets.png">
 							</a>
 						</li>
 						<li>
-							<a class="ticket-cal" href="<?php echo esc_url( home_url( '/' ) ); ?>/calendar">
+							<a class="ticket-cal" href="<?php echo esc_url( home_url( '/' ) ); ?>calendar">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Calendar.png">
 							</a>
 						</li>
