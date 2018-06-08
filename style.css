@@ -1688,73 +1688,77 @@ p.callout {
   display: none;
 }
 
-/* line 686, sass/modules/_modules.scss */
+/* line 683, sass/modules/_modules.scss */
+.hz-shows {
+  position: relative;
+}
+/* line 687, sass/modules/_modules.scss */
 .hz-shows .hz-show .entry-title {
   padding: 0;
   margin: 0;
 }
 @media (min-width: 1000px) {
-  /* line 685, sass/modules/_modules.scss */
+  /* line 686, sass/modules/_modules.scss */
   .hz-shows .hz-show {
     width: 30vw;
   }
 }
 @media (max-width: 1060px) and (min-width: 480px) {
-  /* line 685, sass/modules/_modules.scss */
+  /* line 686, sass/modules/_modules.scss */
   .hz-shows .hz-show {
     width: 40vw;
   }
 }
 @media (max-width: 480px) {
-  /* line 685, sass/modules/_modules.scss */
+  /* line 686, sass/modules/_modules.scss */
   .hz-shows .hz-show {
     width: 100vw;
   }
 }
 
-/* line 703, sass/modules/_modules.scss */
+/* line 704, sass/modules/_modules.scss */
 .dark {
   background-color: rgba(28, 28, 28, 0.6);
   height: 100%;
 }
 @media (max-width: 750px) {
-  /* line 703, sass/modules/_modules.scss */
+  /* line 704, sass/modules/_modules.scss */
   .dark {
     height: 400px;
   }
 }
 
-/* line 712, sass/modules/_modules.scss */
+/* line 713, sass/modules/_modules.scss */
 .event-info {
   color: white;
   padding: 2em;
 }
 
 @media screen and (min-width: 768px) {
-  /* line 724, sass/modules/_modules.scss */
+  /* line 725, sass/modules/_modules.scss */
   .xdgp-calendar-main main.month .day .mobile.heading, .xdgp-calendar-main .month .day .mobile.heading {
     display: none !important;
   }
 }
-/* line 733, sass/modules/_modules.scss */
+/* line 734, sass/modules/_modules.scss */
 .xdgp-calendar-main header {
   padding: 0;
 }
-/* line 738, sass/modules/_modules.scss */
+/* line 739, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next .next__label {
   position: relative;
   padding: 0 15px 0 10px;
   margin: 0;
   display: block !important;
 }
-/* line 745, sass/modules/_modules.scss */
+/* line 746, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next .next__label:after {
   content: ' > ';
   position: absolute;
   right: 0;
   cursor: pointer;
 }
-/* line 754, sass/modules/_modules.scss */
+/* line 755, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__label {
   position: relative;
   padding: 0 10px 0 15px;
@@ -1762,13 +1766,13 @@ p.callout {
   cursor: pointer;
   display: block !important;
 }
-/* line 762, sass/modules/_modules.scss */
+/* line 763, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__label:after {
   content: ' < ';
   position: absolute;
   left: 0;
 }
-/* line 775, sass/modules/_modules.scss */
+/* line 776, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous a,
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next a {
   background-color: transparent !important;
@@ -1776,7 +1780,7 @@ p.callout {
   color: #89724E;
   padding: 5px 10px;
 }
-/* line 781, sass/modules/_modules.scss */
+/* line 782, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous a:hover, .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous a:focus, .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous a:active,
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next a:hover,
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next a:focus,
@@ -1785,132 +1789,132 @@ p.callout {
   color: #DBD8D6 !important;
   text-decoration: none;
 }
-/* line 806, sass/modules/_modules.scss */
+/* line 807, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-previous a {
   position: relative;
 }
-/* line 811, sass/modules/_modules.scss */
+/* line 812, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-next a {
   position: relative;
 }
-/* line 816, sass/modules/_modules.scss */
+/* line 817, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__arrow,
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-next .next__arrow {
   position: absolute;
   display: block;
 }
-/* line 824, sass/modules/_modules.scss */
+/* line 825, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__arrow {
   position: relative;
   display: inline;
   padding-right: 5px;
 }
-/* line 832, sass/modules/_modules.scss */
+/* line 833, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-next .next__arrow {
   position: relative;
   display: inline;
   padding-left: 5px;
 }
-/* line 840, sass/modules/_modules.scss */
+/* line 841, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__arrow:after {
   content: ' < ';
 }
-/* line 848, sass/modules/_modules.scss */
+/* line 849, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-next .next__arrow:after {
   content: ' > ';
 }
-/* line 856, sass/modules/_modules.scss */
+/* line 857, sass/modules/_modules.scss */
 .xdgp-calendar-main section[class*="navigation__month"] {
   font-weight: 700;
 }
-/* line 860, sass/modules/_modules.scss */
+/* line 861, sass/modules/_modules.scss */
 .xdgp-calendar-main p {
   margin-bottom: 0;
 }
-/* line 865, sass/modules/_modules.scss */
+/* line 866, sass/modules/_modules.scss */
 .xdgp-calendar-main li {
   list-style-type: none;
 }
-/* line 869, sass/modules/_modules.scss */
+/* line 870, sass/modules/_modules.scss */
 .xdgp-calendar-main footer {
   background-color: transparent;
 }
-/* line 873, sass/modules/_modules.scss */
+/* line 874, sass/modules/_modules.scss */
 .xdgp-calendar-main section#days {
   background-color: #89724E;
   margin-bottom: 0;
   padding-bottom: 0;
   color: #FFFFFF;
 }
-/* line 880, sass/modules/_modules.scss */
+/* line 881, sass/modules/_modules.scss */
 .xdgp-calendar-main .navigation__month-current {
   font-size: 4.8em;
   color: #89724E;
 }
 @media (max-width: 750px) {
-  /* line 880, sass/modules/_modules.scss */
+  /* line 881, sass/modules/_modules.scss */
   .xdgp-calendar-main .navigation__month-current {
     font-size: 2em;
   }
 }
-/* line 893, sass/modules/_modules.scss */
+/* line 894, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day,
 .xdgp-calendar-main .month .day {
   border-top: 1px solid #89724E !important;
   border-bottom: 1px solid #89724E !important;
   border-left: 1px solid #89724E !important;
 }
-/* line 899, sass/modules/_modules.scss */
+/* line 900, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day img,
 .xdgp-calendar-main .month .day img {
   display: none;
 }
-/* line 903, sass/modules/_modules.scss */
+/* line 904, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day:hover, .xdgp-calendar-main main.month .day:active, .xdgp-calendar-main main.month .day:focus,
 .xdgp-calendar-main .month .day:hover,
 .xdgp-calendar-main .month .day:active,
 .xdgp-calendar-main .month .day:focus {
   background-color: #C3BFBC;
 }
-/* line 910, sass/modules/_modules.scss */
+/* line 911, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day a:hover, .xdgp-calendar-main main.month .day a:active, .xdgp-calendar-main main.month .day a:focus,
 .xdgp-calendar-main .month .day a:hover,
 .xdgp-calendar-main .month .day a:active,
 .xdgp-calendar-main .month .day a:focus {
   text-decoration: none;
 }
-/* line 918, sass/modules/_modules.scss */
+/* line 919, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day:last-child,
 .xdgp-calendar-main .month .day:last-child {
   border-right: 1px solid #89724E !important;
 }
-/* line 923, sass/modules/_modules.scss */
+/* line 924, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day--present,
 .xdgp-calendar-main .month .day--present {
   border: 1px solid #89724E !important;
   background-color: #C3BFBC !important;
 }
-/* line 931, sass/modules/_modules.scss */
+/* line 932, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.performances,
 .xdgp-calendar-main .month ul.performances {
   padding: 0 10px 10px 10px !important;
   margin: 0;
 }
-/* line 937, sass/modules/_modules.scss */
+/* line 938, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.events .event .event__title,
 .xdgp-calendar-main .month ul.events .event .event__title {
   background-color: transparent !important;
   color: #89724E;
   font-weight: 700;
 }
-/* line 943, sass/modules/_modules.scss */
+/* line 944, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.events .event .event__title:active, .xdgp-calendar-main main.month ul.events .event .event__title:hover, .xdgp-calendar-main main.month ul.events .event .event__title:focus,
 .xdgp-calendar-main .month ul.events .event .event__title:active,
 .xdgp-calendar-main .month ul.events .event .event__title:hover,
 .xdgp-calendar-main .month ul.events .event .event__title:focus {
   opacity: .6;
 }
-/* line 950, sass/modules/_modules.scss */
+/* line 951, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.performances .performance__actions .action__buy,
 .xdgp-calendar-main .month ul.performances .performance__actions .action__buy {
   background-color: transparent !important;
@@ -1918,7 +1922,7 @@ p.callout {
   color: #89724E !important;
   font-weight: 700;
 }
-/* line 957, sass/modules/_modules.scss */
+/* line 958, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.performances .performance__actions .action__buy:active, .xdgp-calendar-main main.month ul.performances .performance__actions .action__buy:hover, .xdgp-calendar-main main.month ul.performances .performance__actions .action__buy:focus,
 .xdgp-calendar-main .month ul.performances .performance__actions .action__buy:active,
 .xdgp-calendar-main .month ul.performances .performance__actions .action__buy:hover,
@@ -1927,17 +1931,17 @@ p.callout {
   color: #DBD8D6 !important;
 }
 
-/* line 968, sass/modules/_modules.scss */
+/* line 969, sass/modules/_modules.scss */
 .promo {
   position: relative;
 }
 
-/* line 972, sass/modules/_modules.scss */
+/* line 973, sass/modules/_modules.scss */
 .promo .slick-prev,
 .promo .slick-next {
   width: 100px;
 }
-/* line 975, sass/modules/_modules.scss */
+/* line 976, sass/modules/_modules.scss */
 .promo .slick-prev.slick-arrow,
 .promo .slick-next.slick-arrow {
   position: absolute;
@@ -1945,12 +1949,12 @@ p.callout {
   z-index: 5;
   border: 0;
 }
-/* line 982, sass/modules/_modules.scss */
+/* line 983, sass/modules/_modules.scss */
 .promo .slick-prev.slick-arrow span,
 .promo .slick-next.slick-arrow span {
   opacity: 0;
 }
-/* line 991, sass/modules/_modules.scss */
+/* line 992, sass/modules/_modules.scss */
 .promo .slick-prev {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+73,ffffff+100&0.5+0,0.3+73,0+100 */
   background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 73%, rgba(255, 255, 255, 0) 100%);
@@ -1962,7 +1966,7 @@ p.callout {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 );
   /* IE6-9 */
 }
-/* line 1000, sass/modules/_modules.scss */
+/* line 1001, sass/modules/_modules.scss */
 .promo .slick-next {
   right: 0;
   top: 0;
@@ -1978,26 +1982,26 @@ p.callout {
 }
 
 @media (max-width: 480px) {
-  /* line 1013, sass/modules/_modules.scss */
+  /* line 1014, sass/modules/_modules.scss */
   .slick-track .slick-cloned {
     display: none;
   }
 }
-/* line 1028, sass/modules/_modules.scss */
+/* line 1029, sass/modules/_modules.scss */
 .sidr {
   background: #DBD8D6;
   padding: 4em 0;
 }
-/* line 1040, sass/modules/_modules.scss */
+/* line 1041, sass/modules/_modules.scss */
 .sidr .sidr-inner {
   text-align: center;
 }
-/* line 1044, sass/modules/_modules.scss */
+/* line 1045, sass/modules/_modules.scss */
 .sidr a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 1049, sass/modules/_modules.scss */
+/* line 1050, sass/modules/_modules.scss */
 .sidr .close {
   font-size: 2em;
   color: #FFFFFF;
@@ -2006,19 +2010,19 @@ p.callout {
   font-weight: 700;
   margin-bottom: 1em;
 }
-/* line 1057, sass/modules/_modules.scss */
+/* line 1058, sass/modules/_modules.scss */
 .sidr .close:hover, .sidr .close:active, .sidr .close:focus {
   color: #B8A483;
 }
-/* line 1063, sass/modules/_modules.scss */
+/* line 1064, sass/modules/_modules.scss */
 .sidr .close i {
   color: #FFFFFF;
 }
-/* line 1065, sass/modules/_modules.scss */
+/* line 1066, sass/modules/_modules.scss */
 .sidr .close i:hover, .sidr .close i:active, .sidr .close i:focus {
   color: #1C1C1C;
 }
-/* line 1073, sass/modules/_modules.scss */
+/* line 1074, sass/modules/_modules.scss */
 .sidr .open {
   position: absolute;
   margin: 0 5px;
@@ -2030,20 +2034,20 @@ p.callout {
   font-size: 1.4em;
   margin: 0 5px;
 }
-/* line 1087, sass/modules/_modules.scss */
+/* line 1088, sass/modules/_modules.scss */
 .sidr .open img {
   width: 15px;
 }
-/* line 1090, sass/modules/_modules.scss */
+/* line 1091, sass/modules/_modules.scss */
 .sidr .open:hover, .sidr .open:active, .sidr .open:focus {
   color: #FFFFFF;
 }
-/* line 1100, sass/modules/_modules.scss */
+/* line 1101, sass/modules/_modules.scss */
 .sidr ul.gateway {
   padding: 0;
   margin: 0;
 }
-/* line 1103, sass/modules/_modules.scss */
+/* line 1104, sass/modules/_modules.scss */
 .sidr ul.gateway li {
   list-style-type: none;
   display: inline-block;
@@ -2051,38 +2055,38 @@ p.callout {
   margin: 0 1em;
   padding-top: 0;
 }
-/* line 1110, sass/modules/_modules.scss */
+/* line 1111, sass/modules/_modules.scss */
 .sidr ul.gateway li:hover, .sidr ul.gateway li:focus, .sidr ul.gateway li:active {
   background-color: transparent;
 }
-/* line 1116, sass/modules/_modules.scss */
+/* line 1117, sass/modules/_modules.scss */
 .sidr ul.gateway li a {
   padding: 0;
 }
-/* line 1118, sass/modules/_modules.scss */
+/* line 1119, sass/modules/_modules.scss */
 .sidr ul.gateway li a img {
   width: 30px;
 }
-/* line 1122, sass/modules/_modules.scss */
+/* line 1123, sass/modules/_modules.scss */
 .sidr ul.gateway li a:active, .sidr ul.gateway li a:focus, .sidr ul.gateway li a:hover {
   opacity: .6;
 }
-/* line 1142, sass/modules/_modules.scss */
+/* line 1143, sass/modules/_modules.scss */
 .sidr .ticket-cal {
   margin: 2em 0;
   color: #FFFFFF;
   display: inline-block;
 }
-/* line 1147, sass/modules/_modules.scss */
+/* line 1148, sass/modules/_modules.scss */
 .sidr .ticket-cal:active, .sidr .ticket-cal:focus, .sidr .ticket-cal:hover {
   color: #B8A483;
 }
-/* line 1157, sass/modules/_modules.scss */
+/* line 1158, sass/modules/_modules.scss */
 .sidr ul {
   margin: 0;
   padding: 0;
 }
-/* line 1162, sass/modules/_modules.scss */
+/* line 1163, sass/modules/_modules.scss */
 .sidr ul li {
   list-style-type: none;
   width: 100%;
@@ -2091,15 +2095,15 @@ p.callout {
   margin: 0;
   line-height: 1;
 }
-/* line 1175, sass/modules/_modules.scss */
+/* line 1176, sass/modules/_modules.scss */
 .sidr ul li:active > a, .sidr ul li:focus > a, .sidr ul li:hover > a {
   opacity: .6;
 }
-/* line 1181, sass/modules/_modules.scss */
+/* line 1182, sass/modules/_modules.scss */
 .sidr ul li.current-menu-item > a, .sidr ul li.current-menu-parent > a {
   opacity: .6;
 }
-/* line 1184, sass/modules/_modules.scss */
+/* line 1185, sass/modules/_modules.scss */
 .sidr ul li a {
   font-size: 1.4em;
   font-weight: 700;
@@ -2108,42 +2112,42 @@ p.callout {
   padding-bottom: 2em;
   display: inline-block;
 }
-/* line 1193, sass/modules/_modules.scss */
+/* line 1194, sass/modules/_modules.scss */
 .sidr ul li .sub-menu {
   display: none;
   background-color: #89724E;
   margin: 0;
   padding: 0;
 }
-/* line 1198, sass/modules/_modules.scss */
+/* line 1199, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li {
   padding: 2em 0;
   margin: 0;
 }
-/* line 1202, sass/modules/_modules.scss */
+/* line 1203, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li:hover, .sidr ul li .sub-menu li:focus, .sidr ul li .sub-menu li:active {
   background-color: #B8A483;
 }
-/* line 1206, sass/modules/_modules.scss */
+/* line 1207, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li:hover a, .sidr ul li .sub-menu li:focus a, .sidr ul li .sub-menu li:active a {
   opacity: 1;
 }
-/* line 1211, sass/modules/_modules.scss */
+/* line 1212, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li.current-menu-item {
   background-color: #B8A483;
 }
-/* line 1213, sass/modules/_modules.scss */
+/* line 1214, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li.current-menu-item a {
   opacity: 1;
 }
-/* line 1215, sass/modules/_modules.scss */
+/* line 1216, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li a {
   padding: 0;
 }
 
 /* You can alter this CSS in order to give Smooth Div Scroll your own look'n'feel */
 /* Invisible left hotspot */
-/* line 1229, sass/modules/_modules.scss */
+/* line 1230, sass/modules/_modules.scss */
 div.scrollingHotSpotLeft {
   	/* The hotspots have a minimum width of 100 pixels and if there is room the will grow
       and occupy 15% of the scrollable area (30% combined). Adjust it to your own taste. */
@@ -2159,13 +2163,13 @@ div.scrollingHotSpotLeft {
 }
 
 /* Visible left hotspot */
-/* line 1249, sass/modules/_modules.scss */
+/* line 1250, sass/modules/_modules.scss */
 div.scrollingHotSpotLeftVisible {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Invisible right hotspot */
-/* line 1262, sass/modules/_modules.scss */
+/* line 1263, sass/modules/_modules.scss */
 div.scrollingHotSpotRight {
   min-width: 75px;
   width: 10%;
@@ -2176,7 +2180,7 @@ div.scrollingHotSpotRight {
 }
 
 /* Visible right hotspot */
-/* line 1277, sass/modules/_modules.scss */
+/* line 1278, sass/modules/_modules.scss */
 div.scrollingHotSpotRightVisible {
   background-color: rgba(255, 255, 255, 0.2);
   zoom: 1;
@@ -2185,7 +2189,7 @@ div.scrollingHotSpotRightVisible {
 /* The scroll wrapper is always the same width and height as the containing element (div).
    Overflow is hidden because you don't want to show all of the scrollable area.
 */
-/* line 1291, sass/modules/_modules.scss */
+/* line 1292, sass/modules/_modules.scss */
 div.scrollWrapper {
   position: relative;
   overflow: hidden;
@@ -2193,14 +2197,14 @@ div.scrollWrapper {
   height: 100%;
 }
 
-/* line 1299, sass/modules/_modules.scss */
+/* line 1300, sass/modules/_modules.scss */
 div.scrollableArea {
   position: relative;
   width: auto;
   height: 100%;
 }
 
-/* line 1307, sass/modules/_modules.scss */
+/* line 1308, sass/modules/_modules.scss */
 .sr-only {
   position: absolute;
   width: 1px;
