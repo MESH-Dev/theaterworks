@@ -26,7 +26,7 @@ echo get_template_part('/partials/banner');?>
 		
 		<?php //Create a label for each season, we'll use this for our 
 		      // accordion later?>
-		<div class="season_wrap" style="margin-bottom:3em;">
+		<div class="season_wrap">
 		<div class="separator">
 			<div class="container">
 				<h2><?php echo $season->name; ?> <?php //echo $season_cnt; ?></h2>
@@ -73,6 +73,7 @@ echo get_template_part('/partials/banner');?>
 				    
 		        $event_list_image = get_field('the_featured_image', $post);
 		        $el_image_url = $event_list_image['sizes']['short-banner'];
+		        $alt_img_url = $event_list_image['sizes']['large'];
 		        //var_dump($event_list_image);
 		        $event_types = get_the_terms($post->ID, 'event_type');
 		        //var_dump($event_types);
@@ -96,11 +97,15 @@ echo get_template_part('/partials/banner');?>
         ?>
  	
 
-    <article <?php if($season_cnt == 1){post_class('summary-mc_event first-row');}else{echo 'class="columns-4 hz-show grid-item"'; } ?> style="background-image:url(<?php echo $el_image_url; ?>); background-repeat:no-repeat; background-size:cover; background-position:center center;" >
+    <article <?php if($season_cnt == 1){post_class('summary-mc_event first-row');}else{echo 'class="columns-4 hz-show grid-item"'; } ?> style="background-image:url(<?php echo $el_image_url; ?>);" >
       <?php if ($season_cnt ==1){ ?>
       <!-- <div class="row"> -->
       <?php } ?>
-          <div <?php if($season_cnt == 1){ echo 'class="columns-4 offset-by-8 dark"';} ?>>
+      		<?php if($season_cnt == 1){ ?>
+          		<div class="show-img" style="background-image:url('<?php echo $alt_img_url; ?>');height:400px;" ></div>
+          	<?php } ?>
+          <div <?php if($season_cnt == 1){ echo 'class="content dark"';} ?>>
+          	
           	<?php if($season_cnt > 1){?>
 				<div class="gradient black" aria-hidden="true"></div>
           	<?php } ?>

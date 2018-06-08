@@ -56,6 +56,12 @@
 
 	<?php wp_head(); ?>
 
+	<script>
+
+	$theme = "<?php echo get_template_directory_uri(); ?>";
+
+	</script>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -102,7 +108,7 @@
 							} ?>
 				</nav>
 				<nav class="gateway-nav">
-					<ul>
+					<ul class="gateway">
 						<li>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>seasons">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Get_Tickets.png">

@@ -36,7 +36,7 @@
 						<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 					</ul>
 				</nav>
-					<p>Copyright <?php echo date('Y'); ?> Theaterworks.  All Rights reserved
+					<p>Copyright &copy; <?php echo date('Y'); ?> Theaterworks.  All Rights reserved
 					<p class="signature">Designed by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
 			</div><!-- End of Footer -->
 			<div class="columns-4">
@@ -47,8 +47,13 @@
 					<p>
 						<a href="mailto:info@theaterworks.com">info@theaterworks.com</a></br>
 						860.527.7838</br>
-						Monday - Friday</br>
-						10:00am - 5:00pm
+						<apan class="times">
+							Monday - Friday</br>
+							10:00am - 5:00pm
+						</span>
+					</p>
+					<p class="subscription">
+						Join our mailing list <img class="indicator lg" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow-Bronze.png">
 					</p>
 				</div>
 			</div>

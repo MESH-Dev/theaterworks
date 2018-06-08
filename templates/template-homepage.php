@@ -74,12 +74,10 @@ get_header();
 					<div class="footer" style="color:white;">
 						
 						<div class="horizontal button">
-							<a  href="<?php echo the_permalink(); ?>">
-							Tickets
-							</a>
+							<a  href="<?php echo the_permalink(); ?>">Tickets</a>
 						</div>
 						<div class="horizontal more">
-							<a href="<?php echo the_permalink(); ?>">More &nbsp;&gt;</a>
+							<a href="<?php echo the_permalink(); ?>">More <img class="indicator sm" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png"></a>
 						</div>
 					</div>
 				</div>

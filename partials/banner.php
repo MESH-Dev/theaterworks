@@ -11,7 +11,7 @@
 ?>
 
 <div class="banner has-background <?php echo $event; ?>" style="background-image:url('<?php echo $banner_bg_URL; ?>'); ">
-	
+	<div class="curtain" aria-hidden="true"></div>
 	<div class="container">
 		<div class="footer">
 			<h1 class="page-title"><?php echo the_title();?></h1>

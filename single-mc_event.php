@@ -68,7 +68,7 @@ $cover_image = get_field('cover_image');
 
 <section class="pane" id="synopsis">
   <div class="row">
-<div class="columns-8">
+<div class="columns-7">
 <!-- Event Title -->
 <!-- <h2 class="event__title">
   <?php the_title();  ?>
@@ -130,7 +130,7 @@ echo (!empty($post->disclaimer)) ? '<p class="event__disclaimer">'.$post->discla
 	  <?php the_field('long_desc') ?>
 	</div>
 </div> <!-- end columns-8 -->
-<div class="columns-4" >
+<div class="columns-4 offset-by-1" >
   <h3>Upcoming Times</h3>
   <div class="events-slide" style="overflow:hidden">
 <?php

@@ -34,12 +34,10 @@
 				<p class="callout"><?php echo $callout; ?></p>
 				<h3><?php echo the_title(); ?> <?php echo $ctr; ?></h3>
 				<div class="button horizontal">
-					<a  href="<?php echo the_permalink(); ?>">
-					Tickets
-					</a>
+					<a  href="<?php echo the_permalink(); ?>">Tickets</a>
 				</div>
 				<div class="more horizontal">
-					<a href="<?php echo the_permalink(); ?>">More &nbsp;&nbsp;&gt;</a>
+					<a href="<?php echo the_permalink(); ?>">More <img class="indicator sm" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png"></a>
 				</div>
 			</div>
 		</div>

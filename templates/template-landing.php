@@ -9,6 +9,29 @@ echo get_template_part('/partials/banner');
 
 <main id="content">
 
+	<?php 
+		$title = get_field('title_bar_text');
+
+		$empty = '';
+
+		if($title == ''){
+			$empty = 'empty';
+		}
+
+	?>
+	<div class="title-row <?php echo $empty;?>">
+	    <div class="container">
+	    	<div class="row">
+		  		<div class="title">
+		  			<?php if($title != ''){ ?>
+		  			<h2 class="event-title">
+		  			  <?php echo $title;  ?>
+		  			</h2>
+		  			<?php } ?>
+		  		</div>
+	  		</div>
+		</div>
+	</div>
 	<div class="grid">
 		<div class="row">
 				<?php if (have_rows('grid_block')):
@@ -34,7 +57,7 @@ echo get_template_part('/partials/banner');
 								<p class="callout"><?php echo $callout; ?></p>
 								<h2><?php echo $block_title; ?> <?php echo $ctr; ?></h2>
 								<?php if($link){ ?>
-						<a class="more-link" href="<?php echo $link; ?>" <?php echo $target; ?>> More > </a>
+						<a class="more-link" href="<?php echo $link; ?>" <?php echo $target; ?>> More <img class="indicator sm" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png"> </a>
 						<?php } ?>
 							</div>
 						</div>
@@ -47,7 +70,7 @@ echo get_template_part('/partials/banner');
 			<?php echo get_template_part('/partials/sponsors'); ?>
 		</div>
 	</div>
-	<?php echo get_template_part('/partials/promo-row'); ?>	
+	<?php //echo get_template_part('/partials/promo-row'); ?>	
 </main><!-- End of Content -->
 
 <?php get_footer(); ?>

@@ -5,6 +5,7 @@ footer{
 
 	.footer-navigation{
 		ul{
+			padding-top:2em;
 			li{
 				display:inline-block;
 				list-style-type:none;
@@ -26,18 +27,26 @@ footer{
 
 	.social-nav{
 		ul{
+			margin:0;
+			padding:0;
+			padding-top:2em;
 			li{
 				display:inline-block;
 				list-style-type:none;
-				margin-right:2em;
+				margin-right:5em;
 				a{
-					font-size:1.4em;
+					font-size:3.5em;
 					//font-weight:700;
 					color:$white;
+					i{
+						//font-size:10em;
+					}
+	
 					&:active,
 					&:focus,
 					&:hover{
-						color:$light-gray;
+						//color:$light-gray;
+						opacity:.6;
 					}
 				}
 			}
@@ -68,10 +77,21 @@ footer{
 			&:active,
 			&:focus,
 			&:hover{
-				color:$light_gray;
+				//color:$light_gray;
+				opacity:.6;
 				text-decoration:none;
 			}
 		}
+	}
+	
+	.times{
+		color:$light_gray;
+	}
+
+	.subscription{
+		 color:$champagne;
+		 font-size:2em;
+		 padding:2em 0;
 	}
 
 	.footer-logo{

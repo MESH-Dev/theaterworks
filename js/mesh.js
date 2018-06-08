@@ -194,51 +194,51 @@ $('.separator .trigger').each(function(){
 
 
 
-  $('.slick-prev').on('mouseenter',function(){
-    //alert('Slick Next Hovered');
-    $slick_cnt = $('.slick-slide').size;
-    console.log($slick_cnt);
-    $index = $('.promo, .events-slide, .hz-shows').slick('slickCurrentSlide');
-    console.log($index);
-    setInterval(function(){
-      $index = $('.promo, .events-slide, .hz-shows').slick('slickCurrentSlide');
-      $('.promo, .events-slide, .hz-shows').slick('slickGoTo', $index - 1);
-      //$('.promo, .events-slide, .hz-shows').slick('slickPrev');
-      console.log($index);
-    },2000);
-  })
-    .on('mouseleave', function(){
-      //console.log('Peace Out');
-      clearInterval(function(){
-         $index = $('.promo, .events-slide, .hz-shows').slick('slickCurrentSlide');
-         $('.promo, .events-slide, .hz-shows').slick('slickGoTo', $index);
-        // $('.promo, .events-slide, .hz-shows').slick('slickPause');
-        });
+  // $('.slick-prev').on('hover',function(){
+  //   //alert('Slick Next Hovered');
+  //   $slick_cnt = $('.slick-slide').size;
+  //   console.log($slick_cnt);
+  //   $index = $('.promo, .events-slide, .hz-shows').slick('slickCurrentSlide');
+  //   console.log($index);
+  //   setInterval(function(){
+  //     $index = $('.promo, .events-slide, .hz-shows').slick('slickCurrentSlide');
+  //     $('.promo, .events-slide, .hz-shows').slick('slickGoTo', $index - 1);
+  //     //$('.promo, .events-slide, .hz-shows').slick('slickPrev');
+  //     console.log($index);
+  //   },2000);
+  // })
+  //   .on('mouseleave', function(){
+  //     //console.log('Peace Out');
+  //     clearInterval(function(){
+  //        $index = $('.promo, .events-slide, .hz-shows').slick('slickCurrentSlide');
+  //        $('.promo, .events-slide, .hz-shows').slick('slickGoTo', $index);
+  //       // $('.promo, .events-slide, .hz-shows').slick('slickPause');
+  //       });
     
-  });
+  // });
 
-    $('.slick-next').on('mouseenter',function(){
-    //alert('Slick Next Hovered');
-    $slick_cnt = $('.slick-slide').size;
-    console.log($slick_cnt);
-    $index = $('.promo, .events-slide, .hz-shows').slick('slickCurrentSlide');
-    console.log($index);
-    setInterval(function(){
-      $index = $('.promo, .events-slide, .hz-shows').slick('slickCurrentSlide');
-      $('.promo, .events-slide, .hz-shows').slick('slickGoTo', $index + 1);
-      //$('.promo, .events-slide, .hz-shows').slick('slickPrev');
-      console.log($index);
-    },2000);
-  });
-   $('.slick-next') .on('mouseleave', function(){
-      console.log('Peace Out');
-      //clearInterval(function(){
-         $index = $('.promo, .events-slide, .hz-shows').slick('slickCurrentSlide');
-         $('.promo, .events-slide, .hz-shows').slick('unslick');
-        // $('.promo, .events-slide, .hz-shows').slick('slickPause');
-        //});
+  //   $('.slick-next').on('mouseenter',function(){
+  //   //alert('Slick Next Hovered');
+  //   $slick_cnt = $('.slick-slide').size;
+  //   console.log($slick_cnt);
+  //   $index = $('.promo, .events-slide, .hz-shows').slick('slickCurrentSlide');
+  //   console.log($index);
+  //   setInterval(function(){
+  //     $index = $('.promo, .events-slide, .hz-shows').slick('slickCurrentSlide');
+  //     $('.promo, .events-slide, .hz-shows').slick('slickGoTo', $index + 1);
+  //     //$('.promo, .events-slide, .hz-shows').slick('slickPrev');
+  //     console.log($index);
+  //   },2000);
+  // });
+  //  $('.slick-next') .on('mouseleave', function(){
+  //     console.log('Peace Out');
+  //     //clearInterval(function(){
+  //        $index = $('.promo, .events-slide, .hz-shows').slick('slickCurrentSlide');
+  //        $('.promo, .events-slide, .hz-shows').slick('unslick');
+  //       // $('.promo, .events-slide, .hz-shows').slick('slickPause');
+  //       //});
     
-  });
+  // });
 //});
 
 // $('.slick-prev').on('mouseover',function(){
@@ -299,9 +299,14 @@ $('.close').click(
 
     //Save the location of the first li and link that has children
     $topLink = $('.sidr-inner ul.menu > li.menu-item-has-children > a');
+    //<img class="indicator sm" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png">
+
+   
+    //$protocol = 
+    //console.log($href);
 
     //Add a 'button' to just after the link in any top level li that has children
-    $('<span class="open"><i class="fa fa-fw fa-chevron-down fa-lg"></i> </span>').insertAfter($topLink);
+    $('<span class="open"><img src="'+$theme+'/img/Theaterworks_Icons_Arrow-Bronze.png"> </span>').insertAfter($topLink);
     
     //Now we get all of the peices together
 
@@ -317,10 +322,10 @@ $('.close').click(
       //setting back to 0 each 'even' numbered click
       if($openCnt == 1){
         $(this).next('.sub-menu').slideDown();
-        $(this).html(' <i class="fa fa-fw fa-chevron-up"></i> ');
+        $(this).find('img').css({'transform':'rotate(180deg)'});
       }else{
         $(this).next('.sub-menu').slideUp();
-        $(this).html(' <i class="fa fa-fw fa-chevron-down"></i> ');
+        $(this).find('img').css({'transform':'rotate(0deg)'});
         $openCnt = 0;
       }
    });
