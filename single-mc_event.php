@@ -50,7 +50,7 @@ $cover_image = get_field('cover_image');
           }
 
           if($synopsis || $cast || $gallery){
-            $nav_related = '<li><a href="#promos">More Like This<a></li>';
+            $nav_related = '<li><a href="#promos">More Like This</a></li>';
           }
 
          ?>
