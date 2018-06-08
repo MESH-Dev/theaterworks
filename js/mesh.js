@@ -259,21 +259,21 @@ $('.separator .trigger').each(function(){
     appendArrows: $('.events-nav'),
  	  arrows: true,
     draggable: true,
- // prevArrow: '<button type="button" class="slick-prev"><span>Previous</span></button>',
-  // nextArrow: '<button type="button" class="slick-next"><span>Next</span></button>'
+ prevArrow: '<button type="button" class="slick-prev"><span class="ind">&lang;</span><span>Previous</span></button>',
+  nextArrow: '<button type="button" class="slick-next"><span>Next</span><span class="ind">&rang;</span></button>'
 
   });
 
-$('.hz-shows').slick({
-    accessibility: true,
-    autoplay: false,
-    //swipeToSlide: true,
-    slidesToShow: 3,
-  	//slidesToScroll: 1,
-  	variableWidth: true,
- 	arrows: false,
-  draggable: true
-  });
+// $('.hz-shows').slick({
+//     accessibility: true,
+//     autoplay: false,
+//     //swipeToSlide: true,
+//     slidesToShow: 3,
+//   	//slidesToScroll: 1,
+//   	variableWidth: true,
+//  	arrows: false,
+//   draggable: true
+//   });
 
 ////////////////////////////////////////////////////////////
 

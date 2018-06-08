@@ -438,6 +438,17 @@ p.callout{
 	button{
 		border:2px solid $tw_gold;
 		box-shadow:none;
+
+		font-size:1.4em;
+		font-weight:bold;
+		text-transform:uppercase;
+		color:$tw_gold;
+		&:hover,
+		&:focus,
+		&:active{
+			background-color:$tw_gold;
+			color:$light_gray;
+		}
 	}
 
 	.slick-prev{
@@ -445,27 +456,40 @@ p.callout{
 		//background-image:url('img/Theaterworks_Icons_Arrow-Bronze_left.png');
 		//bacground-repeat:no-repeat
 
-		&:before{
-			content:url('img/Theaterworks_Icons_Arrow-Bronze_left.png');
-			width:15px;
-			//transform:rotate(-90deg);
-			position: absolute;
-		    display: inline;
-		    margin-left: -17px;
-		    margin-top: 2px;
+		// &:before{
+		// 	//content:url('img/Theaterworks_Icons_Arrow-Bronze_left.png');
+		// 	content: '\2329'; 
+		// 	width:15px;
+		// 	font-weight:700;
+		// 	//transform:rotate(-90deg);
+		// 	position: absolute;
+		//     display: inline;
+		//     margin-left: -15px;
+		//     //margin-top: 2px;
+		// }
+
+		.ind{
+			display:inline-block;
+			margin-right:10px;
+			margin-top:-2px;
 		}
 	}
 
 	.slick-next{
 		float:right;
-		&:before{
-			content:url('img/Theaterworks_Icons_Arrow-Bronze_right.png');
-			width:15px;
-			//transform:rotate(-90deg);
-			position: absolute;
-		    display: inline;
-		    margin-right: -17px;
-		    margin-top: 2px;
+		// &:after{
+		// 	content:'\232a';
+		// 	width:15px;
+		// 	//transform:rotate(-90deg);
+		// 	position: absolute;
+		//     display: inline;
+		//     margin-right: 17px;
+		//     margin-top: 2px;
+		// }
+		.ind{
+			display:inline-block;
+			margin-left:10px;
+			margin-top:-2px;
 		}
 	}
 
