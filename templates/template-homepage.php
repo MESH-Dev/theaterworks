@@ -64,7 +64,7 @@ get_header();
 				
 			?>
 			<section class="featured-event panel" id="page-start" style="background-image:url('<?php echo $ci_URL; ?>'); position:relative">
-				<div class="content" style="position:absolute; bottom:2em; right:2em; color:white;">
+				<div class="content">
 					<p class="callout"><?php echo $callout; ?></p>
 					<h2>
 						<!-- <a href="<?php the_permalink(); ?>"> -->
