@@ -259,9 +259,8 @@ $('.separator .trigger').each(function(){
     appendArrows: $('.events-nav'),
  	  arrows: true,
     draggable: true,
- prevArrow: '<button type="button" class="slick-prev"><span class="ind">&lang;</span><span>Previous</span></button>',
-  nextArrow: '<button type="button" class="slick-next"><span>Next</span><span class="ind">&rang;</span></button>'
-
+    //prevArrow: '<button type="button" class="slick-prev"><span class="ind">&lang;</span><span>Previous</span></button>',
+    //nextArrow: '<button type="button" class="slick-next"><span>Next</span><span class="ind">&rang;</span></button>'
   });
 
 // $('.hz-shows').slick({
