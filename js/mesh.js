@@ -256,7 +256,7 @@ $('.separator .trigger').each(function(){
     slidesToShow: 3,
   	//slidesToScroll: 1,
   	variableWidth: true,
-    appendArrows: $('.events-nav'),
+    //appendArrows: $('.events-nav'),
  	  arrows: true,
     draggable: true,
     //prevArrow: '<button type="button" class="slick-prev"><span class="ind">&lang;</span><span>Previous</span></button>',
