@@ -41,7 +41,7 @@
 			</div><!-- End of Footer -->
 			<div class="columns-4">
 				<div class="footer-logo">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_FullLogo@2x.png">
+					<img alt="Theaterworks Logo" aria-hidden="true" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_FullLogo@2x.png">
 				</div>
 				<div class="contact">
 					<p>

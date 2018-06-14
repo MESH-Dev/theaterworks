@@ -118,18 +118,18 @@ echo get_template_part('/partials/banner');?>
             <h3 class="entry-title">
               <!-- <a href="<?php echo get_permalink($post->ID); ?>"> -->
  
-                <div class="title">
-                  <?php echo the_title(); ?> <?php echo $toe; ?>
-                </div>
+                <span class="title">
+                  <?php echo the_title(); ?> <?php //echo $toe; ?>
+                </span>
  
-                <div class="byline">
-                  <?php echo $post->byline; ?>
-                </div>
+                <span class="byline">
+                  <?php //echo $post->byline; ?>
+                </span>
        
             </h3>
             
  
-          </header>
+          <!-- </header> -->
           
  
           <div class="entry-summary">

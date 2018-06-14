@@ -32,12 +32,12 @@
 		<div class="content" style="padding:2em;">
 			<div class="footer">
 				<p class="callout"><?php echo $callout; ?></p>
-				<h3><?php echo the_title(); ?> <?php echo $ctr; ?></h3>
+				<h3><?php echo the_title(); ?> <?php //echo $ctr; ?></h3>
 				<div class="button horizontal">
 					<a  href="<?php echo the_permalink(); ?>">Tickets</a>
 				</div>
 				<div class="more horizontal">
-					<a href="<?php echo the_permalink(); ?>">More <img class="indicator sm" aria-hidden="true" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png"></a>
+					<a href="<?php echo the_permalink(); ?>">More <img class="indicator sm" aria-hidden="true" alt="" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png"></a>
 				</div>
 			</div>
 		</div>
