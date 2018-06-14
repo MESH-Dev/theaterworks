@@ -47,7 +47,7 @@
 					<p>
 						<a href="mailto:info@theaterworks.com">info@theaterworks.com</a></br>
 						860.527.7838</br>
-						<apan class="times">
+						<span class="times">
 							Monday - Friday</br>
 							10:00am - 5:00pm
 						</span>

@@ -132,7 +132,7 @@ echo (!empty($post->disclaimer)) ? '<p class="event__disclaimer">'.$post->discla
 </div> <!-- end columns-8 -->
 <div class="columns-4 offset-by-1" >
   <h3>Upcoming Times</h3>
-  <div class="events-slide" style="overflow:hidden">
+  <div class="events-slide">
 <?php
 
 // This array is not in use at the moment, but it is the built in functionality provided by 
@@ -240,7 +240,6 @@ foreach ($unique as $instance){
     </span>
   </div>
  
-	<!--<div><span><?php echo $nice_date; ?></span><a href="<?php echo $performance->ticket_url; ?>">Buy Tickets</a></br></div> -->
 <?php //} 
 }
 }
@@ -252,6 +251,7 @@ foreach ($unique as $instance){
 <!-- Nav for individual tickets -->
 <div class='events-nav'></div>
 </div>
+
 </div>
 </section>
   <?php 
@@ -264,11 +264,12 @@ foreach ($unique as $instance){
         while(have_rows('cast_member')):the_row();
         $image = get_sub_field('image');
         $image_url = $image['sizes']['large'];
+        $image_alt = $image['alt'];
         $cm_title = get_sub_field('cast_member_title');
         $cm_name = get_sub_field('cast_member_name');
   ?>
   <div class="columns-3 has-background">
-    <img class="bio-pic" style="max-width:100%;" src="<?php echo $image_url; ?>">
+    <img alt="<?php echo $image_alt; ?>" class="bio-pic" src="<?php echo $image_url; ?>">
     <h2 class="bio-title"><?php echo $cm_title; ?></h2>
     <h3 class="bio-name"><?php echo $cm_name; ?></h3>
   </div>
@@ -286,7 +287,7 @@ foreach ($unique as $instance){
    </div>
   <?php while (have_rows('e_gallery')):the_row(); 
     $g_image = get_sub_field('g_image');
-    //var_dump($g_image);
+    
     $g_image_URL = $g_image['sizes']['large'];
     $g_image_alt = $g_image['alt'];
   ?>
@@ -294,6 +295,7 @@ foreach ($unique as $instance){
   <div class="grid-item columns-4 no-pad" style="background-image:url('<?php echo $g_image_URL; ?>')">
   </div>
 <?php endwhile; ?>
+</div>
 </section>
 </div>
 <?php endif; ?>
@@ -311,5 +313,4 @@ foreach ($unique as $instance){
 </div>
 </main>   
       
-<!-- ENTER YOUR FOOTER HTML HERE -->
 <?php get_footer(); ?>

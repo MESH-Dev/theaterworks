@@ -27,7 +27,7 @@
 					$cp_bg_url = $cp_background['sizes']['large'];
 					$callout = get_field('ec_text', $post->ID);
 	?>
-	<div class="grid-item columns-5 promo-slide has-background <?php if ($crt == 1){echo 'starter'; }?>" style="background-image:url('<?php echo $cp_bg_url; ?>')">
+	<div class="grid-item columns-5 no-padding promo-slide has-background <?php if ($crt == 1){echo 'starter'; }?>" style="background-image:url('<?php echo $cp_bg_url; ?>')">
 		<div class="gradient" aria-hidden="true"></div>
 		<div class="content" style="padding:2em;">
 			<div class="footer">
@@ -37,7 +37,7 @@
 					<a  href="<?php echo the_permalink(); ?>">Tickets</a>
 				</div>
 				<div class="more horizontal">
-					<a href="<?php echo the_permalink(); ?>">More <img class="indicator sm" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png"></a>
+					<a href="<?php echo the_permalink(); ?>">More <img class="indicator sm" aria-hidden="true" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png"></a>
 				</div>
 			</div>
 		</div>

@@ -63,15 +63,13 @@ get_header();
 				$callout=get_field('ec_text');
 				
 			?>
-			<section class="featured-event panel" id="page-start" style="background-image:url('<?php echo $ci_URL; ?>'); position:relative">
+			<section class="featured-event panel" id="page-start" style="background-image:url('<?php echo $ci_URL; ?>');">
 				<div class="content">
 					<p class="callout"><?php echo $callout; ?></p>
 					<h2>
-						<!-- <a href="<?php the_permalink(); ?>"> -->
 							<?php the_title(); ?>
-						<!-- </a> -->
 					</h2>
-					<div class="footer" style="color:white;">
+					<div class="footer">
 						
 						<div class="horizontal button">
 							<a  href="<?php echo the_permalink(); ?>">Tickets</a>

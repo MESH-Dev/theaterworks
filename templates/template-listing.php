@@ -32,7 +32,7 @@ echo get_template_part('/partials/banner');?>
 				<h2><?php echo $season->name; ?> <?php //echo $season_cnt; ?></h2>
 				<?php if($season_cnt > 1){ ?>
 					<div class="trigger">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png">
+						<img alt="Click here to see shows" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png">
 					</div>
 				<?php } ?>
 			</div>
@@ -102,7 +102,7 @@ echo get_template_part('/partials/banner');?>
       <!-- <div class="row"> -->
       <?php } ?>
       		<?php if($season_cnt == 1){ ?>
-          		<div class="show-img" style="background-image:url('<?php echo $alt_img_url; ?>');height:400px;" ></div>
+          		<div class="show-img" style="background-image:url('<?php echo $alt_img_url; ?>');" ></div>
           	<?php } ?>
           <div <?php if($season_cnt == 1){ echo 'class="content dark"';} ?>>
           	
@@ -131,11 +131,6 @@ echo get_template_part('/partials/banner');?>
  
           </header>
           
-          <style>
-          .entry-summary p img{
-            display:none;
-          }
-          </style>
  
           <div class="entry-summary">
             
@@ -157,13 +152,9 @@ echo get_template_part('/partials/banner');?>
 			</div>
 			<?php } ?>
 			<div class="horizontal more">
-				<a href="<?php echo the_permalink(); ?>">More &nbsp;&nbsp;&gt; </a>
+				<a href="<?php echo the_permalink(); ?>">More <img class="indicator sm" aria-hidden="true" alt="" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png"> </a>
 			</div>
-           <!--  <p>
-            	<?php $ticket =  get_field('ticket_url', $post->ID); ?>
-              <?php //echo str_replace('hidden-xs', 'visible-xs-inline-block', $buy_button_html) ; ?>
-              <a class="btn" href="<?php echo get_permalink($post->ID); ?>">More ></a>
-            </p> -->
+          
           </div> <!-- end entry-summary -->
  	 
 	<?php if($season_cnt == 1){ ?>

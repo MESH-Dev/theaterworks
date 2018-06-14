@@ -7,11 +7,6 @@ echo get_template_part('/partials/banner');
 
 ?>
 <main id="content">
-<?php
-/* single-mc_event.php
- * Template for displaying all single posts.
- */
-?>
  
 <!-- ENTER YOUR HEADER HTML HERE -->
  
@@ -25,71 +20,13 @@ $cover_image = get_field('cover_image');
 // Example using srcset for responsive images.
 //echo '<img class="img-responsive" src="'.$cover_image['url'].'" alt="" srcset="'.$cover_image['sizes']['medium'].' 300w, '.$cover_image['sizes']['large'].' 640w">';
 ?>
-<!-- <div class="row">
-	<div class="title-row top">
-    <div class="container">
-  		<div class="title">
-  			<h2 class="event-title">
-  			  <?php the_title();  ?>
-  			</h2>
-  		</div>
-      <nav class="page-nav">
-        <?php 
 
-          $synopsis = get_field('long_desc');
-          $cast = get_field('cast_member');
-          $gallery= get_field('gallery');
-          //var_dump($cast);
-          $nav_synopsis = '';
-          $nav_cast = '';
-          $nav_gallery = '';
-          $nav_related = '';
-          if($synopsis){
-            $nav_synopsis = '<li><a href="#synopsis">Synopsis</a></li>';
-          }
-          if($cast != ''){
-            $nav_cast = '<li><a href="#cast">Cast & Creatives</a></li>';
-          }
-
-          if($gallery){
-            $nav_gallery = '<li><a href="#gallery">Gallery</a></li>';
-          }
-
-          if($synopsis || $cast || $gallery){
-            $nav_related = '<li><a href="#promos">More Like This<a></li>';
-          }
-
-         ?>
-        <ul>
-          <?php echo $nav_synopsis; ?>
-          <?php echo $nav_cast; ?>
-          <?php echo $nav_gallery; ?>
-          <?php echo $nav_related; ?>
-        </ul>
-      </nav>
-    </div>
-	</div>
-</div> -->
 <div class="container page-content">
 
 <section class="pane">
   <div class="row">
 <div class="">
-<!-- Event Title -->
-<!-- <h2 class="event__title">
-  <?php the_title();  ?>
-</h2> -->
- 
-<!-- Byline -->
-<!-- <div class="event__byline">
-  <?php //the_field('byline') ?>
-</div> -->
- 
-<!-- Date Range -->
-<!-- <p class="event__dates">
-  <?php //the_field('display_dates_long') ?>
-</p>
-           -->                 
+   
 <?php
  
 // Display "Buy Tickets" link if a URL is set and the show hasn't closed yet ($post->status)

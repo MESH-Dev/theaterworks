@@ -23,19 +23,22 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 
 	<style>
-	*{font-family: 'Source Sans Pro', sans-serif;}
+	
 	</style>
 
 	<!-- CSS
 	================================================== -->
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<!-- 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
- -->	<!-- Favicons
+	
+	<!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/img/favicon-16x16.png">
+	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/img/site.webmanifest">
+	<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/img/safari-pinned-tab.svg" color="#89724e">
+	<meta name="msapplication-TileColor" content="#1c1c1c">
+	<meta name="theme-color" content="#ffffff">
 
 	<!-- Bugherd -->
 
@@ -76,7 +79,7 @@
 				<div class="logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<h1 class="site-title sr-only" ><?php bloginfo( 'name' ); ?></h1>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_ShortLogo@2x.png">
+						<img alt="Theaterworks logo" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_ShortLogo@2x.png">
 					</a>
 				</div>
 				
@@ -111,12 +114,12 @@
 					<ul class="gateway">
 						<li>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>seasons">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Get_Tickets.png">
+								<img alt="Buy Tickets" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Get_Tickets.png">
 							</a>
 						</li>
 						<li>
 							<a class="ticket-cal" href="<?php echo esc_url( home_url( '/' ) ); ?>calendar">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Calendar.png">
+								<img alt="View the show calendar" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Calendar.png">
 							</a>
 						</li>
 					</ul>

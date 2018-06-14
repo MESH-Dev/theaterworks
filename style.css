@@ -946,157 +946,165 @@ footer .social-nav ul li a:active, footer .social-nav ul li a:focus, footer .soc
 footer p {
   margin: 0;
   padding: 0;
+  font-weight: 700;
 }
-/* line 63, sass/modules/_footer.scss */
+/* line 64, sass/modules/_footer.scss */
 footer .contact a {
   color: #FFFFFF;
 }
-/* line 65, sass/modules/_footer.scss */
+/* line 66, sass/modules/_footer.scss */
 footer .contact a:active, footer .contact a:focus, footer .contact a:hover {
   color: #DBD8D6;
   text-decoration: none;
 }
-/* line 75, sass/modules/_footer.scss */
+/* line 76, sass/modules/_footer.scss */
 footer p.signature a {
   color: #FFFFFF;
 }
-/* line 77, sass/modules/_footer.scss */
+/* line 78, sass/modules/_footer.scss */
 footer p.signature a:active, footer p.signature a:focus, footer p.signature a:hover {
   opacity: .6;
   text-decoration: none;
 }
-/* line 87, sass/modules/_footer.scss */
+/* line 88, sass/modules/_footer.scss */
 footer .times {
   color: #DBD8D6;
 }
-/* line 91, sass/modules/_footer.scss */
+/* line 92, sass/modules/_footer.scss */
 footer .subscription {
   color: #B8A483;
   font-size: 2em;
   padding: 2em 0;
 }
-/* line 98, sass/modules/_footer.scss */
+/* line 100, sass/modules/_footer.scss */
 footer .footer-logo img {
   width: 250px;
 }
 
 /* line 3, sass/modules/_modules.scss */
-body {
-  background-color: #DBD8D6;
+* {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* line 7, sass/modules/_modules.scss */
+/* line 5, sass/modules/_modules.scss */
+body {
+  background-color: #DBD8D6;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* line 10, sass/modules/_modules.scss */
 img {
   max-width: 100%;
 }
 
-/* line 11, sass/modules/_modules.scss */
+/* line 14, sass/modules/_modules.scss */
 img.indicator {
   transform: rotate(-90deg);
   display: inline-block;
   margin-bottom: 2px;
 }
-/* line 18, sass/modules/_modules.scss */
+/* line 21, sass/modules/_modules.scss */
 img.indicator.sm {
   width: 10px;
   display: inline-block;
 }
-/* line 24, sass/modules/_modules.scss */
+/* line 27, sass/modules/_modules.scss */
 img.indicator.lg {
   width: 15px;
   display: inline-block;
 }
 
-/* line 31, sass/modules/_modules.scss */
+/* line 34, sass/modules/_modules.scss */
 .panel {
   height: 100vh;
+  min-height: 600px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-/* line 38, sass/modules/_modules.scss */
+/* line 42, sass/modules/_modules.scss */
 .slick-panel {
   height: 600px;
 }
 @media (max-width: 480px) {
-  /* line 38, sass/modules/_modules.scss */
+  /* line 42, sass/modules/_modules.scss */
   .slick-panel {
     width: 100vw;
   }
 }
 
-/* line 47, sass/modules/_modules.scss */
+/* line 51, sass/modules/_modules.scss */
 .banner {
   height: 400px;
   position: relative;
 }
-/* line 50, sass/modules/_modules.scss */
+/* line 54, sass/modules/_modules.scss */
 .banner .footer {
   padding: 0;
 }
 
-/* line 55, sass/modules/_modules.scss */
+/* line 59, sass/modules/_modules.scss */
 .has-background {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-/* line 61, sass/modules/_modules.scss */
+/* line 65, sass/modules/_modules.scss */
 .footer {
   position: absolute;
   bottom: 0;
   padding: 2em;
   color: #FFFFFF;
 }
-/* line 68, sass/modules/_modules.scss */
+/* line 72, sass/modules/_modules.scss */
 .footer h3 {
   padding: 0;
   margin: 0;
 }
-/* line 72, sass/modules/_modules.scss */
+/* line 76, sass/modules/_modules.scss */
 .footer .callout {
   text-transform: uppercase;
 }
 
-/* line 79, sass/modules/_modules.scss */
+/* line 83, sass/modules/_modules.scss */
 .page-title,
 .page-callout {
   color: #FFFFFF;
   font-weight: 700;
 }
 
-/* line 85, sass/modules/_modules.scss */
+/* line 89, sass/modules/_modules.scss */
 .page-title {
   margin: 0;
   padding: 0;
 }
 
-/* line 90, sass/modules/_modules.scss */
+/* line 94, sass/modules/_modules.scss */
 .page-callout {
   width: 60%;
   font-weight: 700;
 }
 @media (max-width: 480px) {
-  /* line 90, sass/modules/_modules.scss */
+  /* line 94, sass/modules/_modules.scss */
   .page-callout {
     width: 95%;
   }
 }
 
-/* line 98, sass/modules/_modules.scss */
+/* line 102, sass/modules/_modules.scss */
 .horizontal {
   display: inline;
   padding-right: 10px;
 }
-/* line 101, sass/modules/_modules.scss */
+/* line 105, sass/modules/_modules.scss */
 .horizontal.button {
   padding: 0;
   margin: 0;
   margin-right: 2em;
 }
-/* line 107, sass/modules/_modules.scss */
+/* line 111, sass/modules/_modules.scss */
 .horizontal.button a {
   border: 2px solid #FFFFFF;
   text-transform: uppercase;
@@ -1106,13 +1114,13 @@ img.indicator.lg {
   font-weight: 700;
   font-size: 1.4em;
 }
-/* line 114, sass/modules/_modules.scss */
+/* line 118, sass/modules/_modules.scss */
 .horizontal.button a:hover, .horizontal.button a:focus, .horizontal.button a:active {
   background: #FFFFFF;
   color: #1C1C1C;
   text-decoration: none;
 }
-/* line 125, sass/modules/_modules.scss */
+/* line 129, sass/modules/_modules.scss */
 .horizontal.more a {
   color: #FFFFFF;
   font-family: "Source Sans Pro", sans-serif;
@@ -1122,67 +1130,67 @@ img.indicator.lg {
   position: relative;
   text-transform: uppercase;
 }
-/* line 132, sass/modules/_modules.scss */
+/* line 136, sass/modules/_modules.scss */
 .horizontal.more a span {
   margin-top: 11px;
   right: 0;
   position: absolute;
 }
-/* line 139, sass/modules/_modules.scss */
+/* line 143, sass/modules/_modules.scss */
 .horizontal.more a:hover, .horizontal.more a:focus, .horizontal.more a:active {
   opacity: .6;
   text-decoration: none;
 }
 
-/* line 151, sass/modules/_modules.scss */
+/* line 155, sass/modules/_modules.scss */
 .more-link {
   color: #FFFFFF;
   font-size: 1.4em;
   font-weight: 700;
   text-transform: uppercase;
 }
-/* line 156, sass/modules/_modules.scss */
+/* line 160, sass/modules/_modules.scss */
 .more-link:hover, .more-link:active, .more-link:focus {
   text-decoration: none;
   opacity: .6;
 }
 
-/* line 164, sass/modules/_modules.scss */
+/* line 168, sass/modules/_modules.scss */
 .sponsor-list {
   text-align: center;
 }
-/* line 166, sass/modules/_modules.scss */
+/* line 170, sass/modules/_modules.scss */
 .sponsor-list li {
   list-style-type: none;
   display: inline-block;
   vertical-align: middle;
 }
 @media (max-width: 750px) {
-  /* line 166, sass/modules/_modules.scss */
+  /* line 170, sass/modules/_modules.scss */
   .sponsor-list li {
     margin: 2em 0;
   }
 }
 
-/* line 177, sass/modules/_modules.scss */
+/* line 181, sass/modules/_modules.scss */
 .title-row {
   background-color: #89724E;
   color: #FFFFFF;
 }
-/* line 180, sass/modules/_modules.scss */
+/* line 184, sass/modules/_modules.scss */
 .title-row.top {
   margin-bottom: 4em;
 }
-/* line 184, sass/modules/_modules.scss */
+/* line 188, sass/modules/_modules.scss */
 .title-row.empty {
   height: 10em;
 }
-/* line 188, sass/modules/_modules.scss */
+/* line 192, sass/modules/_modules.scss */
 .title-row h2 {
   padding: 2rem 0;
 }
 
-/* line 194, sass/modules/_modules.scss */
+/* line 198, sass/modules/_modules.scss */
 .curtain {
   position: absolute;
   top: 0;
@@ -1192,36 +1200,36 @@ img.indicator.lg {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* line 203, sass/modules/_modules.scss */
+/* line 207, sass/modules/_modules.scss */
 p.callout {
   color: #FFFFFF;
   padding: 0;
   margin: 0;
 }
 
-/* line 211, sass/modules/_modules.scss */
-.welcome {
+/* line 215, sass/modules/_modules.scss */
+.welcome, .notfound {
   position: relative;
   border-bottom: 10px solid #89724E;
 }
-/* line 214, sass/modules/_modules.scss */
-.welcome .wrapper {
+/* line 218, sass/modules/_modules.scss */
+.welcome .wrapper, .notfound .wrapper {
   display: table;
   position: relative;
   z-index: 2;
   height: 100%;
   width: 100%;
 }
-/* line 220, sass/modules/_modules.scss */
-.welcome .wrapper .content {
+/* line 224, sass/modules/_modules.scss */
+.welcome .wrapper .content, .notfound .wrapper .content {
   display: table-cell;
   height: 100%;
   width: 100%;
   vertical-align: middle;
   text-align: center;
 }
-/* line 226, sass/modules/_modules.scss */
-.welcome .wrapper .content .title {
+/* line 230, sass/modules/_modules.scss */
+.welcome .wrapper .content .title, .notfound .wrapper .content .title {
   width: 60%;
   margin: 0 auto;
   color: #FFFFFF;
@@ -1231,31 +1239,31 @@ p.callout {
   font-weight: 700;
 }
 @media (max-width: 480px) {
-  /* line 226, sass/modules/_modules.scss */
-  .welcome .wrapper .content .title {
+  /* line 230, sass/modules/_modules.scss */
+  .welcome .wrapper .content .title, .notfound .wrapper .content .title {
     width: 95%;
   }
 }
-/* line 239, sass/modules/_modules.scss */
-.welcome .logo-sub {
+/* line 243, sass/modules/_modules.scss */
+.welcome .logo-sub, .notfound .logo-sub {
   padding: 8em 0 4em 0;
 }
-/* line 241, sass/modules/_modules.scss */
-.welcome .logo-sub img {
+/* line 245, sass/modules/_modules.scss */
+.welcome .logo-sub img, .notfound .logo-sub img {
   width: 250px;
 }
-/* line 245, sass/modules/_modules.scss */
-.welcome .down {
+/* line 249, sass/modules/_modules.scss */
+.welcome .down, .notfound .down {
   position: absolute;
   bottom: 1em;
   width: 100%;
 }
-/* line 250, sass/modules/_modules.scss */
-.welcome .down img {
+/* line 254, sass/modules/_modules.scss */
+.welcome .down img, .notfound .down img {
   width: 56px;
 }
-/* line 255, sass/modules/_modules.scss */
-.welcome .cta p {
+/* line 259, sass/modules/_modules.scss */
+.welcome .cta p, .notfound .cta p {
   text-transform: uppercase;
   color: white;
   font-weight: 600;
@@ -1264,14 +1272,18 @@ p.callout {
   padding: 3em 0;
 }
 
-/* line 267, sass/modules/_modules.scss */
+/* line 270, sass/modules/_modules.scss */
+.featured-event {
+  position: relative;
+}
+/* line 272, sass/modules/_modules.scss */
 .featured-event h2 {
   color: #89724E;
   margin: 0;
   padding: 0;
   margin-bottom: 1rem;
 }
-/* line 273, sass/modules/_modules.scss */
+/* line 278, sass/modules/_modules.scss */
 .featured-event .content {
   position: absolute;
   bottom: 6em;
@@ -1279,78 +1291,84 @@ p.callout {
   color: #FFFFFF;
 }
 @media (max-width: 750px) {
-  /* line 273, sass/modules/_modules.scss */
+  /* line 278, sass/modules/_modules.scss */
   .featured-event .content {
     bottom: 6em;
     right: 6em;
   }
 }
-/* line 285, sass/modules/_modules.scss */
+/* line 290, sass/modules/_modules.scss */
 .featured-event .callout {
   margin-bottom: .75rem;
   font-size: 1.4em;
 }
-/* line 289, sass/modules/_modules.scss */
+/* line 294, sass/modules/_modules.scss */
 .featured-event .footer {
   margin: 0;
   position: initial;
   padding: 0;
+  color: #FFFFFF;
 }
 
-/* line 299, sass/modules/_modules.scss */
+/* line 305, sass/modules/_modules.scss */
 .callout {
   font-size: 3.6em;
   color: #89724E;
 }
 
-/* line 307, sass/modules/_modules.scss */
+/* line 313, sass/modules/_modules.scss */
 .cc-grid .row [class*='columns-']:last-of-type {
   padding-right: 15px;
 }
 
-/* line 313, sass/modules/_modules.scss */
+/* line 318, sass/modules/_modules.scss */
+.cc-gallery.pane {
+  padding-bottom: 8em;
+}
+
+/* line 323, sass/modules/_modules.scss */
 .page-nav ul {
   padding: 2em 0;
 }
 @media (max-width: 480px) {
-  /* line 313, sass/modules/_modules.scss */
+  /* line 323, sass/modules/_modules.scss */
   .page-nav ul {
     padding: 0;
   }
 }
-/* line 318, sass/modules/_modules.scss */
+/* line 328, sass/modules/_modules.scss */
 .page-nav ul li {
   display: inline-block;
   list-style-type: none;
   margin-right: 2em;
 }
 @media (max-width: 480px) {
-  /* line 318, sass/modules/_modules.scss */
+  /* line 328, sass/modules/_modules.scss */
   .page-nav ul li {
     display: block;
     margin: 1em 0;
   }
 }
-/* line 327, sass/modules/_modules.scss */
+/* line 337, sass/modules/_modules.scss */
 .page-nav ul li a {
   font-size: 1.4em;
   font-weight: 700;
   text-transform: uppercase;
   color: #FFFFFF;
 }
-/* line 332, sass/modules/_modules.scss */
+/* line 342, sass/modules/_modules.scss */
 .page-nav ul li a:active, .page-nav ul li a:focus, .page-nav ul li a:hover {
   opacity: .6;
   text-decoration: none;
 }
 
-/* line 344, sass/modules/_modules.scss */
+/* line 354, sass/modules/_modules.scss */
 .event-title {
   margin: 0;
   padding: 0;
 }
 
-/* line 349, sass/modules/_modules.scss */
+/* line 359, sass/modules/_modules.scss */
 .section-title {
   text-transform: uppercase;
   font-size: 1.6em;
@@ -1358,14 +1376,19 @@ p.callout {
   font-weight: 600;
 }
 
-/* line 356, sass/modules/_modules.scss */
+/* line 366, sass/modules/_modules.scss */
 .bio-name {
   font-size: 2.4em;
   color: #89724E;
   font-weight: 600;
 }
 
-/* line 362, sass/modules/_modules.scss */
+/* line 372, sass/modules/_modules.scss */
+.bio-pic {
+  max-width: 100%;
+}
+
+/* line 376, sass/modules/_modules.scss */
 .bio-title {
   color: #1C1C1C;
   font-size: 1.4em;
@@ -1374,51 +1397,55 @@ p.callout {
   padding: 0;
 }
 
-/* line 371, sass/modules/_modules.scss */
+/* line 385, sass/modules/_modules.scss */
 .page-content .pane {
   margin-bottom: 4em;
 }
 
+/* line 390, sass/modules/_modules.scss */
+.events-slide {
+  overflow: hidden;
+}
 @media (max-width: 750px) {
-  /* line 376, sass/modules/_modules.scss */
+  /* line 390, sass/modules/_modules.scss */
   .events-slide {
     width: 95vw;
     margin: 0 auto;
   }
 }
-/* line 382, sass/modules/_modules.scss */
+/* line 398, sass/modules/_modules.scss */
 .events-slide .event {
   padding-bottom: 2em;
 }
-/* line 384, sass/modules/_modules.scss */
+/* line 400, sass/modules/_modules.scss */
 .events-slide .event:first-child {
   margin-top: 1em;
 }
-/* line 388, sass/modules/_modules.scss */
+/* line 404, sass/modules/_modules.scss */
 .events-slide .instance {
   margin-right: 10px;
   width: 600px;
 }
-/* line 392, sass/modules/_modules.scss */
+/* line 408, sass/modules/_modules.scss */
 .events-slide .instance .instance-info {
   font-size: 1.4em;
 }
-/* line 398, sass/modules/_modules.scss */
+/* line 414, sass/modules/_modules.scss */
 .events-slide .instance .date {
   font-weight: 700;
   font-size: 1.4em;
 }
-/* line 403, sass/modules/_modules.scss */
+/* line 419, sass/modules/_modules.scss */
 .events-slide .instance .horizontal {
   display: inline-block;
   vertical-align: middle;
   padding-right: 0;
 }
-/* line 409, sass/modules/_modules.scss */
+/* line 425, sass/modules/_modules.scss */
 .events-slide .instance .horizontal:first-child {
   width: 25%;
 }
-/* line 414, sass/modules/_modules.scss */
+/* line 430, sass/modules/_modules.scss */
 .events-slide .instance .btn.btn-primary {
   border: 2px solid #89724E;
   text-transform: uppercase;
@@ -1429,14 +1456,14 @@ p.callout {
   font-weight: 700;
   font-size: 1.4em;
 }
-/* line 422, sass/modules/_modules.scss */
+/* line 438, sass/modules/_modules.scss */
 .events-slide .instance .btn.btn-primary:hover, .events-slide .instance .btn.btn-primary:focus, .events-slide .instance .btn.btn-primary:active {
   background: #89724E;
   color: #DBD8D6;
   text-decoration: none;
 }
 
-/* line 438, sass/modules/_modules.scss */
+/* line 454, sass/modules/_modules.scss */
 .events-nav button {
   border: 2px solid #89724E;
   box-shadow: none;
@@ -1445,35 +1472,40 @@ p.callout {
   text-transform: uppercase;
   color: #89724E;
 }
-/* line 446, sass/modules/_modules.scss */
+/* line 462, sass/modules/_modules.scss */
 .events-nav button:hover, .events-nav button:focus, .events-nav button:active {
   background-color: #89724E;
   color: #DBD8D6;
 }
-/* line 471, sass/modules/_modules.scss */
+/* line 487, sass/modules/_modules.scss */
 .events-nav .slick-prev .ind {
   display: inline-block;
   margin-right: 10px;
   margin-top: -2px;
 }
-/* line 478, sass/modules/_modules.scss */
+/* line 494, sass/modules/_modules.scss */
 .events-nav .slick-next {
   float: right;
 }
-/* line 489, sass/modules/_modules.scss */
+/* line 505, sass/modules/_modules.scss */
 .events-nav .slick-next .ind {
   display: inline-block;
   margin-left: 10px;
   margin-top: -2px;
 }
 
-/* line 499, sass/modules/_modules.scss */
+/* line 515, sass/modules/_modules.scss */
 .season_wrap {
   margin-bottom: 1em;
 }
 
+/* line 519, sass/modules/_modules.scss */
+.entry-summary p img {
+  display: none;
+}
+
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,89724e+100&0+0,0.3+57,1+100 */
-/* line 507, sass/modules/_modules.scss */
+/* line 527, sass/modules/_modules.scss */
 .bronze {
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(188, 175, 154, 0.3) 57%, #89724e 100%);
   /* FF3.6-15 */
@@ -1485,7 +1517,7 @@ p.callout {
   /* IE6-9 */
 }
 
-/* line 514, sass/modules/_modules.scss */
+/* line 534, sass/modules/_modules.scss */
 .copper {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e28c61+100&0+0,0.3+57,1+100 */
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(238, 189, 165, 0.3) 57%, #e28c61 100%);
@@ -1498,7 +1530,7 @@ p.callout {
   /* IE6-9 */
 }
 
-/* line 522, sass/modules/_modules.scss */
+/* line 542, sass/modules/_modules.scss */
 .silver {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,c3bfbc+100&0+0,0.3+57,1+100 */
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(221, 219, 217, 0.3) 57%, #c3bfbc 100%);
@@ -1511,18 +1543,18 @@ p.callout {
   /* IE6-9 */
 }
 
-/* line 531, sass/modules/_modules.scss */
+/* line 551, sass/modules/_modules.scss */
 .grid-item {
   position: relative;
 }
-/* line 533, sass/modules/_modules.scss */
+/* line 553, sass/modules/_modules.scss */
 .grid-item h2 {
   color: #FFFFFF;
   margin: 0;
   padding: 0;
   margin: 0;
 }
-/* line 543, sass/modules/_modules.scss */
+/* line 563, sass/modules/_modules.scss */
 .grid-item .gradient {
   position: absolute;
   top: 0;
@@ -1539,7 +1571,7 @@ p.callout {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ad6b4e',GradientType=0 );
   /* IE6-9 */
 }
-/* line 556, sass/modules/_modules.scss */
+/* line 576, sass/modules/_modules.scss */
 .grid-item .gradient.black {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,000000+100&0+0,0.3+57,1+100 */
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(110, 110, 110, 0.3) 57%, black 100%);
@@ -1551,37 +1583,37 @@ p.callout {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=0 );
   /* IE6-9 */
 }
-/* line 565, sass/modules/_modules.scss */
+/* line 585, sass/modules/_modules.scss */
 .grid-item .callout {
   font-size: 1.4em;
 }
-/* line 569, sass/modules/_modules.scss */
+/* line 589, sass/modules/_modules.scss */
 .grid-item.promo-slide {
   position: relative;
 }
 @media (min-width: 1000px) {
-  /* line 569, sass/modules/_modules.scss */
+  /* line 589, sass/modules/_modules.scss */
   .grid-item.promo-slide {
-    width: 40vw;
+    width: 600px;
   }
 }
 @media (max-width: 1060px) and (min-width: 480px) {
-  /* line 569, sass/modules/_modules.scss */
+  /* line 589, sass/modules/_modules.scss */
   .grid-item.promo-slide {
-    width: 60vw;
+    width: 400px;
   }
 }
 @media (max-width: 480px) {
-  /* line 569, sass/modules/_modules.scss */
+  /* line 589, sass/modules/_modules.scss */
   .grid-item.promo-slide {
-    width: 100vw;
+    width: 350px;
   }
 }
-/* line 581, sass/modules/_modules.scss */
+/* line 603, sass/modules/_modules.scss */
 .grid-item.promo-slide .callout {
   margin-bottom: .75rem;
 }
-/* line 589, sass/modules/_modules.scss */
+/* line 611, sass/modules/_modules.scss */
 .grid-item .footer {
   position: absolute;
   bottom: 0;
@@ -1589,12 +1621,12 @@ p.callout {
   color: #FFFFFF;
 }
 
-/* line 600, sass/modules/_modules.scss */
+/* line 622, sass/modules/_modules.scss */
 .first-row {
   background-repeat: no-repeat;
 }
 @media (min-width: 750px) {
-  /* line 600, sass/modules/_modules.scss */
+  /* line 622, sass/modules/_modules.scss */
   .first-row {
     height: 400px;
     background-size: cover;
@@ -1602,7 +1634,7 @@ p.callout {
   }
 }
 @media (max-width: 750px) {
-  /* line 600, sass/modules/_modules.scss */
+  /* line 622, sass/modules/_modules.scss */
   .first-row {
     height: 800px;
     background-image: none !important;
@@ -1610,155 +1642,156 @@ p.callout {
     background-position: center top;
   }
 }
-/* line 617, sass/modules/_modules.scss */
+/* line 639, sass/modules/_modules.scss */
 .first-row .show-img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  height: 400px;
 }
 @media (min-width: 750px) {
-  /* line 617, sass/modules/_modules.scss */
+  /* line 639, sass/modules/_modules.scss */
   .first-row .show-img {
     display: none;
   }
 }
 @media (max-width: 750px) {
-  /* line 617, sass/modules/_modules.scss */
+  /* line 639, sass/modules/_modules.scss */
   .first-row .show-img {
     display: block;
   }
 }
-/* line 629, sass/modules/_modules.scss */
+/* line 652, sass/modules/_modules.scss */
 .first-row .content {
   float: right;
 }
 @media (min-width: 1000px) {
-  /* line 629, sass/modules/_modules.scss */
+  /* line 652, sass/modules/_modules.scss */
   .first-row .content {
     width: 40%;
   }
 }
 @media (min-width: 750px) {
-  /* line 629, sass/modules/_modules.scss */
+  /* line 652, sass/modules/_modules.scss */
   .first-row .content {
     width: 50%;
   }
 }
 @media (max-width: 750px) {
-  /* line 629, sass/modules/_modules.scss */
+  /* line 652, sass/modules/_modules.scss */
   .first-row .content {
     width: 100%;
   }
 }
 
-/* line 648, sass/modules/_modules.scss */
+/* line 671, sass/modules/_modules.scss */
 .separator {
   background-color: #89724E;
   padding: 2em 0;
 }
-/* line 652, sass/modules/_modules.scss */
+/* line 675, sass/modules/_modules.scss */
 .separator .container {
   position: relative;
 }
-/* line 656, sass/modules/_modules.scss */
+/* line 679, sass/modules/_modules.scss */
 .separator h2 {
   color: #FFFFFF;
   padding: 0;
   margin: 0;
   line-height: 1;
 }
-/* line 663, sass/modules/_modules.scss */
+/* line 686, sass/modules/_modules.scss */
 .separator .trigger {
   position: absolute;
   right: 0;
   top: 1em;
 }
-/* line 669, sass/modules/_modules.scss */
+/* line 692, sass/modules/_modules.scss */
 .separator img {
   width: 50px;
   transition: .3s .1s ease-in-out;
 }
-/* line 674, sass/modules/_modules.scss */
+/* line 697, sass/modules/_modules.scss */
 .separator h2, .separator .trigger {
   display: inline-block;
 }
 
-/* line 679, sass/modules/_modules.scss */
+/* line 702, sass/modules/_modules.scss */
 .show-listing {
   display: none;
 }
 
-/* line 683, sass/modules/_modules.scss */
+/* line 706, sass/modules/_modules.scss */
 .hz-shows {
   position: relative;
 }
-/* line 687, sass/modules/_modules.scss */
+/* line 710, sass/modules/_modules.scss */
 .hz-shows .hz-show .entry-title {
   padding: 0;
   margin: 0;
 }
 @media (min-width: 1000px) {
-  /* line 686, sass/modules/_modules.scss */
+  /* line 709, sass/modules/_modules.scss */
   .hz-shows .hz-show {
     width: 30vw;
   }
 }
 @media (max-width: 1060px) and (min-width: 480px) {
-  /* line 686, sass/modules/_modules.scss */
+  /* line 709, sass/modules/_modules.scss */
   .hz-shows .hz-show {
     width: 40vw;
   }
 }
 @media (max-width: 480px) {
-  /* line 686, sass/modules/_modules.scss */
+  /* line 709, sass/modules/_modules.scss */
   .hz-shows .hz-show {
     width: 100vw;
   }
 }
 
-/* line 704, sass/modules/_modules.scss */
+/* line 727, sass/modules/_modules.scss */
 .dark {
   background-color: rgba(28, 28, 28, 0.6);
   height: 100%;
 }
 @media (max-width: 750px) {
-  /* line 704, sass/modules/_modules.scss */
+  /* line 727, sass/modules/_modules.scss */
   .dark {
     height: 400px;
   }
 }
 
-/* line 713, sass/modules/_modules.scss */
+/* line 736, sass/modules/_modules.scss */
 .event-info {
   color: white;
   padding: 2em;
 }
 
 @media screen and (min-width: 768px) {
-  /* line 725, sass/modules/_modules.scss */
+  /* line 748, sass/modules/_modules.scss */
   .xdgp-calendar-main main.month .day .mobile.heading, .xdgp-calendar-main .month .day .mobile.heading {
     display: none !important;
   }
 }
-/* line 734, sass/modules/_modules.scss */
+/* line 757, sass/modules/_modules.scss */
 .xdgp-calendar-main header {
   padding: 0;
 }
-/* line 739, sass/modules/_modules.scss */
+/* line 762, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next .next__label {
   position: relative;
   padding: 0 15px 0 10px;
   margin: 0;
   display: block !important;
 }
-/* line 746, sass/modules/_modules.scss */
+/* line 769, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next .next__label:after {
   content: ' > ';
   position: absolute;
   right: 0;
   cursor: pointer;
 }
-/* line 755, sass/modules/_modules.scss */
+/* line 778, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__label {
   position: relative;
   padding: 0 10px 0 15px;
@@ -1766,13 +1799,13 @@ p.callout {
   cursor: pointer;
   display: block !important;
 }
-/* line 763, sass/modules/_modules.scss */
+/* line 786, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__label:after {
   content: ' < ';
   position: absolute;
   left: 0;
 }
-/* line 776, sass/modules/_modules.scss */
+/* line 799, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous a,
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next a {
   background-color: transparent !important;
@@ -1780,7 +1813,7 @@ p.callout {
   color: #89724E;
   padding: 5px 10px;
 }
-/* line 782, sass/modules/_modules.scss */
+/* line 805, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous a:hover, .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous a:focus, .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous a:active,
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next a:hover,
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next a:focus,
@@ -1789,132 +1822,132 @@ p.callout {
   color: #DBD8D6 !important;
   text-decoration: none;
 }
-/* line 807, sass/modules/_modules.scss */
+/* line 830, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-previous a {
   position: relative;
 }
-/* line 812, sass/modules/_modules.scss */
+/* line 835, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-next a {
   position: relative;
 }
-/* line 817, sass/modules/_modules.scss */
+/* line 840, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__arrow,
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-next .next__arrow {
   position: absolute;
   display: block;
 }
-/* line 825, sass/modules/_modules.scss */
+/* line 848, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__arrow {
   position: relative;
   display: inline;
   padding-right: 5px;
 }
-/* line 833, sass/modules/_modules.scss */
+/* line 856, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-next .next__arrow {
   position: relative;
   display: inline;
   padding-left: 5px;
 }
-/* line 841, sass/modules/_modules.scss */
+/* line 864, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__arrow:after {
   content: ' < ';
 }
-/* line 849, sass/modules/_modules.scss */
+/* line 872, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-next .next__arrow:after {
   content: ' > ';
 }
-/* line 857, sass/modules/_modules.scss */
+/* line 880, sass/modules/_modules.scss */
 .xdgp-calendar-main section[class*="navigation__month"] {
   font-weight: 700;
 }
-/* line 861, sass/modules/_modules.scss */
+/* line 884, sass/modules/_modules.scss */
 .xdgp-calendar-main p {
   margin-bottom: 0;
 }
-/* line 866, sass/modules/_modules.scss */
+/* line 889, sass/modules/_modules.scss */
 .xdgp-calendar-main li {
   list-style-type: none;
 }
-/* line 870, sass/modules/_modules.scss */
+/* line 893, sass/modules/_modules.scss */
 .xdgp-calendar-main footer {
   background-color: transparent;
 }
-/* line 874, sass/modules/_modules.scss */
+/* line 897, sass/modules/_modules.scss */
 .xdgp-calendar-main section#days {
   background-color: #89724E;
   margin-bottom: 0;
   padding-bottom: 0;
   color: #FFFFFF;
 }
-/* line 881, sass/modules/_modules.scss */
+/* line 904, sass/modules/_modules.scss */
 .xdgp-calendar-main .navigation__month-current {
   font-size: 4.8em;
   color: #89724E;
 }
 @media (max-width: 750px) {
-  /* line 881, sass/modules/_modules.scss */
+  /* line 904, sass/modules/_modules.scss */
   .xdgp-calendar-main .navigation__month-current {
     font-size: 2em;
   }
 }
-/* line 894, sass/modules/_modules.scss */
+/* line 917, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day,
 .xdgp-calendar-main .month .day {
   border-top: 1px solid #89724E !important;
   border-bottom: 1px solid #89724E !important;
   border-left: 1px solid #89724E !important;
 }
-/* line 900, sass/modules/_modules.scss */
+/* line 923, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day img,
 .xdgp-calendar-main .month .day img {
   display: none;
 }
-/* line 904, sass/modules/_modules.scss */
+/* line 927, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day:hover, .xdgp-calendar-main main.month .day:active, .xdgp-calendar-main main.month .day:focus,
 .xdgp-calendar-main .month .day:hover,
 .xdgp-calendar-main .month .day:active,
 .xdgp-calendar-main .month .day:focus {
   background-color: #C3BFBC;
 }
-/* line 911, sass/modules/_modules.scss */
+/* line 934, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day a:hover, .xdgp-calendar-main main.month .day a:active, .xdgp-calendar-main main.month .day a:focus,
 .xdgp-calendar-main .month .day a:hover,
 .xdgp-calendar-main .month .day a:active,
 .xdgp-calendar-main .month .day a:focus {
   text-decoration: none;
 }
-/* line 919, sass/modules/_modules.scss */
+/* line 942, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day:last-child,
 .xdgp-calendar-main .month .day:last-child {
   border-right: 1px solid #89724E !important;
 }
-/* line 924, sass/modules/_modules.scss */
+/* line 947, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day--present,
 .xdgp-calendar-main .month .day--present {
   border: 1px solid #89724E !important;
   background-color: #C3BFBC !important;
 }
-/* line 932, sass/modules/_modules.scss */
+/* line 955, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.performances,
 .xdgp-calendar-main .month ul.performances {
   padding: 0 10px 10px 10px !important;
   margin: 0;
 }
-/* line 938, sass/modules/_modules.scss */
+/* line 961, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.events .event .event__title,
 .xdgp-calendar-main .month ul.events .event .event__title {
   background-color: transparent !important;
   color: #89724E;
   font-weight: 700;
 }
-/* line 944, sass/modules/_modules.scss */
+/* line 967, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.events .event .event__title:active, .xdgp-calendar-main main.month ul.events .event .event__title:hover, .xdgp-calendar-main main.month ul.events .event .event__title:focus,
 .xdgp-calendar-main .month ul.events .event .event__title:active,
 .xdgp-calendar-main .month ul.events .event .event__title:hover,
 .xdgp-calendar-main .month ul.events .event .event__title:focus {
   opacity: .6;
 }
-/* line 951, sass/modules/_modules.scss */
+/* line 974, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.performances .performance__actions .action__buy,
 .xdgp-calendar-main .month ul.performances .performance__actions .action__buy {
   background-color: transparent !important;
@@ -1922,7 +1955,7 @@ p.callout {
   color: #89724E !important;
   font-weight: 700;
 }
-/* line 958, sass/modules/_modules.scss */
+/* line 981, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.performances .performance__actions .action__buy:active, .xdgp-calendar-main main.month ul.performances .performance__actions .action__buy:hover, .xdgp-calendar-main main.month ul.performances .performance__actions .action__buy:focus,
 .xdgp-calendar-main .month ul.performances .performance__actions .action__buy:active,
 .xdgp-calendar-main .month ul.performances .performance__actions .action__buy:hover,
@@ -1931,17 +1964,17 @@ p.callout {
   color: #DBD8D6 !important;
 }
 
-/* line 969, sass/modules/_modules.scss */
+/* line 992, sass/modules/_modules.scss */
 .promo {
   position: relative;
 }
 
-/* line 973, sass/modules/_modules.scss */
+/* line 996, sass/modules/_modules.scss */
 .promo .slick-prev,
 .promo .slick-next {
   width: 100px;
 }
-/* line 976, sass/modules/_modules.scss */
+/* line 999, sass/modules/_modules.scss */
 .promo .slick-prev.slick-arrow,
 .promo .slick-next.slick-arrow {
   position: absolute;
@@ -1949,12 +1982,12 @@ p.callout {
   z-index: 5;
   border: 0;
 }
-/* line 983, sass/modules/_modules.scss */
+/* line 1006, sass/modules/_modules.scss */
 .promo .slick-prev.slick-arrow span,
 .promo .slick-next.slick-arrow span {
   opacity: 0;
 }
-/* line 992, sass/modules/_modules.scss */
+/* line 1015, sass/modules/_modules.scss */
 .promo .slick-prev {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+73,ffffff+100&0.5+0,0.3+73,0+100 */
   background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 73%, rgba(255, 255, 255, 0) 100%);
@@ -1966,7 +1999,7 @@ p.callout {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 );
   /* IE6-9 */
 }
-/* line 1001, sass/modules/_modules.scss */
+/* line 1024, sass/modules/_modules.scss */
 .promo .slick-next {
   right: 0;
   top: 0;
@@ -1982,26 +2015,26 @@ p.callout {
 }
 
 @media (max-width: 480px) {
-  /* line 1014, sass/modules/_modules.scss */
+  /* line 1037, sass/modules/_modules.scss */
   .slick-track .slick-cloned {
     display: none;
   }
 }
-/* line 1029, sass/modules/_modules.scss */
+/* line 1052, sass/modules/_modules.scss */
 .sidr {
   background: #DBD8D6;
   padding: 4em 0;
 }
-/* line 1041, sass/modules/_modules.scss */
+/* line 1064, sass/modules/_modules.scss */
 .sidr .sidr-inner {
   text-align: center;
 }
-/* line 1045, sass/modules/_modules.scss */
+/* line 1068, sass/modules/_modules.scss */
 .sidr a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 1050, sass/modules/_modules.scss */
+/* line 1073, sass/modules/_modules.scss */
 .sidr .close {
   font-size: 2em;
   color: #FFFFFF;
@@ -2010,19 +2043,19 @@ p.callout {
   font-weight: 700;
   margin-bottom: 1em;
 }
-/* line 1058, sass/modules/_modules.scss */
+/* line 1081, sass/modules/_modules.scss */
 .sidr .close:hover, .sidr .close:active, .sidr .close:focus {
   color: #B8A483;
 }
-/* line 1064, sass/modules/_modules.scss */
+/* line 1087, sass/modules/_modules.scss */
 .sidr .close i {
   color: #FFFFFF;
 }
-/* line 1066, sass/modules/_modules.scss */
+/* line 1089, sass/modules/_modules.scss */
 .sidr .close i:hover, .sidr .close i:active, .sidr .close i:focus {
   color: #1C1C1C;
 }
-/* line 1074, sass/modules/_modules.scss */
+/* line 1097, sass/modules/_modules.scss */
 .sidr .open {
   position: absolute;
   margin: 0 5px;
@@ -2034,20 +2067,20 @@ p.callout {
   font-size: 1.4em;
   margin: 0 5px;
 }
-/* line 1088, sass/modules/_modules.scss */
+/* line 1111, sass/modules/_modules.scss */
 .sidr .open img {
   width: 15px;
 }
-/* line 1091, sass/modules/_modules.scss */
+/* line 1114, sass/modules/_modules.scss */
 .sidr .open:hover, .sidr .open:active, .sidr .open:focus {
   color: #FFFFFF;
 }
-/* line 1101, sass/modules/_modules.scss */
+/* line 1124, sass/modules/_modules.scss */
 .sidr ul.gateway {
   padding: 0;
   margin: 0;
 }
-/* line 1104, sass/modules/_modules.scss */
+/* line 1127, sass/modules/_modules.scss */
 .sidr ul.gateway li {
   list-style-type: none;
   display: inline-block;
@@ -2055,38 +2088,38 @@ p.callout {
   margin: 0 1em;
   padding-top: 0;
 }
-/* line 1111, sass/modules/_modules.scss */
+/* line 1134, sass/modules/_modules.scss */
 .sidr ul.gateway li:hover, .sidr ul.gateway li:focus, .sidr ul.gateway li:active {
   background-color: transparent;
 }
-/* line 1117, sass/modules/_modules.scss */
+/* line 1140, sass/modules/_modules.scss */
 .sidr ul.gateway li a {
   padding: 0;
 }
-/* line 1119, sass/modules/_modules.scss */
+/* line 1142, sass/modules/_modules.scss */
 .sidr ul.gateway li a img {
   width: 30px;
 }
-/* line 1123, sass/modules/_modules.scss */
+/* line 1146, sass/modules/_modules.scss */
 .sidr ul.gateway li a:active, .sidr ul.gateway li a:focus, .sidr ul.gateway li a:hover {
   opacity: .6;
 }
-/* line 1143, sass/modules/_modules.scss */
+/* line 1166, sass/modules/_modules.scss */
 .sidr .ticket-cal {
   margin: 2em 0;
   color: #FFFFFF;
   display: inline-block;
 }
-/* line 1148, sass/modules/_modules.scss */
+/* line 1171, sass/modules/_modules.scss */
 .sidr .ticket-cal:active, .sidr .ticket-cal:focus, .sidr .ticket-cal:hover {
   color: #B8A483;
 }
-/* line 1158, sass/modules/_modules.scss */
+/* line 1181, sass/modules/_modules.scss */
 .sidr ul {
   margin: 0;
   padding: 0;
 }
-/* line 1163, sass/modules/_modules.scss */
+/* line 1186, sass/modules/_modules.scss */
 .sidr ul li {
   list-style-type: none;
   width: 100%;
@@ -2095,15 +2128,15 @@ p.callout {
   margin: 0;
   line-height: 1;
 }
-/* line 1176, sass/modules/_modules.scss */
+/* line 1199, sass/modules/_modules.scss */
 .sidr ul li:active > a, .sidr ul li:focus > a, .sidr ul li:hover > a {
   opacity: .6;
 }
-/* line 1182, sass/modules/_modules.scss */
+/* line 1205, sass/modules/_modules.scss */
 .sidr ul li.current-menu-item > a, .sidr ul li.current-menu-parent > a {
   opacity: .6;
 }
-/* line 1185, sass/modules/_modules.scss */
+/* line 1208, sass/modules/_modules.scss */
 .sidr ul li a {
   font-size: 1.4em;
   font-weight: 700;
@@ -2112,42 +2145,42 @@ p.callout {
   padding-bottom: 2em;
   display: inline-block;
 }
-/* line 1194, sass/modules/_modules.scss */
+/* line 1217, sass/modules/_modules.scss */
 .sidr ul li .sub-menu {
   display: none;
   background-color: #89724E;
   margin: 0;
   padding: 0;
 }
-/* line 1199, sass/modules/_modules.scss */
+/* line 1222, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li {
   padding: 2em 0;
   margin: 0;
 }
-/* line 1203, sass/modules/_modules.scss */
+/* line 1226, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li:hover, .sidr ul li .sub-menu li:focus, .sidr ul li .sub-menu li:active {
   background-color: #B8A483;
 }
-/* line 1207, sass/modules/_modules.scss */
+/* line 1230, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li:hover a, .sidr ul li .sub-menu li:focus a, .sidr ul li .sub-menu li:active a {
   opacity: 1;
 }
-/* line 1212, sass/modules/_modules.scss */
+/* line 1235, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li.current-menu-item {
   background-color: #B8A483;
 }
-/* line 1214, sass/modules/_modules.scss */
+/* line 1237, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li.current-menu-item a {
   opacity: 1;
 }
-/* line 1216, sass/modules/_modules.scss */
+/* line 1239, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li a {
   padding: 0;
 }
 
 /* You can alter this CSS in order to give Smooth Div Scroll your own look'n'feel */
 /* Invisible left hotspot */
-/* line 1230, sass/modules/_modules.scss */
+/* line 1253, sass/modules/_modules.scss */
 div.scrollingHotSpotLeft {
   	/* The hotspots have a minimum width of 100 pixels and if there is room the will grow
       and occupy 15% of the scrollable area (30% combined). Adjust it to your own taste. */
@@ -2163,13 +2196,13 @@ div.scrollingHotSpotLeft {
 }
 
 /* Visible left hotspot */
-/* line 1250, sass/modules/_modules.scss */
+/* line 1273, sass/modules/_modules.scss */
 div.scrollingHotSpotLeftVisible {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Invisible right hotspot */
-/* line 1263, sass/modules/_modules.scss */
+/* line 1286, sass/modules/_modules.scss */
 div.scrollingHotSpotRight {
   min-width: 75px;
   width: 10%;
@@ -2180,7 +2213,7 @@ div.scrollingHotSpotRight {
 }
 
 /* Visible right hotspot */
-/* line 1278, sass/modules/_modules.scss */
+/* line 1301, sass/modules/_modules.scss */
 div.scrollingHotSpotRightVisible {
   background-color: rgba(255, 255, 255, 0.2);
   zoom: 1;
@@ -2189,7 +2222,7 @@ div.scrollingHotSpotRightVisible {
 /* The scroll wrapper is always the same width and height as the containing element (div).
    Overflow is hidden because you don't want to show all of the scrollable area.
 */
-/* line 1292, sass/modules/_modules.scss */
+/* line 1315, sass/modules/_modules.scss */
 div.scrollWrapper {
   position: relative;
   overflow: hidden;
@@ -2197,14 +2230,14 @@ div.scrollWrapper {
   height: 100%;
 }
 
-/* line 1300, sass/modules/_modules.scss */
+/* line 1323, sass/modules/_modules.scss */
 div.scrollableArea {
   position: relative;
   width: auto;
   height: 100%;
 }
 
-/* line 1308, sass/modules/_modules.scss */
+/* line 1331, sass/modules/_modules.scss */
 .sr-only {
   position: absolute;
   width: 1px;

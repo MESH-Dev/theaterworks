@@ -87,6 +87,14 @@ function _resize(){
   console.log(cp5);
   $('.grid-item.columns-6').css({height:cp6*0.66});
   //console.log($wW);
+
+  
+  //Figure out how many grid-item elements are within our scroller element
+  $ps_cnt = $('.promo .grid-item.columns-5').length;
+  
+  //Set the width of the scrollableArea to the number of grid-item elements X the current size of each element
+  $('.scrollableArea').css({width:cp5*$ps_cnt});
+
   if ($wW > 800){
   
 }
