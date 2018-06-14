@@ -98,9 +98,7 @@ echo get_template_part('/partials/banner');?>
  	
 
     <article <?php if($season_cnt == 1){post_class('summary-mc_event first-row');}else{echo 'class="columns-4 hz-show grid-item"'; } ?> style="background-image:url(<?php echo $el_image_url; ?>);" >
-      <?php if ($season_cnt ==1){ ?>
-      <!-- <div class="row"> -->
-      <?php } ?>
+      
       		<?php if($season_cnt == 1){ ?>
           		<div class="show-img" style="background-image:url('<?php echo $alt_img_url; ?>');" ></div>
           	<?php } ?>
@@ -128,7 +126,7 @@ echo get_template_part('/partials/banner');?>
        
             </h3>
             
- 
+ 			
           <!-- </header> -->
           
  
@@ -157,10 +155,7 @@ echo get_template_part('/partials/banner');?>
           
           </div> <!-- end entry-summary -->
  	 
-	<?php if($season_cnt == 1){ ?>
-      <!-- </div> --> <!--end row -->
-	<?php } ?>
-    </div> <!-- end columns-4 offset -->
+    </div> </div></div><!-- end columns-4 offset -->
     <!-- </div> -->
     </article>
     
