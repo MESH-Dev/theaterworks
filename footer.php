@@ -53,7 +53,7 @@
 						</span>
 					</p>
 					<p class="subscription">
-						Join our mailing list <img class="indicator lg" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow-Bronze.png">
+						<a href="" target="_blank">Join our mailing list <!-- <img class="indicator lg" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow-Bronze.png"> --></a>
 					</p>
 				</div>
 			</div>

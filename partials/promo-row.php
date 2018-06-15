@@ -1,4 +1,4 @@
-<section class="promo row" id="promos">
+<section class="promo row scroller" id="promos">
 	<?php 
 		//This is our upcoming events panel
 		// Pulls curated posts via ACF post objects
@@ -37,7 +37,7 @@
 					<a  href="<?php echo the_permalink(); ?>">Tickets</a>
 				</div>
 				<div class="more horizontal">
-					<a href="<?php echo the_permalink(); ?>">More <img class="indicator sm" aria-hidden="true" alt="" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png"></a>
+					<a href="<?php echo the_permalink(); ?>">More <!-- <img class="indicator sm" aria-hidden="true" alt="" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png"> --></a>
 				</div>
 			</div>
 		</div>

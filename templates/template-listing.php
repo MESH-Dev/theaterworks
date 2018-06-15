@@ -22,10 +22,11 @@ echo get_template_part('/partials/banner');?>
 			// $count= count($season);
 			// var_dump($count);
 			$season_cnt++;
-			?>
-		
+
+		?>
 		<?php //Create a label for each season, we'll use this for our 
-		      // accordion later?>
+		      // accordion later
+		?>
 		<div class="season_wrap">
 		<div class="separator">
 			<div class="container">
@@ -39,7 +40,7 @@ echo get_template_part('/partials/banner');?>
 		</div>
 		<div class="row <?php if ($season_cnt >1){ echo 'show-listing';} ?>">
 			<?php if($season_cnt > 1) {?>
- 			<div class="hz-shows" id="promos">
+ 			<div class="hz-shows scroller" id="promos">
  			<?php } ?>
 		<?php 
 
@@ -124,11 +125,7 @@ echo get_template_part('/partials/banner');?>
                   <?php //echo $post->byline; ?>
                 </span>
        
-            </h3>
-            
- 			
-          <!-- </header> -->
-          
+            </h3>    
  
           <div class="entry-summary">
             
@@ -143,20 +140,18 @@ echo get_template_part('/partials/banner');?>
             
             <?php if ($season_cnt == 1 ){ ?>
             <div class="horizontal button">
-				<!-- <a  href="<?php echo the_permalink(); ?>">
-				Tickets
-				</a> -->
 				<?php echo str_replace('hidden-xs', 'visible-xs-inline-block', $buy_button_html) ; ?>
 			</div>
 			<?php } ?>
 			<div class="horizontal more">
-				<a href="<?php echo the_permalink(); ?>">More <img class="indicator sm" aria-hidden="true" alt="" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png"> </a>
+				<a href="<?php echo the_permalink(); ?>">More <!-- <img class="indicator sm" aria-hidden="true" alt="" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png">  --></a>
 			</div>
           
           </div> <!-- end entry-summary -->
  	 
-    </div> </div></div><!-- end columns-4 offset -->
-    <!-- </div> -->
+    </div> 
+</div><!-- end columns-4 offset -->
+ 
     </article>
     
 		<?php 

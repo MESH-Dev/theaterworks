@@ -28,7 +28,7 @@ get_header();
 								<p>See what's on</p>
 							</div>
 							<a href="#page-start">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png">
+								<img alt="Click to see more" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png">
 							</a>
 						</div>
 					</div>
@@ -75,7 +75,7 @@ get_header();
 							<a  href="<?php echo the_permalink(); ?>">Tickets</a>
 						</div>
 						<div class="horizontal more">
-							<a href="<?php echo the_permalink(); ?>">More <img class="indicator sm" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png"></a>
+							<a href="<?php echo the_permalink(); ?>">More <!-- <img class="indicator sm" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png"> --></a>
 						</div>
 					</div>
 				</div>

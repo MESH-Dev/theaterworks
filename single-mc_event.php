@@ -50,7 +50,7 @@ $cover_image = get_field('cover_image');
           }
 
           if($synopsis || $cast || $gallery){
-            $nav_related = '<li><a href="#promos">More Like This</a></li>';
+            $nav_related = '<li><a href="#related">More Like This</a></li>';
           }
 
          ?>
@@ -299,7 +299,7 @@ foreach ($unique as $instance){
 </section>
 </div>
 <?php endif; ?>
-<div class="promos" style="padding-bottom:8em;">
+<div class="promos" id="related" style="padding-bottom:8em;">
 <div class="title-row">
     <div class="container">
       <div class="title">
