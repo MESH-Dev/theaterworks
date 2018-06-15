@@ -162,7 +162,7 @@ echo get_template_part('/partials/banner');?>
 		wp_reset_postdata(); ?>
 	</div></div>
 	 <?php if($season_cnt > 1) {?>
- </div></div>
+ </div><!-- </div> -->
  		<!-- </div></div> -->
  	<?php } ?>
 <?php }
