@@ -340,7 +340,7 @@ $('.close').click(
    });
 
       // SMOOTH SCROLL
-      $("#promos").smoothDivScroll({
+      $(".scroller").smoothDivScroll({
         startAtElementId: "starter",
         hotSpotScrollingInterval: 33,
         touchScrolling: true,
