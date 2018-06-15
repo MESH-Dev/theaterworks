@@ -278,7 +278,7 @@ foreach ($unique as $instance){
 </section>
 <?php endif; ?>
 </div>
-</div> <!-- End Container -->
+<!-- </div>  --><!-- End Container -->
 <?php if (have_rows('e_gallery')): ?>
 <section class="cc-gallery pane" id="gallery" style="padding-bottom:8em;">
   <div class="row">
@@ -297,7 +297,7 @@ foreach ($unique as $instance){
 <?php endwhile; ?>
 </div>
 </section>
-</div>
+<!-- </div> -->
 <?php endif; ?>
 <div class="promos" id="related" style="padding-bottom:8em;">
 <div class="title-row">

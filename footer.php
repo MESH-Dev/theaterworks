@@ -45,10 +45,10 @@
 				</div>
 				<div class="contact">
 					<p>
-						<a href="mailto:info@theaterworks.com">info@theaterworks.com</a></br>
-						860.527.7838</br>
+						<a href="mailto:info@theaterworks.com">info@theaterworks.com</a><br>
+						860.527.7838<br>
 						<span class="times">
-							Monday - Friday</br>
+							Monday - Friday<br>
 							10:00am - 5:00pm
 						</span>
 					</p>
