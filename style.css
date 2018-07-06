@@ -269,6 +269,18 @@ th {
   padding: 0;
 }
 
+@font-face {
+  font-family: 'gotham-black';
+  src: url("fonts/Gotham-Black.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'gotham-light';
+  src: url("fonts/Gotham-Light.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 /* line 7, sass/base/_base-styles.scss */
 html {
   font-size: 62.5%;
@@ -426,7 +438,7 @@ p {
 @media (max-width: 1250px) {
   /* line 22, sass/base/_grid.scss */
   .container {
-    max-width: 95%;
+    max-width: 90%;
   }
 }
 
@@ -919,72 +931,84 @@ footer .footer-navigation ul li {
   list-style-type: none;
   margin-right: 2em;
 }
-/* line 13, sass/modules/_footer.scss */
+@media (max-width: 750px) {
+  /* line 9, sass/modules/_footer.scss */
+  footer .footer-navigation ul li {
+    display: block;
+  }
+}
+/* line 16, sass/modules/_footer.scss */
 footer .footer-navigation ul li a {
   font-size: 1.4em;
   font-weight: 700;
   color: #FFFFFF;
 }
-/* line 17, sass/modules/_footer.scss */
+/* line 20, sass/modules/_footer.scss */
 footer .footer-navigation ul li a:active, footer .footer-navigation ul li a:focus, footer .footer-navigation ul li a:hover {
   color: #DBD8D6;
 }
-/* line 29, sass/modules/_footer.scss */
+/* line 32, sass/modules/_footer.scss */
 footer .social-nav ul {
   margin: 0;
   padding: 0;
   padding-top: 2em;
 }
-/* line 33, sass/modules/_footer.scss */
+/* line 36, sass/modules/_footer.scss */
 footer .social-nav ul li {
   display: inline-block;
   list-style-type: none;
   margin-right: 5em;
 }
-/* line 37, sass/modules/_footer.scss */
+/* line 40, sass/modules/_footer.scss */
 footer .social-nav ul li a {
   font-size: 3.5em;
   color: #FFFFFF;
 }
-/* line 45, sass/modules/_footer.scss */
+/* line 48, sass/modules/_footer.scss */
 footer .social-nav ul li a:active, footer .social-nav ul li a:focus, footer .social-nav ul li a:hover {
   opacity: .6;
 }
-/* line 57, sass/modules/_footer.scss */
+/* line 60, sass/modules/_footer.scss */
 footer p {
   margin: 0;
   padding: 0;
   font-weight: 700;
 }
-/* line 64, sass/modules/_footer.scss */
+/* line 67, sass/modules/_footer.scss */
 footer .contact a {
   color: #FFFFFF;
 }
-/* line 66, sass/modules/_footer.scss */
+/* line 69, sass/modules/_footer.scss */
 footer .contact a:active, footer .contact a:focus, footer .contact a:hover {
   opacity: .6;
   text-decoration: none;
 }
-/* line 77, sass/modules/_footer.scss */
+/* line 80, sass/modules/_footer.scss */
 footer p.signature a {
   color: #FFFFFF;
 }
-/* line 79, sass/modules/_footer.scss */
+/* line 82, sass/modules/_footer.scss */
 footer p.signature a:active, footer p.signature a:focus, footer p.signature a:hover {
   opacity: .6;
   text-decoration: none;
 }
-/* line 89, sass/modules/_footer.scss */
+/* line 92, sass/modules/_footer.scss */
 footer .times {
   color: #DBD8D6;
 }
-/* line 93, sass/modules/_footer.scss */
+/* line 96, sass/modules/_footer.scss */
 footer .subscription {
   color: #B8A483;
   font-size: 2em;
   padding: 2em 0;
 }
-/* line 97, sass/modules/_footer.scss */
+@media (max-width: 750px) {
+  /* line 96, sass/modules/_footer.scss */
+  footer .subscription {
+    padding: 1em 0 0 0;
+  }
+}
+/* line 103, sass/modules/_footer.scss */
 footer .subscription a {
   color: #B8A483;
   padding-right: 15px;
@@ -993,19 +1017,14 @@ footer .subscription a {
   background-size: 8px;
   background-repeat: no-repeat;
 }
-/* line 106, sass/modules/_footer.scss */
+/* line 112, sass/modules/_footer.scss */
 footer .subscription a:hover, footer .subscription a:active, footer .subscription a:focus {
   opacity: .6;
   text-decoration: none;
 }
-/* line 118, sass/modules/_footer.scss */
+/* line 124, sass/modules/_footer.scss */
 footer .footer-logo img {
   width: 250px;
-}
-
-/* line 3, sass/modules/_modules.scss */
-* {
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* line 5, sass/modules/_modules.scss */
@@ -1625,29 +1644,29 @@ p.callout {
   font-size: 1.4em;
 }
 /* line 604, sass/modules/_modules.scss */
-.grid-item.promo-slide {
+.grid-item.slider {
   position: relative;
 }
 @media (min-width: 1000px) {
   /* line 604, sass/modules/_modules.scss */
-  .grid-item.promo-slide {
+  .grid-item.slider {
     width: 500px;
   }
 }
 @media (max-width: 1060px) and (min-width: 480px) {
   /* line 604, sass/modules/_modules.scss */
-  .grid-item.promo-slide {
+  .grid-item.slider {
     width: 300px;
   }
 }
 @media (max-width: 480px) {
   /* line 604, sass/modules/_modules.scss */
-  .grid-item.promo-slide {
+  .grid-item.slider {
     width: 250px;
   }
 }
 /* line 618, sass/modules/_modules.scss */
-.grid-item.promo-slide .callout {
+.grid-item.slider .callout {
   margin-bottom: .75rem;
 }
 /* line 626, sass/modules/_modules.scss */
@@ -1658,16 +1677,21 @@ p.callout {
   color: #FFFFFF;
 }
 /* line 631, sass/modules/_modules.scss */
-.grid-item .footer h3 {
+.grid-item .footer h2 {
   line-height: 1;
 }
+/* line 634, sass/modules/_modules.scss */
+.grid-item .footer h3 {
+  line-height: 1;
+  padding-bottom: 1rem;
+}
 
-/* line 640, sass/modules/_modules.scss */
+/* line 644, sass/modules/_modules.scss */
 .first-row {
   background-repeat: no-repeat;
 }
 @media (min-width: 750px) {
-  /* line 640, sass/modules/_modules.scss */
+  /* line 644, sass/modules/_modules.scss */
   .first-row {
     height: 400px;
     background-size: cover;
@@ -1675,7 +1699,7 @@ p.callout {
   }
 }
 @media (max-width: 750px) {
-  /* line 640, sass/modules/_modules.scss */
+  /* line 644, sass/modules/_modules.scss */
   .first-row {
     height: 800px;
     background-image: none !important;
@@ -1683,7 +1707,7 @@ p.callout {
     background-position: center top;
   }
 }
-/* line 657, sass/modules/_modules.scss */
+/* line 661, sass/modules/_modules.scss */
 .first-row .show-img {
   background-repeat: no-repeat;
   background-size: cover;
@@ -1691,155 +1715,155 @@ p.callout {
   height: 400px;
 }
 @media (min-width: 750px) {
-  /* line 657, sass/modules/_modules.scss */
+  /* line 661, sass/modules/_modules.scss */
   .first-row .show-img {
     display: none;
     visibility: hidden;
   }
 }
 @media (max-width: 750px) {
-  /* line 657, sass/modules/_modules.scss */
+  /* line 661, sass/modules/_modules.scss */
   .first-row .show-img {
     display: block;
     visibility: visbile;
   }
 }
-/* line 672, sass/modules/_modules.scss */
+/* line 676, sass/modules/_modules.scss */
 .first-row .content {
   float: right;
 }
 @media (min-width: 1000px) {
-  /* line 672, sass/modules/_modules.scss */
+  /* line 676, sass/modules/_modules.scss */
   .first-row .content {
     width: 40%;
   }
 }
 @media (min-width: 750px) {
-  /* line 672, sass/modules/_modules.scss */
+  /* line 676, sass/modules/_modules.scss */
   .first-row .content {
     width: 50%;
   }
 }
 @media (max-width: 750px) {
-  /* line 672, sass/modules/_modules.scss */
+  /* line 676, sass/modules/_modules.scss */
   .first-row .content {
     width: 100%;
   }
 }
 
-/* line 691, sass/modules/_modules.scss */
+/* line 695, sass/modules/_modules.scss */
 .separator {
   background-color: #89724E;
   padding: 2em 0;
 }
-/* line 695, sass/modules/_modules.scss */
+/* line 699, sass/modules/_modules.scss */
 .separator .container {
   position: relative;
 }
-/* line 699, sass/modules/_modules.scss */
+/* line 703, sass/modules/_modules.scss */
 .separator h2 {
   color: #FFFFFF;
   padding: 0;
   margin: 0;
   line-height: 1;
 }
-/* line 706, sass/modules/_modules.scss */
+/* line 710, sass/modules/_modules.scss */
 .separator .trigger {
   position: absolute;
   right: 0;
   top: 1em;
 }
-/* line 710, sass/modules/_modules.scss */
+/* line 714, sass/modules/_modules.scss */
 .separator .trigger:focus, .separator .trigger:active, .separator .trigger:hover {
   opacity: .6;
 }
-/* line 717, sass/modules/_modules.scss */
+/* line 721, sass/modules/_modules.scss */
 .separator img {
   width: 50px;
   transition: .3s .1s ease-in-out;
 }
-/* line 722, sass/modules/_modules.scss */
+/* line 726, sass/modules/_modules.scss */
 .separator h2, .separator .trigger {
   display: inline-block;
 }
 
-/* line 727, sass/modules/_modules.scss */
+/* line 731, sass/modules/_modules.scss */
 .show-listing {
   display: none;
 }
 
-/* line 731, sass/modules/_modules.scss */
+/* line 735, sass/modules/_modules.scss */
 .hz-shows {
   position: relative;
 }
-/* line 735, sass/modules/_modules.scss */
+/* line 739, sass/modules/_modules.scss */
 .hz-shows .hz-show .entry-title {
   padding: 0;
   margin: 0;
 }
 @media (min-width: 1000px) {
-  /* line 734, sass/modules/_modules.scss */
+  /* line 738, sass/modules/_modules.scss */
   .hz-shows .hz-show {
     width: 30vw;
   }
 }
 @media (max-width: 1060px) and (min-width: 480px) {
-  /* line 734, sass/modules/_modules.scss */
+  /* line 738, sass/modules/_modules.scss */
   .hz-shows .hz-show {
     width: 40vw;
   }
 }
 @media (max-width: 480px) {
-  /* line 734, sass/modules/_modules.scss */
+  /* line 738, sass/modules/_modules.scss */
   .hz-shows .hz-show {
     width: 100vw;
   }
 }
 
-/* line 752, sass/modules/_modules.scss */
+/* line 756, sass/modules/_modules.scss */
 .dark {
   background-color: rgba(28, 28, 28, 0.6);
   height: 100%;
 }
 @media (max-width: 750px) {
-  /* line 752, sass/modules/_modules.scss */
+  /* line 756, sass/modules/_modules.scss */
   .dark {
     background-color: rgba(28, 28, 28, 0.9);
     height: 400px;
   }
 }
 
-/* line 761, sass/modules/_modules.scss */
+/* line 765, sass/modules/_modules.scss */
 .event-info {
   color: white;
   padding: 2em;
 }
 
 @media screen and (min-width: 768px) {
-  /* line 773, sass/modules/_modules.scss */
+  /* line 777, sass/modules/_modules.scss */
   .xdgp-calendar-main main.month .day .mobile.heading, .xdgp-calendar-main .month .day .mobile.heading {
     display: none !important;
   }
 }
-/* line 782, sass/modules/_modules.scss */
+/* line 786, sass/modules/_modules.scss */
 .xdgp-calendar-main header {
   padding: 0;
 }
-/* line 787, sass/modules/_modules.scss */
+/* line 791, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next .next__label {
   position: relative;
   padding: 0 15px 0 10px;
   margin: 0;
   display: block !important;
 }
-/* line 794, sass/modules/_modules.scss */
+/* line 798, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next .next__label:after {
   content: ' > ';
   position: absolute;
   right: 0;
   cursor: pointer;
 }
-/* line 803, sass/modules/_modules.scss */
+/* line 807, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__label {
   position: relative;
   padding: 0 10px 0 15px;
@@ -1847,13 +1871,13 @@ p.callout {
   cursor: pointer;
   display: block !important;
 }
-/* line 811, sass/modules/_modules.scss */
+/* line 815, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__label:after {
   content: ' < ';
   position: absolute;
   left: 0;
 }
-/* line 824, sass/modules/_modules.scss */
+/* line 828, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous a,
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next a {
   background-color: transparent !important;
@@ -1861,7 +1885,7 @@ p.callout {
   color: #89724E;
   padding: 5px 10px;
 }
-/* line 830, sass/modules/_modules.scss */
+/* line 834, sass/modules/_modules.scss */
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous a:hover, .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous a:focus, .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-previous a:active,
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next a:hover,
 .xdgp-calendar-main nav.xdgp-calendar-month-navigation .navigation__month-next a:focus,
@@ -1870,133 +1894,133 @@ p.callout {
   color: #DBD8D6 !important;
   text-decoration: none;
 }
-/* line 855, sass/modules/_modules.scss */
+/* line 859, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-previous a {
   position: relative;
 }
-/* line 860, sass/modules/_modules.scss */
+/* line 864, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-next a {
   position: relative;
 }
-/* line 865, sass/modules/_modules.scss */
+/* line 869, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__arrow,
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-next .next__arrow {
   position: absolute;
   display: block;
 }
-/* line 873, sass/modules/_modules.scss */
+/* line 877, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__arrow {
   position: relative;
   display: inline;
   padding-right: 5px;
 }
-/* line 881, sass/modules/_modules.scss */
+/* line 885, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-next .next__arrow {
   position: relative;
   display: inline;
   padding-left: 5px;
 }
-/* line 889, sass/modules/_modules.scss */
+/* line 893, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-previous .previous__arrow:after {
   content: ' < ';
 }
-/* line 897, sass/modules/_modules.scss */
+/* line 901, sass/modules/_modules.scss */
 .xdgp-calendar-main footer nav.xdgp-calendar-month-navigation .navigation__month-next .next__arrow:after {
   content: ' > ';
 }
-/* line 905, sass/modules/_modules.scss */
+/* line 909, sass/modules/_modules.scss */
 .xdgp-calendar-main section[class*="navigation__month"] {
   font-weight: 700;
 }
-/* line 909, sass/modules/_modules.scss */
+/* line 913, sass/modules/_modules.scss */
 .xdgp-calendar-main p {
   margin-bottom: 0;
 }
-/* line 914, sass/modules/_modules.scss */
+/* line 918, sass/modules/_modules.scss */
 .xdgp-calendar-main li {
   list-style-type: none;
 }
-/* line 918, sass/modules/_modules.scss */
+/* line 922, sass/modules/_modules.scss */
 .xdgp-calendar-main footer {
   background-color: transparent;
 }
-/* line 922, sass/modules/_modules.scss */
+/* line 926, sass/modules/_modules.scss */
 .xdgp-calendar-main section#days {
   background-color: #89724E;
   margin-bottom: 0;
   padding-bottom: 0;
   color: #FFFFFF;
 }
-/* line 929, sass/modules/_modules.scss */
+/* line 933, sass/modules/_modules.scss */
 .xdgp-calendar-main .navigation__month-current {
   font-size: 4.8em;
   color: #89724E;
 }
 @media (max-width: 750px) {
-  /* line 929, sass/modules/_modules.scss */
+  /* line 933, sass/modules/_modules.scss */
   .xdgp-calendar-main .navigation__month-current {
     font-size: 2em;
   }
 }
-/* line 942, sass/modules/_modules.scss */
+/* line 946, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day,
 .xdgp-calendar-main .month .day {
   border-top: 1px solid #89724E !important;
   border-bottom: 1px solid #89724E !important;
   border-left: 1px solid #89724E !important;
 }
-/* line 948, sass/modules/_modules.scss */
+/* line 952, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day img,
 .xdgp-calendar-main .month .day img {
   display: none;
   visibility: hidden;
 }
-/* line 953, sass/modules/_modules.scss */
+/* line 957, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day:hover, .xdgp-calendar-main main.month .day:active, .xdgp-calendar-main main.month .day:focus,
 .xdgp-calendar-main .month .day:hover,
 .xdgp-calendar-main .month .day:active,
 .xdgp-calendar-main .month .day:focus {
   background-color: #C3BFBC;
 }
-/* line 960, sass/modules/_modules.scss */
+/* line 964, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day a:hover, .xdgp-calendar-main main.month .day a:active, .xdgp-calendar-main main.month .day a:focus,
 .xdgp-calendar-main .month .day a:hover,
 .xdgp-calendar-main .month .day a:active,
 .xdgp-calendar-main .month .day a:focus {
   text-decoration: none;
 }
-/* line 968, sass/modules/_modules.scss */
+/* line 972, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day:last-child,
 .xdgp-calendar-main .month .day:last-child {
   border-right: 1px solid #89724E !important;
 }
-/* line 973, sass/modules/_modules.scss */
+/* line 977, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month .day--present,
 .xdgp-calendar-main .month .day--present {
   border: 1px solid #89724E !important;
   background-color: #C3BFBC !important;
 }
-/* line 981, sass/modules/_modules.scss */
+/* line 985, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.performances,
 .xdgp-calendar-main .month ul.performances {
   padding: 0 10px 10px 10px !important;
   margin: 0;
 }
-/* line 987, sass/modules/_modules.scss */
+/* line 991, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.events .event .event__title,
 .xdgp-calendar-main .month ul.events .event .event__title {
   background-color: transparent !important;
   color: #89724E;
   font-weight: 700;
 }
-/* line 993, sass/modules/_modules.scss */
+/* line 997, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.events .event .event__title:active, .xdgp-calendar-main main.month ul.events .event .event__title:hover, .xdgp-calendar-main main.month ul.events .event .event__title:focus,
 .xdgp-calendar-main .month ul.events .event .event__title:active,
 .xdgp-calendar-main .month ul.events .event .event__title:hover,
 .xdgp-calendar-main .month ul.events .event .event__title:focus {
   opacity: .6;
 }
-/* line 1000, sass/modules/_modules.scss */
+/* line 1004, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.performances .performance__actions .action__buy,
 .xdgp-calendar-main .month ul.performances .performance__actions .action__buy {
   background-color: transparent !important;
@@ -2004,7 +2028,7 @@ p.callout {
   color: #89724E !important;
   font-weight: 700;
 }
-/* line 1007, sass/modules/_modules.scss */
+/* line 1011, sass/modules/_modules.scss */
 .xdgp-calendar-main main.month ul.performances .performance__actions .action__buy:active, .xdgp-calendar-main main.month ul.performances .performance__actions .action__buy:hover, .xdgp-calendar-main main.month ul.performances .performance__actions .action__buy:focus,
 .xdgp-calendar-main .month ul.performances .performance__actions .action__buy:active,
 .xdgp-calendar-main .month ul.performances .performance__actions .action__buy:hover,
@@ -2013,17 +2037,21 @@ p.callout {
   color: #DBD8D6 !important;
 }
 
-/* line 1018, sass/modules/_modules.scss */
+/* line 1022, sass/modules/_modules.scss */
 .promo {
   position: relative;
 }
+/* line 1025, sass/modules/_modules.scss */
+.promo:hover, .promo:focus, .promo:active {
+  cursor: pointer;
+}
 
-/* line 1022, sass/modules/_modules.scss */
+/* line 1032, sass/modules/_modules.scss */
 .promo .slick-prev,
 .promo .slick-next {
   width: 100px;
 }
-/* line 1025, sass/modules/_modules.scss */
+/* line 1035, sass/modules/_modules.scss */
 .promo .slick-prev.slick-arrow,
 .promo .slick-next.slick-arrow {
   position: absolute;
@@ -2031,12 +2059,12 @@ p.callout {
   z-index: 5;
   border: 0;
 }
-/* line 1032, sass/modules/_modules.scss */
+/* line 1042, sass/modules/_modules.scss */
 .promo .slick-prev.slick-arrow span,
 .promo .slick-next.slick-arrow span {
   opacity: 0;
 }
-/* line 1041, sass/modules/_modules.scss */
+/* line 1051, sass/modules/_modules.scss */
 .promo .slick-prev {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+73,ffffff+100&0.5+0,0.3+73,0+100 */
   background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 73%, rgba(255, 255, 255, 0) 100%);
@@ -2048,7 +2076,7 @@ p.callout {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 );
   /* IE6-9 */
 }
-/* line 1050, sass/modules/_modules.scss */
+/* line 1060, sass/modules/_modules.scss */
 .promo .slick-next {
   right: 0;
   top: 0;
@@ -2064,26 +2092,22 @@ p.callout {
 }
 
 @media (max-width: 480px) {
-  /* line 1063, sass/modules/_modules.scss */
+  /* line 1073, sass/modules/_modules.scss */
   .slick-track .slick-cloned {
     display: none;
   }
 }
-/* line 1078, sass/modules/_modules.scss */
+/* line 1088, sass/modules/_modules.scss */
 .sidr {
   background: #C3BFBC;
   padding: 4em 0;
 }
-/* line 1090, sass/modules/_modules.scss */
-.sidr .sidr-inner {
-  padding-left: 25%;
-}
-/* line 1095, sass/modules/_modules.scss */
+/* line 1105, sass/modules/_modules.scss */
 .sidr a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 1100, sass/modules/_modules.scss */
+/* line 1110, sass/modules/_modules.scss */
 .sidr .close {
   font-size: 2em;
   color: #FFFFFF;
@@ -2095,19 +2119,19 @@ p.callout {
   right: 1em;
   top: 1em;
 }
-/* line 1111, sass/modules/_modules.scss */
+/* line 1121, sass/modules/_modules.scss */
 .sidr .close:hover, .sidr .close:active, .sidr .close:focus {
   color: #B8A483;
 }
-/* line 1117, sass/modules/_modules.scss */
+/* line 1127, sass/modules/_modules.scss */
 .sidr .close i {
   color: #FFFFFF;
 }
-/* line 1119, sass/modules/_modules.scss */
+/* line 1129, sass/modules/_modules.scss */
 .sidr .close i:hover, .sidr .close i:active, .sidr .close i:focus {
   color: #1C1C1C;
 }
-/* line 1127, sass/modules/_modules.scss */
+/* line 1137, sass/modules/_modules.scss */
 .sidr .open {
   position: absolute;
   margin: 0 5px;
@@ -2119,20 +2143,21 @@ p.callout {
   font-size: 1.4em;
   margin: 0 5px;
 }
-/* line 1141, sass/modules/_modules.scss */
+/* line 1151, sass/modules/_modules.scss */
 .sidr .open img {
   width: 15px;
 }
-/* line 1144, sass/modules/_modules.scss */
+/* line 1154, sass/modules/_modules.scss */
 .sidr .open:hover, .sidr .open:active, .sidr .open:focus {
   color: #FFFFFF;
 }
-/* line 1154, sass/modules/_modules.scss */
+/* line 1164, sass/modules/_modules.scss */
 .sidr ul.gateway {
   padding: 0;
   margin: 0;
+  padding-left: 25%;
 }
-/* line 1157, sass/modules/_modules.scss */
+/* line 1168, sass/modules/_modules.scss */
 .sidr ul.gateway li {
   list-style-type: none;
   display: inline-block;
@@ -2140,38 +2165,38 @@ p.callout {
   margin: 0 1em;
   padding-top: 0;
 }
-/* line 1164, sass/modules/_modules.scss */
+/* line 1176, sass/modules/_modules.scss */
 .sidr ul.gateway li:hover, .sidr ul.gateway li:focus, .sidr ul.gateway li:active {
   background-color: transparent;
 }
-/* line 1170, sass/modules/_modules.scss */
+/* line 1182, sass/modules/_modules.scss */
 .sidr ul.gateway li a {
   padding: 0;
 }
-/* line 1172, sass/modules/_modules.scss */
+/* line 1184, sass/modules/_modules.scss */
 .sidr ul.gateway li a img {
   width: 30px;
 }
-/* line 1176, sass/modules/_modules.scss */
+/* line 1188, sass/modules/_modules.scss */
 .sidr ul.gateway li a:active, .sidr ul.gateway li a:focus, .sidr ul.gateway li a:hover {
   opacity: .6;
 }
-/* line 1196, sass/modules/_modules.scss */
+/* line 1208, sass/modules/_modules.scss */
 .sidr .ticket-cal {
   margin: 2em 0;
   color: #FFFFFF;
   display: inline-block;
 }
-/* line 1201, sass/modules/_modules.scss */
+/* line 1213, sass/modules/_modules.scss */
 .sidr .ticket-cal:active, .sidr .ticket-cal:focus, .sidr .ticket-cal:hover {
   color: #B8A483;
 }
-/* line 1211, sass/modules/_modules.scss */
+/* line 1223, sass/modules/_modules.scss */
 .sidr ul {
   margin: 0;
   padding: 0;
 }
-/* line 1216, sass/modules/_modules.scss */
+/* line 1228, sass/modules/_modules.scss */
 .sidr ul li {
   list-style-type: none;
   width: 100%;
@@ -2180,15 +2205,15 @@ p.callout {
   margin: 0;
   line-height: 1;
 }
-/* line 1229, sass/modules/_modules.scss */
+/* line 1241, sass/modules/_modules.scss */
 .sidr ul li:active > a, .sidr ul li:focus > a, .sidr ul li:hover > a {
   opacity: .6;
 }
-/* line 1235, sass/modules/_modules.scss */
+/* line 1247, sass/modules/_modules.scss */
 .sidr ul li.current-menu-item > a, .sidr ul li.current-menu-parent > a {
   opacity: .6;
 }
-/* line 1238, sass/modules/_modules.scss */
+/* line 1250, sass/modules/_modules.scss */
 .sidr ul li a {
   font-size: 1.4em;
   font-weight: 700;
@@ -2196,43 +2221,45 @@ p.callout {
   text-decoration: none;
   padding-bottom: 2em;
   display: inline-block;
+  padding-left: 25%;
 }
-/* line 1247, sass/modules/_modules.scss */
+/* line 1260, sass/modules/_modules.scss */
 .sidr ul li .sub-menu {
   display: none;
   background-color: #89724E;
   margin: 0;
   padding: 0;
 }
-/* line 1252, sass/modules/_modules.scss */
+/* line 1265, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li {
   padding: 2em 0;
   margin: 0;
 }
-/* line 1256, sass/modules/_modules.scss */
+/* line 1269, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li:hover, .sidr ul li .sub-menu li:focus, .sidr ul li .sub-menu li:active {
   background-color: #B8A483;
 }
-/* line 1260, sass/modules/_modules.scss */
+/* line 1273, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li:hover a, .sidr ul li .sub-menu li:focus a, .sidr ul li .sub-menu li:active a {
   opacity: 1;
 }
-/* line 1265, sass/modules/_modules.scss */
+/* line 1278, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li.current-menu-item {
   background-color: #B8A483;
 }
-/* line 1267, sass/modules/_modules.scss */
+/* line 1280, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li.current-menu-item a {
   opacity: 1;
 }
-/* line 1269, sass/modules/_modules.scss */
+/* line 1282, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li a {
   padding: 0;
+  padding-left: 25%;
 }
 
 /* You can alter this CSS in order to give Smooth Div Scroll your own look'n'feel */
 /* Invisible left hotspot */
-/* line 1283, sass/modules/_modules.scss */
+/* line 1297, sass/modules/_modules.scss */
 div.scrollingHotSpotLeft {
   	/* The hotspots have a minimum width of 100 pixels and if there is room the will grow
       and occupy 15% of the scrollable area (30% combined). Adjust it to your own taste. */
@@ -2248,13 +2275,13 @@ div.scrollingHotSpotLeft {
 }
 
 /* Visible left hotspot */
-/* line 1303, sass/modules/_modules.scss */
+/* line 1317, sass/modules/_modules.scss */
 div.scrollingHotSpotLeftVisible {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Invisible right hotspot */
-/* line 1316, sass/modules/_modules.scss */
+/* line 1330, sass/modules/_modules.scss */
 div.scrollingHotSpotRight {
   min-width: 75px;
   width: 10%;
@@ -2265,7 +2292,7 @@ div.scrollingHotSpotRight {
 }
 
 /* Visible right hotspot */
-/* line 1331, sass/modules/_modules.scss */
+/* line 1345, sass/modules/_modules.scss */
 div.scrollingHotSpotRightVisible {
   background-color: rgba(255, 255, 255, 0.2);
   zoom: 1;
@@ -2274,7 +2301,7 @@ div.scrollingHotSpotRightVisible {
 /* The scroll wrapper is always the same width and height as the containing element (div).
    Overflow is hidden because you don't want to show all of the scrollable area.
 */
-/* line 1345, sass/modules/_modules.scss */
+/* line 1359, sass/modules/_modules.scss */
 div.scrollWrapper {
   position: relative;
   overflow: hidden;
@@ -2282,14 +2309,32 @@ div.scrollWrapper {
   height: 100%;
 }
 
-/* line 1353, sass/modules/_modules.scss */
+/* line 1367, sass/modules/_modules.scss */
 div.scrollableArea {
   position: relative;
   width: auto;
   height: 100%;
 }
 
-/* line 1361, sass/modules/_modules.scss */
+/* line 1376, sass/modules/_modules.scss */
+.mobile-show {
+  display: none;
+}
+@media (max-width: 750px) {
+  /* line 1376, sass/modules/_modules.scss */
+  .mobile-show {
+    display: block;
+  }
+}
+
+@media (max-width: 750px) {
+  /* line 1383, sass/modules/_modules.scss */
+  .mobile-hide {
+    display: none;
+  }
+}
+
+/* line 1390, sass/modules/_modules.scss */
 .sr-only {
   position: absolute;
   width: 1px;

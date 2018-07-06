@@ -41,6 +41,28 @@ $orange_a: rgba(226, 140, 97, .6);
 //Fonts
 $proxima: "proxima-nova",sans-serif;
 $source: 'Source Sans Pro', sans-serif;
+$gotham_black: 'gotham-black', sans-serif;
+$gotham_light: 'gotham-light', sans-serif;
+
+@font-face {
+    font-family: 'gotham-black';
+    src: url('fonts/Gotham-Black.ttf') format('ttf');
+         //url('fonts/Gotham-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gotham-light';
+    src: url('fonts/Gotham-Light.ttf') format('ttf');
+         //url('fonts/Gotham-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 
 @mixin source-sans{
 	font-family:$source;

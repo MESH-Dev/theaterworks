@@ -280,7 +280,7 @@ foreach ($unique as $instance){
 </div>
 <!-- </div>  --><!-- End Container -->
 <?php if (have_rows('e_gallery')): ?>
-<section class="cc-gallery pane" id="gallery" style="padding-bottom:8em;">
+<section class="cc-gallery pane scroller" id="gallery" style="padding-bottom:8em;">
   <div class="row">
     <div class="container">
      <h2 class="section-title">Gallery</h2>
@@ -293,7 +293,7 @@ foreach ($unique as $instance){
     $g_image_alt = $g_image['alt'];
   ?>
 
-  <div class="grid-item columns-4 no-pad" style="background-image:url('<?php echo $g_image_URL; ?>')">
+  <div class="grid-item columns-4 no-pad slider has-background" style="background-image:url('<?php echo $g_image_URL; ?>')">
   </div>
 <?php endwhile; ?>
 </div></div>

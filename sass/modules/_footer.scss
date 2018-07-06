@@ -10,6 +10,9 @@ footer{
 				display:inline-block;
 				list-style-type:none;
 				margin-right:2em;
+				@media($bp-smaller-than-tablet){
+					display:block;
+				}
 				a{
 					font-size:1.4em;
 					font-weight:700;
@@ -94,6 +97,9 @@ footer{
 		 color:$champagne;
 		 font-size:2em;
 		 padding:2em 0;
+		 @media($bp-smaller-than-tablet){
+		 	padding:1em 0 0 0;
+		 }
 				a{
 					color:$champagne;
 		 			//font-size:2em;

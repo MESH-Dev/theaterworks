@@ -4,6 +4,24 @@
 
 	<div class="container">
 		<div class="row">
+			<div class="columns-4 mobile-show">
+				<div class="footer-logo">
+					<img alt="Theaterworks Logo" aria-hidden="true" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_FullLogo@2x.png">
+				</div>
+				<div class="contact">
+					<p>
+						<a href="mailto:info@theaterworks.com">info@theaterworks.com</a><br>
+						860.527.7838<br>
+						<span class="times">
+							Monday - Friday<br>
+							10:00am - 5:00pm
+						</span>
+					</p>
+					<p class="subscription">
+						<a href="" target="_blank">Join our mailing list <!-- <img class="indicator lg" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow-Bronze.png"> --></a>
+					</p>
+				</div>
+			</div>
 			<div class="columns-8">
 				<nav class="footer-navigation">
 					<?php if(has_nav_menu('main_nav')){
@@ -39,7 +57,7 @@
 					<p>Copyright &copy; <?php echo date('Y'); ?> Theaterworks.  All Rights reserved
 					<p class="signature">Designed by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
 			</div><!-- End of Footer -->
-			<div class="columns-4">
+			<div class="columns-4 mobile-hide">
 				<div class="footer-logo">
 					<img alt="Theaterworks Logo" aria-hidden="true" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_FullLogo@2x.png">
 				</div>

@@ -1,6 +1,6 @@
 //Global
 
-*{font-family: 'Source Sans Pro', sans-serif;}
+//*{font-family: 'Source Sans Pro', sans-serif;}
 
 body{
 	background-color:$light_gray;
@@ -601,7 +601,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 			font-size:1.4em;
 		}
 
-		&.promo-slide{
+		&.slider{
 			//min-width:300px;
 			position:relative;
 			@media ($bp-larger-than-desktop){
@@ -628,8 +628,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 		bottom:0;
 		padding:2em;
 		color:$white;
+		h2{
+			line-height:1;
+		}
 		h3{
 			line-height:1;
+			padding-bottom:1rem;
 		}
 	}
 	
@@ -1017,6 +1021,12 @@ section[class*="navigation__month"]{
 
 .promo{
 	position:relative;
+
+	&:hover,
+	&:focus,
+	&:active{
+		cursor:pointer;
+	}
 }
 .promo{
 .slick-prev,
@@ -1089,7 +1099,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 
 	.sidr-inner{
 		//text-align:center;
-		padding-left:25%;
+		//padding-left:25%;
 	}
 
 	a{
@@ -1154,12 +1164,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 		ul.gateway{
 			padding:0;
 			margin:0;
+			padding-left:25%;
 			li{
 				list-style-type:none;
 				display:inline-block;
 				width:auto;
 				margin:0 1em;
 				padding-top:0;
+				//padding-left:25%;
 
 				&:hover,
 				&:focus,
@@ -1242,6 +1254,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 				text-decoration:none;
 				padding-bottom:2em;
 				display:inline-block;
+				padding-left:25%;
 			}
 
 			.sub-menu{
@@ -1268,6 +1281,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 					}
 					a{
 						padding:0;
+						padding-left:25%;
 					}
 				}
 			}
@@ -1355,6 +1369,21 @@ div.scrollableArea
 	position: relative;
 	width: auto;
 	height: 100%;
+}
+
+//Mobile specific styling
+
+.mobile-show{
+	display:none;
+	@media($bp-smaller-than-tablet){
+		display:block;
+	}
+}
+
+.mobile-hide{
+	@media($bp-smaller-than-tablet){
+		display:none;
+	}
 }
 
 //Accessibility

@@ -80,7 +80,7 @@ get_header();
 					</div>
 				</div>
 			</section>
-			<?php endwhile; endif; ?>
+			<?php endwhile; endif; wp_reset_postdata();?>
 
 			<?php echo get_template_part('/partials/promo-row'); ?>	
 
