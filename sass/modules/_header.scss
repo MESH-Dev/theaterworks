@@ -1,5 +1,15 @@
 header{
 	padding:2em 1em;
+
+	&.is-home{
+		.sidr-trigger,
+		.logo,
+		.gateway-nav{
+			display:inline-block;
+			vertical-align:top;
+			width:49%;
+		}
+	}
 	.logo{
 		text-align:center;
 		&:hover,

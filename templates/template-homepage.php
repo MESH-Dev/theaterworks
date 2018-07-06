@@ -20,7 +20,7 @@ get_header();
 					<div class="content">
 						<h2 class="title"><?php echo $we_statement; ?></h2>
 						<div class="logo-sub">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_FullLogo@2x.png">
+							<img alt="Theaterworks logo" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_FullLogo@2x.png">
 						</div>
 						
 						<div class="down">

@@ -69,20 +69,21 @@
 
 <body <?php body_class(); ?>>
  
-	<header class="site-header">
+	<header class="site-header <?php if(is_front_page()){ echo 'is-home'; }?>">
 		<div class="">
 
 			<div class=""> <!-- columns-12 -->
 				<div class="sidr-trigger">
 					<i class="fa fa-fw fa-4x fa-bars"></i>
 				</div>
+				<?php if (!is_front_page()) { ?>
 				<div class="logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<h1 class="site-title sr-only" ><?php bloginfo( 'name' ); ?></h1>
 						<img alt="Theaterworks logo" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_ShortLogo@2x.png">
 					</a>
 				</div>
-				
+				<?php } ?>	
 				<nav class="main-navigation" style="display:none;">
 					<div class="close">
 						Close <i class="fa fa-fw fa-times"></i>

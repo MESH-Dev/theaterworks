@@ -285,6 +285,7 @@ foreach ($unique as $instance){
     <div class="container">
      <h2 class="section-title">Gallery</h2>
    </div>
+   <div class="scroller">
   <?php while (have_rows('e_gallery')):the_row(); 
     $g_image = get_sub_field('g_image');
     
@@ -295,7 +296,7 @@ foreach ($unique as $instance){
   <div class="grid-item columns-4 no-pad" style="background-image:url('<?php echo $g_image_URL; ?>')">
   </div>
 <?php endwhile; ?>
-</div>
+</div></div>
 </section>
 <!-- </div> -->
 <?php endif; ?>

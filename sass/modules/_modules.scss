@@ -236,10 +236,11 @@ p.callout{
 				margin:0 auto;
 				color:$white;
 				font-size:3.6em;
-				fonnt-weight:700;
+				font-weight:700;
 				@include source-bold;
 				@media ($bp-smaller-than-mobile){
 					width:95%;
+					font-size:3.2em;
 				}
 			}
 		}
@@ -273,11 +274,19 @@ p.callout{
 
 .featured-event{
 	position:relative;
+
+	&.panel{
+		@media ($bp-smaller-than-mobile){
+			min-height:auto;
+			height:400px;
+		}
+	}
 	h2{
 		color:$tw_gold;
 		margin:0;
 		padding:0;
 		margin-bottom:1rem;
+		letter-spacing:-.001em;
 	}
 	.content{
 		position:absolute; 
@@ -286,8 +295,10 @@ p.callout{
 		color:$white;
 
 		@media ($bp-smaller-than-tablet){
-			bottom:6em;
-			right:6em;
+			bottom:2em;
+			right:initial;
+			width:100%;
+			padding:0 2em;
 		}
 	}
 
@@ -595,14 +606,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 			position:relative;
 			@media ($bp-larger-than-desktop){
 			//width:40vw;
-			width:600px;
+			width:500px;
 			}
 			@media ($bp-smaller-than-desktop) and ($bp-larger-than-mobile){
-				width:400px;
+				width:300px;
 
 			}
 			@media ($bp-smaller-than-mobile){
-				width:350px;
+				width:250px;
 			}
 			.callout{
 				margin-bottom:.75rem;
@@ -617,6 +628,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 		bottom:0;
 		padding:2em;
 		color:$white;
+		h3{
+			line-height:1;
+		}
 	}
 	
 }
@@ -647,9 +661,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 		height:400px;
 		@media ($bp-larger-than-tablet){
 			display:none;
+			visibility:hidden;
 		}
 		@media ($bp-smaller-than-tablet){
 			display:block;
+			visibility:visbile;
 		}
 	}
 
@@ -931,6 +947,7 @@ section[class*="navigation__month"]{
 
 		img{
 			display:none;
+			visibility:hidden;
 		}
 
 		&:hover,
@@ -1059,7 +1076,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 // }
 
 .sidr{
-	background:$light-gray;
+	background:$dark_gray;
 	padding:4em 0;
 
 	// @media($bp-larger-than-tablet){

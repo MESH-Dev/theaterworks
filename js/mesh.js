@@ -315,7 +315,7 @@ $('.close').click(
     //console.log($href);
 
     //Add a 'button' to just after the link in any top level li that has children
-    $('<span class="open"><img src="'+$theme+'/img/Theaterworks_Icons_Arrow-Bronze.png"> </span>').insertAfter($topLink);
+    $('<span class="open"><img src="'+$theme+'/img/Theaterworks_Icons_Arrow-Bronze.png" alt="Click here to see more links"> </span>').insertAfter($topLink);
     
     //Now we get all of the peices together
 

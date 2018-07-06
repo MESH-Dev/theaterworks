@@ -31,9 +31,9 @@
 				</nav>
 				<nav class="social-nav">
 					<ul>
-						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+						<li><a href="https://www.facebook.com/TheaterWorksHartford/" target="_blank"><span class="sr-only">Find us on Facebook</span><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="https://twitter.com/TheaterWorksCT/" target="_blank"><span class="sr-only">Tweet us</span><i class="fab fa-twitter"></i></a></li>
+						<li><a href="https://www.instagram.com/theaterworksct/" target="_blank"><span class="sr-only">Follow us on Instagram</span><i class="fab fa-instagram"></i></a></li>
 					</ul>
 				</nav>
 					<p>Copyright &copy; <?php echo date('Y'); ?> Theaterworks.  All Rights reserved
