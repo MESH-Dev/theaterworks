@@ -18,7 +18,7 @@ $cover_image = get_field('cover_image');
 // Example using srcset for responsive images.
 //echo '<img class="img-responsive" src="'.$cover_image['url'].'" alt="" srcset="'.$cover_image['sizes']['medium'].' 300w, '.$cover_image['sizes']['large'].' 640w">';
 ?>
-<div class="banner" style="background-image:url('<?php echo $cover_image['url']; ?>'); background-repeat:no-repeat; background-size: cover; height:80vh;"> </div>
+<div class="banner has-background" style="background-image:url('<?php echo $cover_image['url']; ?>');height:80vh;"> </div>
 <div class="row">
 	<div class="title-row top">
     <div class="container">

@@ -1804,6 +1804,7 @@ p.callout {
 @media (max-width: 750px) {
   /* line 752, sass/modules/_modules.scss */
   .dark {
+    background-color: rgba(28, 28, 28, 0.9);
     height: 400px;
   }
 }
@@ -2075,14 +2076,14 @@ p.callout {
 }
 /* line 1090, sass/modules/_modules.scss */
 .sidr .sidr-inner {
-  text-align: center;
+  padding-left: 25%;
 }
-/* line 1094, sass/modules/_modules.scss */
+/* line 1095, sass/modules/_modules.scss */
 .sidr a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 1099, sass/modules/_modules.scss */
+/* line 1100, sass/modules/_modules.scss */
 .sidr .close {
   font-size: 2em;
   color: #FFFFFF;
@@ -2090,20 +2091,23 @@ p.callout {
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 1em;
+  position: absolute;
+  right: 1em;
+  top: 1em;
 }
-/* line 1107, sass/modules/_modules.scss */
+/* line 1111, sass/modules/_modules.scss */
 .sidr .close:hover, .sidr .close:active, .sidr .close:focus {
   color: #B8A483;
 }
-/* line 1113, sass/modules/_modules.scss */
+/* line 1117, sass/modules/_modules.scss */
 .sidr .close i {
   color: #FFFFFF;
 }
-/* line 1115, sass/modules/_modules.scss */
+/* line 1119, sass/modules/_modules.scss */
 .sidr .close i:hover, .sidr .close i:active, .sidr .close i:focus {
   color: #1C1C1C;
 }
-/* line 1123, sass/modules/_modules.scss */
+/* line 1127, sass/modules/_modules.scss */
 .sidr .open {
   position: absolute;
   margin: 0 5px;
@@ -2115,20 +2119,20 @@ p.callout {
   font-size: 1.4em;
   margin: 0 5px;
 }
-/* line 1137, sass/modules/_modules.scss */
+/* line 1141, sass/modules/_modules.scss */
 .sidr .open img {
   width: 15px;
 }
-/* line 1140, sass/modules/_modules.scss */
+/* line 1144, sass/modules/_modules.scss */
 .sidr .open:hover, .sidr .open:active, .sidr .open:focus {
   color: #FFFFFF;
 }
-/* line 1150, sass/modules/_modules.scss */
+/* line 1154, sass/modules/_modules.scss */
 .sidr ul.gateway {
   padding: 0;
   margin: 0;
 }
-/* line 1153, sass/modules/_modules.scss */
+/* line 1157, sass/modules/_modules.scss */
 .sidr ul.gateway li {
   list-style-type: none;
   display: inline-block;
@@ -2136,38 +2140,38 @@ p.callout {
   margin: 0 1em;
   padding-top: 0;
 }
-/* line 1160, sass/modules/_modules.scss */
+/* line 1164, sass/modules/_modules.scss */
 .sidr ul.gateway li:hover, .sidr ul.gateway li:focus, .sidr ul.gateway li:active {
   background-color: transparent;
 }
-/* line 1166, sass/modules/_modules.scss */
+/* line 1170, sass/modules/_modules.scss */
 .sidr ul.gateway li a {
   padding: 0;
 }
-/* line 1168, sass/modules/_modules.scss */
+/* line 1172, sass/modules/_modules.scss */
 .sidr ul.gateway li a img {
   width: 30px;
 }
-/* line 1172, sass/modules/_modules.scss */
+/* line 1176, sass/modules/_modules.scss */
 .sidr ul.gateway li a:active, .sidr ul.gateway li a:focus, .sidr ul.gateway li a:hover {
   opacity: .6;
 }
-/* line 1192, sass/modules/_modules.scss */
+/* line 1196, sass/modules/_modules.scss */
 .sidr .ticket-cal {
   margin: 2em 0;
   color: #FFFFFF;
   display: inline-block;
 }
-/* line 1197, sass/modules/_modules.scss */
+/* line 1201, sass/modules/_modules.scss */
 .sidr .ticket-cal:active, .sidr .ticket-cal:focus, .sidr .ticket-cal:hover {
   color: #B8A483;
 }
-/* line 1207, sass/modules/_modules.scss */
+/* line 1211, sass/modules/_modules.scss */
 .sidr ul {
   margin: 0;
   padding: 0;
 }
-/* line 1212, sass/modules/_modules.scss */
+/* line 1216, sass/modules/_modules.scss */
 .sidr ul li {
   list-style-type: none;
   width: 100%;
@@ -2176,15 +2180,15 @@ p.callout {
   margin: 0;
   line-height: 1;
 }
-/* line 1225, sass/modules/_modules.scss */
+/* line 1229, sass/modules/_modules.scss */
 .sidr ul li:active > a, .sidr ul li:focus > a, .sidr ul li:hover > a {
   opacity: .6;
 }
-/* line 1231, sass/modules/_modules.scss */
+/* line 1235, sass/modules/_modules.scss */
 .sidr ul li.current-menu-item > a, .sidr ul li.current-menu-parent > a {
   opacity: .6;
 }
-/* line 1234, sass/modules/_modules.scss */
+/* line 1238, sass/modules/_modules.scss */
 .sidr ul li a {
   font-size: 1.4em;
   font-weight: 700;
@@ -2193,42 +2197,42 @@ p.callout {
   padding-bottom: 2em;
   display: inline-block;
 }
-/* line 1243, sass/modules/_modules.scss */
+/* line 1247, sass/modules/_modules.scss */
 .sidr ul li .sub-menu {
   display: none;
   background-color: #89724E;
   margin: 0;
   padding: 0;
 }
-/* line 1248, sass/modules/_modules.scss */
+/* line 1252, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li {
   padding: 2em 0;
   margin: 0;
 }
-/* line 1252, sass/modules/_modules.scss */
+/* line 1256, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li:hover, .sidr ul li .sub-menu li:focus, .sidr ul li .sub-menu li:active {
   background-color: #B8A483;
 }
-/* line 1256, sass/modules/_modules.scss */
+/* line 1260, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li:hover a, .sidr ul li .sub-menu li:focus a, .sidr ul li .sub-menu li:active a {
   opacity: 1;
 }
-/* line 1261, sass/modules/_modules.scss */
+/* line 1265, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li.current-menu-item {
   background-color: #B8A483;
 }
-/* line 1263, sass/modules/_modules.scss */
+/* line 1267, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li.current-menu-item a {
   opacity: 1;
 }
-/* line 1265, sass/modules/_modules.scss */
+/* line 1269, sass/modules/_modules.scss */
 .sidr ul li .sub-menu li a {
   padding: 0;
 }
 
 /* You can alter this CSS in order to give Smooth Div Scroll your own look'n'feel */
 /* Invisible left hotspot */
-/* line 1279, sass/modules/_modules.scss */
+/* line 1283, sass/modules/_modules.scss */
 div.scrollingHotSpotLeft {
   	/* The hotspots have a minimum width of 100 pixels and if there is room the will grow
       and occupy 15% of the scrollable area (30% combined). Adjust it to your own taste. */
@@ -2244,13 +2248,13 @@ div.scrollingHotSpotLeft {
 }
 
 /* Visible left hotspot */
-/* line 1299, sass/modules/_modules.scss */
+/* line 1303, sass/modules/_modules.scss */
 div.scrollingHotSpotLeftVisible {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Invisible right hotspot */
-/* line 1312, sass/modules/_modules.scss */
+/* line 1316, sass/modules/_modules.scss */
 div.scrollingHotSpotRight {
   min-width: 75px;
   width: 10%;
@@ -2261,7 +2265,7 @@ div.scrollingHotSpotRight {
 }
 
 /* Visible right hotspot */
-/* line 1327, sass/modules/_modules.scss */
+/* line 1331, sass/modules/_modules.scss */
 div.scrollingHotSpotRightVisible {
   background-color: rgba(255, 255, 255, 0.2);
   zoom: 1;
@@ -2270,7 +2274,7 @@ div.scrollingHotSpotRightVisible {
 /* The scroll wrapper is always the same width and height as the containing element (div).
    Overflow is hidden because you don't want to show all of the scrollable area.
 */
-/* line 1341, sass/modules/_modules.scss */
+/* line 1345, sass/modules/_modules.scss */
 div.scrollWrapper {
   position: relative;
   overflow: hidden;
@@ -2278,14 +2282,14 @@ div.scrollWrapper {
   height: 100%;
 }
 
-/* line 1349, sass/modules/_modules.scss */
+/* line 1353, sass/modules/_modules.scss */
 div.scrollableArea {
   position: relative;
   width: auto;
   height: 100%;
 }
 
-/* line 1357, sass/modules/_modules.scss */
+/* line 1361, sass/modules/_modules.scss */
 .sr-only {
   position: absolute;
   width: 1px;

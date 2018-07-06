@@ -4,13 +4,14 @@
 		// Pulls curated posts via ACF post objects
 
 	$rows = get_field('cp_item');
-	//var_dump($rows);
+	var_dump($rows);
 		if(have_rows('cp_item')):
 			$ctr=0;
 			while(have_rows('cp_item')):the_row();
 				
-				$cp_callout = get_sub_field('callout_text');
+				//$cp_callout = get_sub_field('callout_text');
 				$event = get_sub_field('event');
+				var_dump($event);
 
 				// echo '<pre>';
 				//print_r( $event  );

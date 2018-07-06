@@ -86,7 +86,7 @@
 				<?php } ?>	
 				<nav class="main-navigation" style="display:none;">
 					<div class="close">
-						Close <i class="fa fa-fw fa-times"></i>
+						<i class="fa fa-fw fa-times"></i>
 					</div>
 					<?php if(has_nav_menu('main_nav')){
 								$defaults = array(

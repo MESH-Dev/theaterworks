@@ -754,7 +754,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 	height:100%;
 
 	@media ($bp-smaller-than-tablet){
-		//background-color:$black;
+		background-color:$black_adark;
 		height:400px;
 	}
 }
@@ -1088,7 +1088,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 	// }
 
 	.sidr-inner{
-		text-align:center;
+		//text-align:center;
+		padding-left:25%;
 	}
 
 	a{
@@ -1103,6 +1104,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 		text-transform:uppercase;
 		font-weight:700;
 		margin-bottom:1em;
+		position:absolute;
+		right:1em;
+		top:1em;
 
 			&:hover,
 			&:active,

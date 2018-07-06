@@ -55,7 +55,7 @@ echo get_template_part('/partials/banner');
 							<div class="gradient black" aria-hidden="true"></div>
 							<div class="footer">
 								<p class="callout"><?php echo $callout; ?></p>
-								<h2><?php echo $block_title; ?> <?php echo $ctr; ?></h2>
+								<h2><?php echo $block_title; ?></h2>
 								<?php if($link){ ?>
 						<a class="more-link" href="<?php echo $link; ?>" <?php echo $target; ?>> More </a>
 						<?php } ?>
