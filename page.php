@@ -38,7 +38,7 @@ $banner_img_URL = $banner_img['sizes']['background-fullscreen'];
 			  
 			<?php 
 				$image = get_field('image_column');
-				$image_url = $image['sizes']['large'];
+				$image_url = $image['sizes']['square'];
 				$imageAlt = $image['alt'];
 				if($image != ''){
 			 ?>
