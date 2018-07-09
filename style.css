@@ -1131,7 +1131,7 @@ img.indicator.lg {
 
 /* line 84, sass/modules/_modules.scss */
 .promos {
-  margin-bottom: 8em;
+  paddding-bottom: 8em;
 }
 
 /* line 88, sass/modules/_modules.scss */
@@ -1480,7 +1480,7 @@ p.callout {
 
 /* line 406, sass/modules/_modules.scss */
 .event__description p {
-  font-size: 1.29em;
+  font-size: 1.8em;
 }
 
 /* line 411, sass/modules/_modules.scss */

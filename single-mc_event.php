@@ -317,7 +317,7 @@ $unique = array_unique($this_perfs, SORT_REGULAR);
 </section>
 <!-- </div> -->
 <?php endif; ?>
-<div class="promos" id="related" style="padding-bottom:8em;">
+<div class="promos" id="related">
 <div class="title-row">
     <div class="container">
       <div class="title">

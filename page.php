@@ -4,20 +4,32 @@
 
 $banner_img = get_field('banner_background');
 $banner_img_URL = $banner_img['sizes']['background-fullscreen'];
-?>
 
-<div class="banner" style="background-image:url('<?php echo $banner_img_URL; ?>'); background-repeat:no-repeat; background-size: cover; height:80vh;"> </div>
-<div class="row">
-	<div class="title-row top">
-    <div class="container">
-  		<div class="title">
-  			<h1 class="event-title">
-  			  <?php the_title(); ?>
-  			</h1>
-  		</div>
-    </div>
+
+echo get_template_part('/partials/banner');?>
+<?php 
+		$title = get_field('title_bar_text');
+
+		$empty = '';
+
+		if($title == ''){
+			$empty = 'empty';
+		}
+
+	?>
+	<div class="title-row <?php echo $empty;?>">
+	    <div class="container">
+	    	<div class="row">
+		  		<div class="title">
+		  			<?php if($title != ''){ ?>
+		  			<h2 class="event-title">
+		  			  <?php echo $title;  ?>
+		  			</h2>
+		  			<?php } ?>
+		  		</div>
+	  		</div>
+		</div>
 	</div>
-</div>
 <div class="container page-content">
 
 	<section class="pane">
