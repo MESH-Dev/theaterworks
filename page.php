@@ -45,17 +45,20 @@ echo get_template_part('/partials/banner');?>
 		  			</div>
 				</div>
 			</div> <!-- end columns-8 -->
-
-			<div class="columns-4" >
-			  
+				
 			<?php 
 				$image = get_field('image_column');
 				$image_url = $image['sizes']['square'];
+				//var_dump($image_url);
 				$imageAlt = $image['alt'];
-				if($image != ''){
+				//if($image != ''){
 			 ?>
-			 <img alt="<?php echo $imageAlt; ?>" src='<?php echo $image_url; ?>' >
-			<?php } ?>
+
+			<div class="columns-4 grid-item has-background" style="background-image:<?php echo $image_url; ?>">
+			  
+			
+			 <!-- <img alt="<?php //echo $imageAlt; ?>" src='<?php //echo $image_url; ?>' > -->
+			<?php //} ?>
 			</div>
 
 		</div>
@@ -71,7 +74,7 @@ echo get_template_part('/partials/banner');?>
   <?php while (have_rows('e_gallery')):the_row(); 
     $g_image = get_sub_field('g_image');
     //var_dump($g_image);
-    $g_image_URL = $g_image['sizes']['square'];
+    $g_image_URL = $g_image['sizes']['large'];
     $g_image_alt = $g_image['alt'];
   ?>
 
