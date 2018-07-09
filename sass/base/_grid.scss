@@ -54,6 +54,8 @@ $max-width: 1200px;
 .columns-11 { width: grid-column-width(11); }
 .columns-12 { width: grid-column-width(12); }
 
+.columns-1-5{width:20%;}
+
 .offset-by-1 { margin-left: grid-column-width(1); }
 .offset-by-2 { margin-left: grid-column-width(2); }
 .offset-by-3 { margin-left: grid-column-width(3); }

@@ -257,19 +257,19 @@ $('.separator .trigger').each(function(){
 //   $('.promo, .events-slide, .hz-shows').slick('slickPlay');
 // });
 
-  $('.events-slide').slick({
-    accessibility: true,
-    autoplay: false,
-    //swipeToSlide: true,
-    slidesToShow: 1,
-  	slidesToScroll: 1,
-  	variableWidth: true,
-    appendArrows: $('.events-nav'),
- 	  arrows: true,
-    draggable: true,
-    //prevArrow: '<button type="button" class="slick-prev"><span class="ind">&lang;</span><span>Previous</span></button>',
-    //nextArrow: '<button type="button" class="slick-next"><span>Next</span><span class="ind">&rang;</span></button>'
-  });
+  // $('.events-slide').slick({
+  //   accessibility: true,
+  //   autoplay: false,
+  //   //swipeToSlide: true,
+  //   slidesToShow: 1,
+  // 	slidesToScroll: 1,
+  // 	variableWidth: true,
+  //   appendArrows: $('.events-nav'),
+ 	//   arrows: true,
+  //   draggable: true,
+  //   //prevArrow: '<button type="button" class="slick-prev"><span class="ind">&lang;</span><span>Previous</span></button>',
+  //   //nextArrow: '<button type="button" class="slick-next"><span>Next</span><span class="ind">&rang;</span></button>'
+  // });
 
 // $('.hz-shows').slick({
 //     accessibility: true,

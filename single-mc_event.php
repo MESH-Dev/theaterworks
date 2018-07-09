@@ -285,7 +285,7 @@ $unique = array_unique($this_perfs, SORT_REGULAR);
         $cm_title = get_sub_field('cast_member_title');
         $cm_name = get_sub_field('cast_member_name');
   ?>
-  <div class="columns-3 has-background">
+  <div class="columns-1-5 has-background">
     <img alt="<?php echo $image_alt; ?>" class="bio-pic" src="<?php echo $image_url; ?>">
     <h2 class="bio-title"><?php echo $cm_title; ?></h2>
     <h3 class="bio-name"><?php echo $cm_name; ?></h3>

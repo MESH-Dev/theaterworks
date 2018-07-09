@@ -81,6 +81,10 @@ img.indicator{
 	
 }
 
+.promos{
+	margin-bottom:8em;
+}
+
 .page-title,
 .page-callout{
 	color:$white;
@@ -160,7 +164,15 @@ img.indicator{
 	color:$white;
 	font-size:1.4em;
 	font-weight:700;
+	padding-right:15px;
+	position:relative;
 	text-transform:uppercase;
+	background-image:url('img/Theaterworks_Icons_Arrow-right.png');
+	background-repeat:no-repeat;
+	background-size:6px;
+	background-position: right center;
+	display:block;
+	margin-top:.75em;
 	&:hover,
 	&:active,
 	&:focus{
@@ -390,6 +402,12 @@ p.callout{
 	padding:0;
 }
 
+.event__description{
+	p{
+		font-size:1.29em;
+	}
+}
+
 .section-title{
 	text-transform:uppercase;
 	font-size:1.6em;
@@ -590,6 +608,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 			padding:0;
 			//padding-bottom:1rem;
 			margin:0;
+			font-size:3.6em;
 		}
 		
 		
@@ -695,11 +714,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 	.content{
 		float:right;
 		@media ($bp-larger-than-desktop){
-			width:40%;
+			width:33.333%;
 
 		}
 		
-		@media ($bp-smaller-than-desktop and $bp-larger-than-tablet){
+		@media ($bp-smaller-than-desktop) and (min-width:900px){
+			width:40%;
+		}
+	
+		@media (max-width:900px) and ($bp-larger-than-tablet){
 			width:50%;
 		}
 
@@ -1071,6 +1094,10 @@ section[class*="navigation__month"]{
 		opacity:.6;
 		text-decoration:none !important;
 	}
+}
+
+.xdgp-calendar-mini main.month .day{
+	color:$tw_gold;
 }
 
 //Slick Sliders
