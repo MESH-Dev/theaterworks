@@ -71,7 +71,7 @@ echo get_template_part('/partials/banner');?>
   <?php while (have_rows('e_gallery')):the_row(); 
     $g_image = get_sub_field('g_image');
     //var_dump($g_image);
-    $g_image_URL = $g_image['sizes']['large'];
+    $g_image_URL = $g_image['sizes']['square'];
     $g_image_alt = $g_image['alt'];
   ?>
 
