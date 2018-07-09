@@ -54,7 +54,7 @@ echo get_template_part('/partials/banner');?>
 				//if($image != ''){
 			 ?>
 
-			<div class="columns-4 grid-item has-background" style="background-image:<?php echo $image_url; ?>">
+			<div class="columns-4 grid-item has-background" style="background-image:url('<?php echo $image_url; ?>')">
 			  
 			
 			 <!-- <img alt="<?php //echo $imageAlt; ?>" src='<?php //echo $image_url; ?>' > -->
