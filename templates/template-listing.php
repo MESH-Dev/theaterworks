@@ -30,7 +30,7 @@ echo get_template_part('/partials/banner');?>
 		<div class="season_wrap">
 		<div class="separator">
 			<div class="container">
-				<h2><?php echo $season->name; ?> <?php //echo $season_cnt; ?></h2>
+				<h2 class="season-title"><?php echo $season->name; ?> <?php //echo $season_cnt; ?></h2>
 				<?php if($season_cnt > 1){ ?>
 					<div class="trigger">
 						<img alt="Click here to see shows" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png">

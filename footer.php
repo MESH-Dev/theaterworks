@@ -11,7 +11,7 @@
 				<div class="contact">
 					<p>
 						<a href="mailto:info@theaterworks.com">info@theaterworks.com</a><br>
-						860.527.7838<br>
+						<a href="tel:860.527.7838">860.527.7838</a><br>
 						<span class="times">
 							Monday - Friday<br>
 							10:00am - 5:00pm
@@ -64,7 +64,7 @@
 				<div class="contact">
 					<p>
 						<a href="mailto:info@theaterworks.com">info@theaterworks.com</a><br>
-						860.527.7838<br>
+						<a href="tel:860.527.7838">860.527.7838</a><br>
 						<span class="times">
 							Monday - Friday<br>
 							10:00am - 5:00pm

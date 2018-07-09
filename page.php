@@ -11,9 +11,9 @@ $banner_img_URL = $banner_img['sizes']['background-fullscreen'];
 	<div class="title-row top">
     <div class="container">
   		<div class="title">
-  			<h2 class="event-title">
+  			<h1 class="event-title">
   			  <?php the_title(); ?>
-  			</h2>
+  			</h1>
   		</div>
     </div>
 	</div>
@@ -36,8 +36,14 @@ $banner_img_URL = $banner_img['sizes']['background-fullscreen'];
 
 			<div class="columns-4" >
 			  
-			<?php $put_something_here; ?>
-
+			<?php 
+				$image = get_field('image_column');
+				$image_url = $image['sizes']['large'];
+				$imageAlt = $image['alt'];
+				if($image != ''){
+			 ?>
+			 <img alt="<?php echo $imageAlt; ?>" src='<?php echo $image_url; ?>' >
+			<?php } ?>
 			</div>
 
 		</div>
@@ -49,6 +55,7 @@ $banner_img_URL = $banner_img['sizes']['background-fullscreen'];
     <div class="container">
      <h2 class="section-title">Gallery</h2>
    </div>
+   <div class="scroller">
   <?php while (have_rows('e_gallery')):the_row(); 
     $g_image = get_sub_field('g_image');
     //var_dump($g_image);
@@ -59,6 +66,7 @@ $banner_img_URL = $banner_img['sizes']['background-fullscreen'];
   <div class="grid-item columns-4 no-pad slider has-background" style="background-image:url('<?php echo $g_image_URL; ?>')">
   </div>
 <?php endwhile; ?>
+</div></div>
 </section>
 </div>
 <?php endif; ?>

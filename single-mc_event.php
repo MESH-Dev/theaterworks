@@ -23,9 +23,9 @@ $cover_image = get_field('cover_image');
 	<div class="title-row top">
     <div class="container">
   		<div class="title">
-  			<h2 class="event-title">
+  			<h1 class="event-title">
   			  <?php the_title();  ?>
-  			</h2>
+  			</h1>
   		</div>
       <nav class="page-nav">
         <?php 
@@ -123,13 +123,20 @@ echo (!empty($post->running_time)) ? '<p class="event__running-time">Running Tim
  
 echo (!empty($post->disclaimer)) ? '<p class="event__disclaimer">'.$post->disclaimer.'</p>' : '';
  
+ $quote = get_field('quote_text');
+ $quote_attr = get_field('quote_attribution');
  
 ?>
 
 	<div class="event__description" >
 	  <?php the_field('long_desc') ?>
 	</div>
-</div> <!-- end columns-8 -->
+  <?php if ($quote != '') { ?>
+  <div class="event-quote callout">
+  <span class="quote">&ldquo;<?php echo $quote; ?>&rdquo;</span> <span class="attr">(<?php echo $quote_attr; ?>)</span>
+  </div>
+  <?php } ?>
+</div> <!-- end columns-7 -->
 <div class="columns-4 offset-by-1" >
   <h3>Upcoming Times</h3>
   <div class="events-slide">
@@ -137,7 +144,9 @@ echo (!empty($post->disclaimer)) ? '<p class="event__disclaimer">'.$post->discla
 
 // This array is not in use at the moment, but it is the built in functionality provided by 
 // the groundplan plugin  
-if ($post->status != 'closed') {
+
+//echo ($post->status);
+//if ($post->status != 'closed') {
   //echo '<h3>Upcoming Times</h3>';
   // Display a "single" style calendar for only this show.
   // For full configuration options, refer to https://nickxd.atlassian.net/wiki/x/IYBpAg
@@ -152,7 +161,7 @@ if ($post->status != 'closed') {
     'show_all' => false,
     //'event_ids' => $event_id,
     //'event_post' => true,
-    'type' => 'agenda', // 'single', 'all', or 'agenda'
+    'type' => 'mini', // 'single', 'all', or 'agenda'
     //'performances' => $post->performances[0]->ticket_url,
     //'pad' => false,
    	//'paginate_by' => 'month',
@@ -171,9 +180,9 @@ if ($post->status != 'closed') {
   $calendar = new XDGPCalendar($args);
   //var_dump($calendar);
   //if($calendar != ''){
-  	//echo $calendar->xdgp_display_calendar();
+  	echo $calendar->xdgp_display_calendar();
   //}
-}
+//}
 // Create a performance array to hold our performance instances from the immediately proceeding
 // foreach loop
 $this_perfs = array();
@@ -216,21 +225,25 @@ foreach($post->performances as $performance){
 }
 $unique = array_unique($this_perfs, SORT_REGULAR);
 //var_dump($unique);
+//var_dump($unique);
 //$unique = array();
 //array_push ($unique,array_unique($this_perfs));
 //var_dump($unique);
 // var_dump($unique);
-foreach ($unique as $instance){
-  //Get the ticket
-	$message = $instance['ticket_message'];
-	$today = date('F j, Y');
-	$today_STT = strtotime($today);
-	$p_date= strtotime($instance['performance_date']);
+//if($unique !=""){
 
-	if($p_date > $today_STT && $message != 'Sold Out'){
+//Prints out each event by day(s)
+// foreach ($unique as $instance){
+//   //Get the ticket
+// 	$message = $instance['ticket_message'];
+// 	$today = date('F j, Y');
+// 	$today_STT = strtotime($today);
+// 	$p_date= strtotime($instance['performance_date']);
+
+// 	if($p_date > $today_STT && $message != 'Sold Out'){
  
 	?>		
-	<div class="event">
+	<!-- <div class="event">
     <span class="instance-info horizontal">
        <span class="date"><?php echo $instance['performance_date']; ?></span><br> 
       <span class="time"><?php echo $instance['performance_time']; ?></span> <?php //echo $instance['ticket_message']; ?>
@@ -238,11 +251,15 @@ foreach ($unique as $instance){
     <span class="horizontal">
       <a class="btn btn-primary" href="<?php echo $instance['ticket_url']; ?>" target="_blank">Buy Tickets</a></br>
     </span>
-  </div>
+  </div> -->
  
 <?php //} 
-}
-}
+//}else{?>
+ <!--  <div class="event">
+    <p>There are no current times for this event! </p>
+  </div> -->
+<?php 
+//}}
 //var_dump($this_perfs);
 
 ?>

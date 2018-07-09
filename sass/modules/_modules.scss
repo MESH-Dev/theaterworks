@@ -195,8 +195,15 @@ img.indicator{
 
 	h2{
 		padding:2rem 0;
+		font-size:3.6em;
+		letter-spacing:-1;
 	}
 	
+}
+
+.season-title{
+	font-size:3.6em;
+	letter-spacing:-1px;
 }
 
 .curtain{
@@ -212,6 +219,11 @@ p.callout{
 	color:$white;
 	padding:0;
 	margin:0;
+	margin-bottom:.75rem;
+	font-size:1.4em;
+	text-transform:uppercase;
+	font-weight:300;
+	font-style:normal;
 }
 
 //Homepage
@@ -237,6 +249,7 @@ p.callout{
 				color:$white;
 				font-size:3.6em;
 				font-weight:700;
+				letter-spacing:-1px;
 				@include source-bold;
 				@media ($bp-smaller-than-mobile){
 					width:95%;
@@ -320,6 +333,12 @@ p.callout{
 .callout{
 	font-size:3.6em;
 	color:$tw_gold;
+	font-style:italic;
+	font-weight:700;
+}
+
+.attr{
+	color:$black;
 }
 
 //Single Event Page
@@ -404,7 +423,7 @@ p.callout{
 
 .events-slide{
 
-	overflow:hidden;
+	//overflow:hidden;
 
 	@media ($bp-smaller-than-tablet){
 			width:95vw;
@@ -766,6 +785,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 	color:white;
 	padding:2em;
 
+	.callout{
+		margin-bottom:.75rem;
+		font-size:1.4em;
+		text-transform:uppercase;
+		font-weight:300;
+	}
+
 }
 
 //Calendar
@@ -1014,6 +1040,36 @@ section[class*="navigation__month"]{
 			background-color: $tw_gold !important;
 			color:$light_gray !important;
 		}
+	}
+}
+
+.xdgp-calendar-mini header nav.xdgp-calendar-mini__navigation{
+	font-size:1.8em;
+	text-transform:uppercase;
+	font-weight:700;
+	color:$tw_gold;
+}
+
+.xdgp-calendar-mini header nav.xdgp-calendar-mini__navigation .navigation__month-next a .next__arrow:before,
+.xdgp-calendar-mini header nav.xdgp-calendar-mini__navigation .navigation__month-previous a .previous__arrow:before{
+	color:$tw_gold !important;
+
+	&:hover,
+	&:focus,
+	&:active{
+		opacity:.6;
+		text-decoraton:none !important;
+	}
+}
+
+.xdgp-calendar-mini header nav.xdgp-calendar-mini__navigation .navigation__month-next a,
+.xdgp-calendar-mini header nav.xdgp-calendar-mini__navigation .navigation__month-previous a{
+
+	&:hover,
+	&:focus,
+	&:active{
+		opacity:.6;
+		text-decoration:none !important;
 	}
 }
 
