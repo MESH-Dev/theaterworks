@@ -30,7 +30,7 @@ echo get_template_part('/partials/banner');?>
 	  		</div>
 		</div>
 	</div>
-<div class="container page-content">
+<div class="container page-content text">
 
 	<section class="pane">
 		<div class="row">
