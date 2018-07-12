@@ -19,11 +19,12 @@ get_header();
 				<div class="wrapper">
 					<div class="content">
 						<h2 class="title"><?php echo $we_statement; ?></h2>
-						<div class="logo-sub">
-							<img alt="Theaterworks logo" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_FullLogo@2x.png">
-						</div>
+						
 						
 						<div class="down">
+							<div class="logo-sub">
+							<img alt="Theaterworks logo" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_FullLogo@2x.png">
+						</div>
 							<div class="cta">
 								<p>See what's on</p>
 							</div>

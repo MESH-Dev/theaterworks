@@ -5,11 +5,14 @@ footer{
 
 	.footer-navigation{
 		ul{
-			padding-top:2em;
+			padding-top:3em;
+			@media($bp-smaller-than-tablet){
+				padding-top:2em;
+			}
 			li{
 				display:inline-block;
 				list-style-type:none;
-				margin-right:2em;
+				margin-right:4em;
 				@media($bp-smaller-than-tablet){
 					display:block;
 				}

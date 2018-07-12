@@ -30,7 +30,7 @@ echo get_template_part('/partials/banner');?>
 		<div class="season_wrap">
 		<div class="separator">
 			<div class="container">
-				<h2 class="season-title"><?php echo $season->name; ?> <?php //echo $season_cnt; ?></h2>
+				<h2 class="season-title"><?php echo $season->name; ?> Season<?php //echo $season_cnt; ?></h2>
 				<?php if($season_cnt > 1){ ?>
 					<div class="trigger">
 						<img alt="Click here to see shows" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png">
@@ -91,17 +91,28 @@ echo get_template_part('/partials/banner');?>
 				    $buy_button_html = '<a href="'.$post->ticket_url.'" class="btn">Tickets</a>';
 				  } else if ($post->status == 'sold-out'){
 				    $buy_button_html =  '<a class="btn ">'.$post->sold_out_message.'</a>';
+				  } else if ($post->status == 'upcoming'){
+				  	$buy_button_html= '<a href="'. get_the_permalink($post->ID) .'">Reserve your seat</a>';
 				  }else{
 				  	$buy_button_html= '<a href="'. get_the_permalink($post->ID) .'#gallery">View the gallery</a>';
 				  }
 			$callout = get_field('callout', $post->ID);
+			$now_playing = get_field('now_playing', $post->ID);
         ?>
  	
 
     <article <?php if($season_cnt == 1){post_class('summary-mc_event first-row');}else{echo 'class="columns-4 hz-show grid-item"'; } ?> style="background-image:url(<?php echo $el_image_url; ?>);" >
-      
+      		
+      		<?php if ($now_playing == true){?>
+				<img class='playing' alt="Now Playing" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_NowPlaying.png">
+			<?php } ?>
+
       		<?php if($season_cnt == 1){ ?>
-          		<div class="show-img" style="background-image:url('<?php echo $alt_img_url; ?>');" ></div>
+          		<div class="show-img" style="background-image:url('<?php echo $alt_img_url; ?>');" >
+					<?php if ($now_playing == true){?>
+					<!-- <img alt="Now Playing" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_NowPlaying.png"> -->
+					<?php } ?>
+          		</div>
           	<?php } ?>
           <div <?php if($season_cnt == 1){ echo 'class="content dark"';} ?>>
           	

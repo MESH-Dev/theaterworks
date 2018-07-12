@@ -4,7 +4,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="columns-4 mobile-show">
+			<div class="columns-3 mobile-show">
 				<div class="footer-logo">
 					<img alt="Theaterworks Logo" aria-hidden="true" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_FullLogo@2x.png">
 				</div>
@@ -22,7 +22,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="columns-8">
+			<div class="columns-9">
 				<nav class="footer-navigation">
 					<?php if(has_nav_menu('main_nav')){
 								$defaults = array(
@@ -57,7 +57,7 @@
 					<p>Copyright &copy; <?php echo date('Y'); ?> Theaterworks.  All Rights reserved
 					<p class="signature">Designed by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
 			</div><!-- End of Footer -->
-			<div class="columns-4 mobile-hide">
+			<div class="columns-3 mobile-hide">
 				<div class="footer-logo">
 					<img alt="Theaterworks Logo" aria-hidden="true" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_FullLogo@2x.png">
 				</div>

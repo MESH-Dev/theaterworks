@@ -39,7 +39,14 @@ echo get_template_part('/partials/banner');
 						while(have_rows('grid_block')):the_row();
 						$ctr++;
 						$background_image = get_sub_field('background_image');
-						$background_image_url = $background_image['sizes']['large'];
+						//var_dump($background_image);
+
+						if($background_image['subtype'] == 'gif'){
+							$background_image_url = $background_image['url'];	
+						}else{
+							$background_image_url = $background_image['sizes']['large'];
+						}
+						
 						$callout = get_sub_field('callout_text');
 						$block_title = get_sub_field('block_title');
 						$link = get_sub_field('block_link');

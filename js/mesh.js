@@ -23,6 +23,19 @@ $(function() {
   });
 });
 
+$(window).scroll(function(event){
+  var _top = $(this).scrollTop();
+  console.log(_top)
+
+  if(_top >= 50){
+    $('header.site-header').addClass('fixed');
+    $('header.site-header').css({'position':'fixed'});
+  }else{
+    $('header.site-header').removeClass('fixed');
+    $('header.site-header').css({'position':'absoute'});
+  }
+});
+
 //Setup variables to hold our sizes
 var gi2, gi3, gi4, gi5, gi6, gi7, cp3, cp4, cp5, cp6, cp7, $wW;
 

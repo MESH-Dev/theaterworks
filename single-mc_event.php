@@ -137,7 +137,7 @@ echo (!empty($post->disclaimer)) ? '<p class="event__disclaimer">'.$post->discla
   </div>
   <?php } ?>
 </div> <!-- end columns-7 -->
-<div class="columns-4 offset-by-1" >
+<div class="columns-4 offset-by-1 boxoffice" >
   <h3>Upcoming Times</h3>
   <div class="events-slide">
 <?php
