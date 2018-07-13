@@ -317,6 +317,7 @@ $unique = array_unique($this_perfs, SORT_REGULAR);
 </section>
 <!-- </div> -->
 <?php endif; ?>
+<?php $rows = get_field('cp_item'); if ($rows != ''){ ?>
 <div class="promos" id="related">
 <div class="title-row">
     <div class="container">
@@ -329,6 +330,7 @@ $unique = array_unique($this_perfs, SORT_REGULAR);
   </div>
 <?php echo get_template_part('/partials/promo-row'); ?>	
 </div>
+<?php } ?>
 </main>   
       
 <?php get_footer(); ?>

@@ -63,11 +63,15 @@
 				</div>
 				<div class="contact">
 					<p>
-						<a href="mailto:info@theaterworks.com">info@theaterworks.com</a><br>
-						<a href="tel:860.527.7838">860.527.7838</a><br>
+						<?php 
+							$email = get_field('email', 'options');
+							$phone = get_field('phone', 'options');
+ 							$hours = get_field('business_hours', 'options');
+						?>
+						<a href="<?php echo $email; ?>"><?php echo $email; ?></a><br>
+						<a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a><br>
 						<span class="times">
-							Monday - Friday<br>
-							10:00am - 5:00pm
+							<?php echo $hours; ?>
 						</span>
 					</p>
 					<p class="subscription">

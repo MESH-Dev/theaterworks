@@ -1123,15 +1123,14 @@ img.indicator.lg {
 .banner {
   height: 400px;
   position: relative;
+  overflow-x: hidden;
 }
 /* line 57, sass/modules/_modules.scss */
-overflow-x:hidden
 .banner.solo .page-title {
   margin-bottom: 10rem;
 }
 @media (max-width: 480px) {
   /* line 57, sass/modules/_modules.scss */
-  overflow-x:hidden
   .banner.solo .page-title {
     margin-bottom: 4em;
   }
