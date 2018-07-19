@@ -77,6 +77,7 @@ echo get_template_part('/partials/banner');?>
 		        $alt_img_url = $event_list_image['sizes']['large'];
 		        //var_dump($event_list_image);
 		        $event_types = get_the_terms($post->ID, 'event_type');
+		        $link_include = get_field('link_include', $post->ID);
 		        //var_dump($event_types);
 
 		        $toe = '';
@@ -154,10 +155,11 @@ echo get_template_part('/partials/banner');?>
 				<?php echo str_replace('hidden-xs', 'visible-xs-inline-block', $buy_button_html) ; ?>
 			</div>
 			<?php } ?>
+			<?php if ($link_include == false){ ?>
 			<div class="horizontal more">
 				<a href="<?php echo the_permalink(); ?>">More <!-- <img class="indicator sm" aria-hidden="true" alt="" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png">  --></a>
 			</div>
-          
+          	<?php } ?>
           </div> <!-- end entry-summary -->
  	 
     </div> 

@@ -49,7 +49,7 @@ function hide_text_editor() {
   // Hide the editor on a page with a specific page template
   // Get the name of the Page Template file.
   $template_file = get_post_meta($post_id, '_wp_page_template', true);
-  $templates = array('templates/template-listing.php', 'templates/template-landing.php', 'templates/template-homepage.php');
+  $templates = array('templates/template-listing.php', 'templates/template-landing.php', 'templates/template-homepage.php', 'templates/template-custom-archive.php');
 
 
   if(in_array($template_file, $templates)){ // the filename of the page template
