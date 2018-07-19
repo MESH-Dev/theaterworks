@@ -770,9 +770,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 	
 }
 
+//Curated Show listing:
+
+.curated-listing{
+	.summary-mc_event{
+		height:400px;
+
+	}
+}
+
 //Seasons
 
-.first-row{
+.first-row,.curated-listing .summary-mc_event{
 	position:relative;
 
 	img.playing{
