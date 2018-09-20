@@ -14,11 +14,13 @@ if (function_exists('xdgp_load_all')) xdgp_load_all(array('connections' => true,
  
 // Display the cover image for the Event
 $cover_image = get_field('cover_image');
+$feature_image = get_field('the_featured_image');
+$feature_image_url = $feature_image['sizes']['background-fullscreen'];
  
 // Example using srcset for responsive images.
 //echo '<img class="img-responsive" src="'.$cover_image['url'].'" alt="" srcset="'.$cover_image['sizes']['medium'].' 300w, '.$cover_image['sizes']['large'].' 640w">';
 ?>
-<div class="banner has-background" style="background-image:url('<?php echo $cover_image['url']; ?>');height:80vh;"> </div>
+<div class="banner has-background" style="background-image:url('<?php echo $cover_image['sizes']['short-banner']; ?>');height:80vh;"> </div>
 <div class="row">
 	<div class="title-row top">
     <div class="container">

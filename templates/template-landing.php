@@ -49,6 +49,7 @@ echo get_template_part('/partials/banner');
 						
 						$callout = get_sub_field('callout_text');
 						$block_title = get_sub_field('block_title');
+						$desc = get_sub_field('description');
 						$link = get_sub_field('block_link');
 						$external = get_sub_field('external');
 
@@ -63,6 +64,9 @@ echo get_template_part('/partials/banner');
 							<div class="footer">
 								<p class="callout"><?php echo $callout; ?></p>
 								<h2><?php echo $block_title; ?></h2>
+								<?php if($desc != '') { ?>
+								<p class="desc"><?php echo $desc; ?></p>
+								<?php } ?>
 								<?php if($link){ ?>
 						<a class="more-link" href="<?php echo $link; ?>" <?php echo $target; ?>> More </a>
 						<?php } ?>

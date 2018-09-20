@@ -3,7 +3,7 @@
 //*{font-family: 'Source Sans Pro', sans-serif;}
 
 body{
-	background-color:$light_gray;
+	background-color:$white;
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -732,6 +732,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 			font-size:1.4em;
 		}
 
+		.desc{
+			width:60%;
+
+			@media ($bp-smaller-than-desktop) and ($bp-larger-than-tablet){
+				width:100%
+			}
+			@media ($bp-smaller-than-tablet){
+				width:60%
+			}
+		}
+
 		&.slider{
 			//min-width:300px;
 			position:relative;
@@ -1125,7 +1136,9 @@ section[class*="navigation__month"]{
 		&:hover,
 		&:active,
 		&:focus{
-			background-color:$dark_gray;
+			//background-color:$dark_gray;
+			background-color:#dedede;
+			//background-color:$tw_gold;
 		}
 
 		a{
@@ -1145,7 +1158,8 @@ section[class*="navigation__month"]{
 	 main.month .day--present, 
 	.month .day--present{
 		border:1px solid $tw_gold !important;
-		background-color:$dark_gray !important;
+		//background-color:$dark_gray !important;
+		background-color:#dedede !important;
 	}
 	
 	//.xdgp-calendar-main main.month .day--present, .xdgp-calendar-main .month .day--present
