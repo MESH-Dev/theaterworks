@@ -42,7 +42,7 @@ function hide_text_editor() {
   // Hide the editor on certian pages
    $pgname = get_the_title($post_id);
    $pages = array('Content Tester');
-  if(in_array($pgname, $pages)){ 
+  if(in_array($pgname, $pages)){
     remove_post_type_support('page', 'editor');
   }
 
@@ -68,5 +68,25 @@ function pluginname_ajaxurl() {
     }
 
  define( 'DISALLOW_FILE_EDIT', true );
+
+ /*-----------------------------------------------------------------------------------*/
+// Modify Event Cover Image Size
+/*-----------------------------------------------------------------------------------*/
+
+
+function xdgp_cover_image_dimensions( $field ) {
+
+ // xdgp_console_debug($field,'fields');
+
+ $field['instructions'] = "This image will be used for the banner on this show's page. Choose an image from your Media Library. Choose an image that is 1800px wide and 734px tall.";
+ $field['min_height'] = 734;
+ $field['min_width'] = 1800;
+ $field['label'] = "Banner Image (formerly Cover Image)";
+
+ return $field;
+
+}
+
+add_filter('acf/load_field/key=field_xdgp_event_cover_image', 'xdgp_cover_image_dimensions');
 
 ?>

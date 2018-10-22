@@ -52,7 +52,13 @@ img.indicator{
 	height:400px;
 	position:relative;
 	overflow-x:hidden;
-
+	height: 80vh;
+	@media screen and ($bp-smaller-than-desktop){
+		height: 50vh;
+	}
+	@media screen and ($bp-smaller-than-phablet){
+		height: 30vh;
+	}
 	&.solo{
 		.page-title{
 			margin-bottom:10rem;
@@ -358,11 +364,17 @@ p.page-callout{
 
 .featured-event{
 	position:relative;
-
+	@media screen and ($bp-smaller-than-desktophd){
+		height: 613px;
+	}
+	@media screen and (max-width: 850px){
+		height: 434px;
+		min-height: unset;
+	}
 	&.panel{
 		@media ($bp-smaller-than-mobile){
 			min-height:auto;
-			height:400px;
+			height:300px;
 		}
 	}
 	h2{
@@ -811,18 +823,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 
 	@media ($bp-smaller-than-tablet){
 		//background-repeat:no-repeat;
-		height:800px;
+		height:700px;
 		background-image:none !important;
 		background-size:contain;
 		background-position:center top;
+	}
+	@media screen and ($bp-smaller-than-phablet){
+		height: 600px;
 	}
 
 	.show-img{
 		background-repeat:no-repeat;
 		background-size:cover;
 		background-position:center center;
-		height:400px;
+		height:300px;
 		position:relative;
+		@media screen and ($bp-smaller-than-phablet){
+			height: 200px;
+		}
 		@media ($bp-larger-than-tablet){
 			display:none;
 			visibility:hidden;
@@ -1324,7 +1342,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 // 		&
 // 	}
 // }
-// 
+//
 // .sidr{
 // 	background:$dark_gray;
 // 	padding:4em 0;

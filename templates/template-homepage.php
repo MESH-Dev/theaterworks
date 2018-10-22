@@ -1,14 +1,14 @@
-<?php 
+<?php
 /* Template Name: Homepage Template*/
 
-get_header(); 
+get_header();
 ?>
 
 <main id="content">
 
 	<div class="">
 		<div class="row">
-			<?php 
+			<?php
 				$wa_image = get_field('wa_background');
 				//var_dump($wa_image);
 				$wa_img_url = $wa_image['sizes']['background-fullscreen'];
@@ -19,8 +19,8 @@ get_header();
 				<div class="wrapper">
 					<div class="content">
 						<h2 class="title"><?php echo $we_statement; ?></h2>
-						
-						
+
+
 						<div class="down">
 							<div class="logo-sub">
 							<img alt="Theaterworks logo" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_FullLogo@2x.png">
@@ -59,19 +59,20 @@ get_header();
 			//var_dump($the_query);
 			if ($the_query->have_posts()):
 				while($the_query->have_posts()) : $the_query->the_post();
-				$cover_image = get_field('cover_image');
-				$ci_URL = $cover_image['sizes']['background-fullscreen'];
+				$cover_image = get_field('the_featured_image');
+				$ci_URL = $cover_image['sizes']['home-feature'];
 				$callout=get_field('ec_text');
-				
+
 			?>
 			<section class="featured-event panel" id="page-start" style="background-image:url('<?php echo $ci_URL; ?>');">
 				<div class="content">
 					<p class="callout"><?php echo $callout; ?></p>
 					<h2>
+						<!-- <//?php var_dump($cover_image['sizes']); ?> -->
 							<?php the_title(); ?>
 					</h2>
 					<div class="footer">
-						
+
 						<div class="horizontal button">
 							<a  href="<?php echo the_permalink(); ?>">Tickets</a>
 						</div>
@@ -83,7 +84,7 @@ get_header();
 			</section>
 			<?php endwhile; endif; wp_reset_postdata();?>
 
-			<?php echo get_template_part('/partials/promo-row'); ?>	
+			<?php echo get_template_part('/partials/promo-row'); ?>
 
 		</div>
 	</div>
