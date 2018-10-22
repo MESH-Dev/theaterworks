@@ -6,7 +6,7 @@ header{
 		top:0;
 		width:100%;
 		//background-color:rgba(0,0,0,.3);
-		
+
 		//Gradient
 		// background: rgba(0,0,0,0.3);
 		// background: -moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.2) 77%, rgba(0,0,0,0) 100%);
@@ -25,7 +25,7 @@ header{
 		background: -ms-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 77%, rgba(0,0,0,0) 100%);
 		background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 77%, rgba(0,0,0,0) 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
-		
+
 	}
 
 	&.is-home{
@@ -59,7 +59,7 @@ header{
 				list-style-type:none;
 				display:inline-block;
 				margin-left:2em;
-
+				margin-bottom: 0;
 				a{
 					&:active,
 					&:focus,
@@ -85,7 +85,7 @@ header{
 		top:0;
 		z-index:5;
 	}
-	
+
 	.sidr-trigger{
 		color:$white;
 		cursor:pointer;
@@ -100,7 +100,12 @@ header{
 	.gateway-nav{
 		text-align:right;
 		img{
-			width:30px;
+			height: 40px;
+		}
+		img.req{
+			@media screen and ($bp-smaller-than-tablet){
+				display: none;
+			}
 		}
 	}
 
@@ -123,7 +128,239 @@ header{
 				opacity:.6;
 			}
 		i{
-			
+
+		}
+	}
+}
+
+.sidr#sidr-main{
+	@media screen and (min-width: 900px){
+		width: 30%;
+	}
+	@media screen and (max-width: 900px){
+		width: 260px;
+		left: -260px;
+	}
+	@media screen and (max-width: 550px){
+		width: 260px;
+		left: -260px;
+	}
+}
+
+.sidr{
+	background:$dark_gray;
+	padding:4em 0;
+	width: 30%;
+	// @media($bp-larger-than-tablet){
+	// 	width:30% !important;
+
+	// 	&.left{
+	// 		left:-30% ;
+	// 	}
+	// }
+
+	.sidr-inner{
+		//text-align:center;
+		//padding-left:25%;
+	}
+
+	a{
+		text-decoration:none;
+		text-transform:uppercase;
+	}
+
+	.close{
+		font-size:2em;
+		color:$white;
+		cursor:pointer;
+		text-transform:uppercase;
+		font-weight:700;
+		margin-bottom:1em;
+		position:absolute;
+		right:1em;
+		top:1em;
+
+			&:hover,
+			&:active,
+			&:focus{
+				color:$champagne;
+			}
+
+		i{
+			color:$white;
+			&:hover,
+			&:active,
+			&:focus{
+				color:$black;
+			}
+		}
+	}
+
+	.open{
+		position:absolute;
+		//top:4px;
+		//top:50%;
+		//margin:0 5px;
+		//height:100%;
+		font-size:2.8em;
+		font-weight:700;
+		text-transform:uppercase;
+		color:$tw_gold;
+
+			color:$tw_gold;
+			font-size:1.4em;
+			margin:8px 5px 8px 15px;
+			@media screen and (max-width: 900px){
+					margin:0px 5px;
+
+				}
+			img{
+				width:20px;
+				@media screen and (max-width: 900px){
+					width:15px;
+
+				}
+			}
+			&:hover,
+			&:active,
+			&:focus{
+				color:$white;
+			}
+
+	}
+
+	//.gateway-nav{
+
+		ul.gateway{
+			padding:0;
+			margin:0;
+			padding-left:20%;
+			li{
+				list-style-type:none;
+				display: block;
+				width:auto;
+				// margin:0 1em;
+				margin-top: 20px;
+				padding-top:0;
+				//padding-left:25%;
+
+				&:hover,
+				&:focus,
+				&:active{
+					background-color:transparent;
+				}
+
+				a{
+					padding:0;
+					img{
+						height: 50px;
+						max-width: unset;
+					}
+
+					&:active,
+					&:focus,
+					&:hover{
+						opacity:.6;
+					}
+
+				}
+			}
+		}
+		// a{
+		// 	color:$white;
+		// 	&:active,
+		// 	&:focus,
+		// 	&:hover{
+		// 		color:$light_gray;
+		// 	}
+		// }
+	//
+//}
+
+	.ticket-cal{
+		//width:30px;
+		// margin:2em 0;
+			color:$white;
+		display:inline-block;
+			&:active,
+			&:focus,
+			&:hover{
+				color:$champagne;
+			}
+		i{
+
+		}
+	}
+
+	ul{
+		margin:0;
+		padding:0;
+
+
+		li{
+			list-style-type:none;
+			width:100%;
+			//text-align:center;
+			position:relative;
+			padding-top:2em;
+			margin:0;
+			line-height:1;
+
+			&:active,
+			&:focus,
+			&:hover{
+				//background-color:$champagne;
+				> a{opacity:.6;}
+			}
+
+			&.current-menu-item,
+			&.current-menu-parent{
+				// background-color:$champagne;
+				> a{opacity:.6;}
+			}
+
+			a{
+				//font-size:1.4em;
+				font-size:2.8em;
+				font-weight:700;
+				color:$white;
+				text-decoration:none;
+				padding-bottom:2rem;
+				display:inline-block;
+				padding-left:20%;
+				@media (max-width: 900px){
+					font-size:1.4em;
+				}
+			}
+
+			.sub-menu{
+				display:none;
+				background-color:$tw_gold;
+				margin:0;
+				padding:0;
+				li{
+					padding:2em 0;
+					margin:0;
+
+					&:hover,
+					&:focus,
+					&:active{
+						background-color:$champagne;
+						a{
+							opacity:1;
+						}
+					}
+
+					&.current-menu-item{
+						background-color:$champagne;
+						  a{opacity:1;}
+					}
+					a{
+						padding:0;
+						padding-left:25%;
+					}
+				}
+			}
 		}
 	}
 }

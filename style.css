@@ -888,6 +888,7 @@ header .gateway-nav ul.gateway li {
   list-style-type: none;
   display: inline-block;
   margin-left: 2em;
+  margin-bottom: 0;
 }
 /* line 64, sass/modules/_header.scss */
 header .gateway-nav ul.gateway li a:active, header .gateway-nav ul.gateway li a:focus, header .gateway-nav ul.gateway li a:hover {
@@ -923,9 +924,15 @@ header .gateway-nav {
 }
 /* line 102, sass/modules/_header.scss */
 header .gateway-nav img {
-  width: 30px;
+  height: 40px;
 }
-/* line 107, sass/modules/_header.scss */
+@media screen and (max-width: 750px) {
+  /* line 105, sass/modules/_header.scss */
+  header .gateway-nav img.req {
+    display: none;
+  }
+}
+/* line 112, sass/modules/_header.scss */
 header .sidr-trigger,
 header .logo,
 header .gateway-nav {
@@ -933,14 +940,213 @@ header .gateway-nav {
   vertical-align: top;
   width: 32.33333%;
 }
-/* line 114, sass/modules/_header.scss */
+/* line 119, sass/modules/_header.scss */
 header .ticket-cal {
   color: #FFFFFF;
   display: inline-block;
 }
-/* line 119, sass/modules/_header.scss */
+/* line 124, sass/modules/_header.scss */
 header .ticket-cal:active, header .ticket-cal:focus, header .ticket-cal:hover {
   opacity: .6;
+}
+
+@media screen and (min-width: 900px) {
+  /* line 136, sass/modules/_header.scss */
+  .sidr#sidr-main {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 900px) {
+  /* line 136, sass/modules/_header.scss */
+  .sidr#sidr-main {
+    width: 260px;
+    left: -260px;
+  }
+}
+@media screen and (max-width: 550px) {
+  /* line 136, sass/modules/_header.scss */
+  .sidr#sidr-main {
+    width: 260px;
+    left: -260px;
+  }
+}
+
+/* line 150, sass/modules/_header.scss */
+.sidr {
+  background: #C3BFBC;
+  padding: 4em 0;
+  width: 30%;
+}
+/* line 167, sass/modules/_header.scss */
+.sidr a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 172, sass/modules/_header.scss */
+.sidr .close {
+  font-size: 2em;
+  color: #FFFFFF;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1em;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+/* line 183, sass/modules/_header.scss */
+.sidr .close:hover, .sidr .close:active, .sidr .close:focus {
+  color: #B8A483;
+}
+/* line 189, sass/modules/_header.scss */
+.sidr .close i {
+  color: #FFFFFF;
+}
+/* line 191, sass/modules/_header.scss */
+.sidr .close i:hover, .sidr .close i:active, .sidr .close i:focus {
+  color: #1C1C1C;
+}
+/* line 199, sass/modules/_header.scss */
+.sidr .open {
+  position: absolute;
+  font-size: 2.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #AD9573;
+  color: #AD9573;
+  font-size: 1.4em;
+  margin: 8px 5px 8px 15px;
+}
+@media screen and (max-width: 900px) {
+  /* line 199, sass/modules/_header.scss */
+  .sidr .open {
+    margin: 0px 5px;
+  }
+}
+/* line 217, sass/modules/_header.scss */
+.sidr .open img {
+  width: 20px;
+}
+@media screen and (max-width: 900px) {
+  /* line 217, sass/modules/_header.scss */
+  .sidr .open img {
+    width: 15px;
+  }
+}
+/* line 224, sass/modules/_header.scss */
+.sidr .open:hover, .sidr .open:active, .sidr .open:focus {
+  color: #FFFFFF;
+}
+/* line 234, sass/modules/_header.scss */
+.sidr ul.gateway {
+  padding: 0;
+  margin: 0;
+  padding-left: 20%;
+}
+/* line 238, sass/modules/_header.scss */
+.sidr ul.gateway li {
+  list-style-type: none;
+  display: block;
+  width: auto;
+  margin-top: 20px;
+  padding-top: 0;
+}
+/* line 247, sass/modules/_header.scss */
+.sidr ul.gateway li:hover, .sidr ul.gateway li:focus, .sidr ul.gateway li:active {
+  background-color: transparent;
+}
+/* line 253, sass/modules/_header.scss */
+.sidr ul.gateway li a {
+  padding: 0;
+}
+/* line 255, sass/modules/_header.scss */
+.sidr ul.gateway li a img {
+  height: 50px;
+  max-width: unset;
+}
+/* line 260, sass/modules/_header.scss */
+.sidr ul.gateway li a:active, .sidr ul.gateway li a:focus, .sidr ul.gateway li a:hover {
+  opacity: .6;
+}
+/* line 280, sass/modules/_header.scss */
+.sidr .ticket-cal {
+  color: #FFFFFF;
+  display: inline-block;
+}
+/* line 285, sass/modules/_header.scss */
+.sidr .ticket-cal:active, .sidr .ticket-cal:focus, .sidr .ticket-cal:hover {
+  color: #B8A483;
+}
+/* line 295, sass/modules/_header.scss */
+.sidr ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 300, sass/modules/_header.scss */
+.sidr ul li {
+  list-style-type: none;
+  width: 100%;
+  position: relative;
+  padding-top: 2em;
+  margin: 0;
+  line-height: 1;
+}
+/* line 313, sass/modules/_header.scss */
+.sidr ul li:active > a, .sidr ul li:focus > a, .sidr ul li:hover > a {
+  opacity: .6;
+}
+/* line 319, sass/modules/_header.scss */
+.sidr ul li.current-menu-item > a, .sidr ul li.current-menu-parent > a {
+  opacity: .6;
+}
+/* line 322, sass/modules/_header.scss */
+.sidr ul li a {
+  font-size: 2.8em;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding-bottom: 2rem;
+  display: inline-block;
+  padding-left: 20%;
+}
+@media (max-width: 900px) {
+  /* line 322, sass/modules/_header.scss */
+  .sidr ul li a {
+    font-size: 1.4em;
+  }
+}
+/* line 336, sass/modules/_header.scss */
+.sidr ul li .sub-menu {
+  display: none;
+  background-color: #AD9573;
+  margin: 0;
+  padding: 0;
+}
+/* line 341, sass/modules/_header.scss */
+.sidr ul li .sub-menu li {
+  padding: 2em 0;
+  margin: 0;
+}
+/* line 345, sass/modules/_header.scss */
+.sidr ul li .sub-menu li:hover, .sidr ul li .sub-menu li:focus, .sidr ul li .sub-menu li:active {
+  background-color: #B8A483;
+}
+/* line 349, sass/modules/_header.scss */
+.sidr ul li .sub-menu li:hover a, .sidr ul li .sub-menu li:focus a, .sidr ul li .sub-menu li:active a {
+  opacity: 1;
+}
+/* line 354, sass/modules/_header.scss */
+.sidr ul li .sub-menu li.current-menu-item {
+  background-color: #B8A483;
+}
+/* line 356, sass/modules/_header.scss */
+.sidr ul li .sub-menu li.current-menu-item a {
+  opacity: 1;
+}
+/* line 358, sass/modules/_header.scss */
+.sidr ul li .sub-menu li a {
+  padding: 0;
+  padding-left: 25%;
 }
 
 /* line 1, sass/modules/_footer.scss */
@@ -2390,166 +2596,6 @@ p.page-callout {
     display: none;
   }
 }
-/* line 1328, sass/modules/_modules.scss */
-.sidr {
-  background: #C3BFBC;
-  padding: 4em 0;
-}
-/* line 1345, sass/modules/_modules.scss */
-.sidr a {
-  text-decoration: none;
-  text-transform: uppercase;
-}
-/* line 1350, sass/modules/_modules.scss */
-.sidr .close {
-  font-size: 2em;
-  color: #FFFFFF;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 1em;
-  position: absolute;
-  right: 1em;
-  top: 1em;
-}
-/* line 1361, sass/modules/_modules.scss */
-.sidr .close:hover, .sidr .close:active, .sidr .close:focus {
-  color: #B8A483;
-}
-/* line 1367, sass/modules/_modules.scss */
-.sidr .close i {
-  color: #FFFFFF;
-}
-/* line 1369, sass/modules/_modules.scss */
-.sidr .close i:hover, .sidr .close i:active, .sidr .close i:focus {
-  color: #1C1C1C;
-}
-/* line 1377, sass/modules/_modules.scss */
-.sidr .open {
-  position: absolute;
-  margin: 0 5px;
-  font-size: 1.4em;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #AD9573;
-  color: #AD9573;
-  font-size: 1.4em;
-  margin: 0 5px;
-}
-/* line 1391, sass/modules/_modules.scss */
-.sidr .open img {
-  width: 15px;
-}
-/* line 1394, sass/modules/_modules.scss */
-.sidr .open:hover, .sidr .open:active, .sidr .open:focus {
-  color: #FFFFFF;
-}
-/* line 1404, sass/modules/_modules.scss */
-.sidr ul.gateway {
-  padding: 0;
-  margin: 0;
-  padding-left: 25%;
-}
-/* line 1408, sass/modules/_modules.scss */
-.sidr ul.gateway li {
-  list-style-type: none;
-  display: inline-block;
-  width: auto;
-  margin: 0 1em;
-  padding-top: 0;
-}
-/* line 1416, sass/modules/_modules.scss */
-.sidr ul.gateway li:hover, .sidr ul.gateway li:focus, .sidr ul.gateway li:active {
-  background-color: transparent;
-}
-/* line 1422, sass/modules/_modules.scss */
-.sidr ul.gateway li a {
-  padding: 0;
-}
-/* line 1424, sass/modules/_modules.scss */
-.sidr ul.gateway li a img {
-  width: 30px;
-}
-/* line 1428, sass/modules/_modules.scss */
-.sidr ul.gateway li a:active, .sidr ul.gateway li a:focus, .sidr ul.gateway li a:hover {
-  opacity: .6;
-}
-/* line 1448, sass/modules/_modules.scss */
-.sidr .ticket-cal {
-  margin: 2em 0;
-  color: #FFFFFF;
-  display: inline-block;
-}
-/* line 1453, sass/modules/_modules.scss */
-.sidr .ticket-cal:active, .sidr .ticket-cal:focus, .sidr .ticket-cal:hover {
-  color: #B8A483;
-}
-/* line 1463, sass/modules/_modules.scss */
-.sidr ul {
-  margin: 0;
-  padding: 0;
-}
-/* line 1468, sass/modules/_modules.scss */
-.sidr ul li {
-  list-style-type: none;
-  width: 100%;
-  position: relative;
-  padding-top: 2em;
-  margin: 0;
-  line-height: 1;
-}
-/* line 1481, sass/modules/_modules.scss */
-.sidr ul li:active > a, .sidr ul li:focus > a, .sidr ul li:hover > a {
-  opacity: .6;
-}
-/* line 1487, sass/modules/_modules.scss */
-.sidr ul li.current-menu-item > a, .sidr ul li.current-menu-parent > a {
-  opacity: .6;
-}
-/* line 1490, sass/modules/_modules.scss */
-.sidr ul li a {
-  font-size: 1.4em;
-  font-weight: 700;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding-bottom: 2em;
-  display: inline-block;
-  padding-left: 25%;
-}
-/* line 1500, sass/modules/_modules.scss */
-.sidr ul li .sub-menu {
-  display: none;
-  background-color: #AD9573;
-  margin: 0;
-  padding: 0;
-}
-/* line 1505, sass/modules/_modules.scss */
-.sidr ul li .sub-menu li {
-  padding: 2em 0;
-  margin: 0;
-}
-/* line 1509, sass/modules/_modules.scss */
-.sidr ul li .sub-menu li:hover, .sidr ul li .sub-menu li:focus, .sidr ul li .sub-menu li:active {
-  background-color: #B8A483;
-}
-/* line 1513, sass/modules/_modules.scss */
-.sidr ul li .sub-menu li:hover a, .sidr ul li .sub-menu li:focus a, .sidr ul li .sub-menu li:active a {
-  opacity: 1;
-}
-/* line 1518, sass/modules/_modules.scss */
-.sidr ul li .sub-menu li.current-menu-item {
-  background-color: #B8A483;
-}
-/* line 1520, sass/modules/_modules.scss */
-.sidr ul li .sub-menu li.current-menu-item a {
-  opacity: 1;
-}
-/* line 1522, sass/modules/_modules.scss */
-.sidr ul li .sub-menu li a {
-  padding: 0;
-  padding-left: 25%;
-}
-
 /* You can alter this CSS in order to give Smooth Div Scroll your own look'n'feel */
 /* Invisible left hotspot */
 /* line 1537, sass/modules/_modules.scss */

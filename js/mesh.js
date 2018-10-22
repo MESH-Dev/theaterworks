@@ -101,15 +101,15 @@ function _resize(){
   $('.grid-item.columns-6').css({height:cp6*0.66});
   //console.log($wW);
 
-  
+
   //Figure out how many grid-item elements are within our scroller element
   $ps_cnt = $('.promo .grid-item.columns-5').length;
-  
+
   //Set the width of the scrollableArea to the number of grid-item elements X the current size of each element
   $('.scrollableArea').css({width:cp5*$ps_cnt});
 
   if ($wW > 800){
-  
+
 }
 }
 
@@ -146,7 +146,7 @@ $('.separator .trigger').each(function(){
       }else{
         $(this).find('img').css({'transform':'rotate(0)'});
         $(this).parent().parent().parent().find('.show-listing').slideUp(400);
-        
+
         $l_clk = 0;
       }
     });
@@ -236,7 +236,7 @@ $('.separator .trigger').each(function(){
   //        $('.promo, .events-slide, .hz-shows').slick('slickGoTo', $index);
   //       // $('.promo, .events-slide, .hz-shows').slick('slickPause');
   //       });
-    
+
   // });
 
   //   $('.slick-next').on('mouseenter',function(){
@@ -260,7 +260,7 @@ $('.separator .trigger').each(function(){
   //        $('.promo, .events-slide, .hz-shows').slick('unslick');
   //       // $('.promo, .events-slide, .hz-shows').slick('slickPause');
   //       //});
-    
+
   // });
 //});
 
@@ -306,7 +306,7 @@ $('.sidr-trigger').sidr({
       displace: false,
       // onOpen: function(){
       //   $('.sidr ul li a').append('<span class="open"><img src="../img/TheaterWorks_Icons_Arrow-Bronze.png" ></span>')
-      // }     
+      // }
 
  });//end sidr onOpen function
 
@@ -323,16 +323,16 @@ $('.close').click(
     $topLink = $('.sidr-inner ul.menu > li.menu-item-has-children > a');
     //<img class="indicator sm" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png">
 
-   
-    //$protocol = 
+
+    //$protocol =
     //console.log($href);
 
     //Add a 'button' to just after the link in any top level li that has children
-    $('<span class="open"><img src="'+$theme+'/img/Theaterworks_Icons_Arrow-Bronze.png" alt="Click here to see more links"> </span>').insertAfter($topLink);
-    
+    $('<span class="open"><img src="'+$theme+'/img/Theaterworks_Icons_Arrow_Heavy.png" alt="Click here to see more links"> </span>').insertAfter($topLink);
+
     //Now we get all of the peices together
 
-    //1 Create a counter to act as a toggle, we will be setting this counter to 1, then back to 
+    //1 Create a counter to act as a toggle, we will be setting this counter to 1, then back to
     //  zero with each click
     $openCnt = 0;
 
