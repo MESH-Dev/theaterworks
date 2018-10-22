@@ -20,7 +20,7 @@ img.indicator{
 
 	&.sm{
 		width:10px;
-		
+
 		display:inline-block;
 	}
 
@@ -94,7 +94,7 @@ img.indicator{
 		letter-spacing:1.97px;
 	}
 
-	
+
 }
 
 .promos{
@@ -128,7 +128,7 @@ img.indicator{
 			padding:0;
 			margin:0;
 			margin-right:2em;
-			
+
 			a{
 				border:2px solid $white;
 				text-transform:uppercase;
@@ -233,7 +233,7 @@ img.indicator{
 			font-size:3.2em;
 		}
 	}
-	
+
 }
 
 .season-title{
@@ -350,9 +350,9 @@ p.page-callout{
 			font-weight:700;
 			margin:0;
 			padding:0;
-			padding:3em 0; 
+			padding:3em 0;
 			letter-spacing:1.97px;
-		}	
+		}
 	}
 }
 
@@ -378,9 +378,9 @@ p.page-callout{
 		}
 	}
 	.content{
-		position:absolute; 
-		bottom:6em; 
-		right:6em; 
+		position:absolute;
+		bottom:6em;
+		right:6em;
 		color:$white;
 
 		@media ($bp-smaller-than-tablet){
@@ -426,7 +426,7 @@ p.page-callout{
 	.the-content{
 		padding-right:15px;
 	}
-	
+
 }
 
 //Single Event Page
@@ -512,7 +512,7 @@ p.page-callout{
 .page-content{
 	.pane{
 		margin-bottom:4em;
-		
+
 		&#synopsis{
 			margin-bottom:9em;
 		}
@@ -537,7 +537,7 @@ p.page-callout{
 		}
 	}
 	.instance{
-		margin-right:10px; 
+		margin-right:10px;
 		width:600px;
 
 		.instance-info{
@@ -545,7 +545,7 @@ p.page-callout{
 			//padding-left:1em;
 			//font-weight:700;
 		}
-		
+
 		.date{
 			font-weight:700;
 			font-size:1.4em;
@@ -577,7 +577,7 @@ p.page-callout{
 					color:$light-gray;
 					text-decoration:none;
 				}
-			
+
 
 		}
 	}
@@ -609,7 +609,7 @@ p.page-callout{
 
 		// &:before{
 		// 	//content:url('img/Theaterworks_Icons_Arrow-Bronze_left.png');
-		// 	content: '\2329'; 
+		// 	content: '\2329';
 		// 	width:15px;
 		// 	font-weight:700;
 		// 	//transform:rotate(-90deg);
@@ -651,7 +651,7 @@ p.page-callout{
 		margin-bottom:0;
 	}
 }
-//Listing 
+//Listing
 
 .season_wrap{
 	margin-bottom:1em;
@@ -703,9 +703,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 				font-size:3.2em;
 			}
 		}
-		
-		
-		
+
+
+
 		.gradient{
 			position:absolute;
 				top:0;
@@ -717,8 +717,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 			background: -o-linear-gradient(rgba(255,255,255,0) 0%, rgba(208,171,154,0.3) 57%, rgba(173,107,78,1) 100%);
 			background: linear-gradient(rgba(255,255,255,0) 0%, rgba(208,171,154,0.3) 57%, rgba(173,107,78,1) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ad6b4e',GradientType=0 ); /* IE6-9 */
-				
-				
+
+
 			&.black{
 					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,000000+100&0+0,0.3+57,1+100 */
 				background: -webkit-linear-gradient(rgba(255,255,255,0) 0%, rgba(110,110,110,0.3) 57%, rgba(0,0,0,1) 100%);
@@ -761,10 +761,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 				margin-bottom:.75rem;
 			}
 			.gradient{
-				
+
 			}
 		}
-	
+
 	.footer{
 		position:absolute;
 		bottom:0;
@@ -778,7 +778,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 			padding-bottom:1rem;
 		}
 	}
-	
+
 }
 
 //Curated Show listing:
@@ -802,18 +802,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 		top:2em;
 		left:2em;
 	}
-	background-repeat:no-repeat; 
+	background-repeat:no-repeat;
 	@media ($bp-larger-than-tablet){
 		height:400px;
-		background-size:cover; 
+		background-size:cover;
 		background-position:center center;
 	}
 
 	@media ($bp-smaller-than-tablet){
-		//background-repeat:no-repeat; 
+		//background-repeat:no-repeat;
 		height:800px;
 		background-image:none !important;
-		background-size:contain; 
+		background-size:contain;
 		background-position:center top;
 	}
 
@@ -847,11 +847,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 			width:33.333%;
 
 		}
-		
+
 		@media ($bp-smaller-than-desktop) and (min-width:900px){
 			width:40%;
 		}
-	
+
 		@media (max-width:900px) and ($bp-larger-than-tablet){
 			width:50%;
 		}
@@ -867,7 +867,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 .separator{
 	background-color:$tw_gold;
 	padding:2em 0;
-			
+
 	.container{
 		position:relative;
 	}
@@ -912,7 +912,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 			padding:0;
 			margin:0;
 		}
-	
+
 	@media ($bp-larger-than-desktop){
 			width:30vw;
 			}
@@ -1088,7 +1088,7 @@ footer nav.xdgp-calendar-month-navigation .navigation__month-next .next__arrow:a
 section[class*="navigation__month"]{
 	font-weight:700 !important;
 }
-	
+
 	p{
 		margin-bottom:0;
 	}
@@ -1117,12 +1117,12 @@ section[class*="navigation__month"]{
 		}
 	}
 
-	
+
 	// div[role="day"]{
 	// 	border:1px solid $tw_gold !important;
 	// }
 
-	main.month .day, 
+	main.month .day,
 	.month .day{
 		border-top:1px solid $tw_gold !important;
 		border-bottom:1px solid $tw_gold !important;
@@ -1150,27 +1150,27 @@ section[class*="navigation__month"]{
 		}
 	}
 
-	main.month .day:last-child, 
+	main.month .day:last-child,
 	.month .day:last-child{
 		border-right:1px solid $tw_gold !important;
 	}
 
-	 main.month .day--present, 
+	 main.month .day--present,
 	.month .day--present{
 		border:1px solid $tw_gold !important;
 		//background-color:$dark_gray !important;
 		background-color:#dedede !important;
 	}
-	
+
 	//.xdgp-calendar-main main.month .day--present, .xdgp-calendar-main .month .day--present
 
-	main.month ul.performances, 
+	main.month ul.performances,
 	.month ul.performances{
 		padding:0 10px 10px 10px !important;
 		margin:0;
 	}
 
-	main.month ul.events .event .event__title, 
+	main.month ul.events .event .event__title,
 	.month ul.events .event .event__title{
 		background-color:transparent !important;
 		color:$tw_gold;
@@ -1183,7 +1183,7 @@ section[class*="navigation__month"]{
 		}
 	}
 
-	main.month ul.performances .performance__actions .action__buy, 
+	main.month ul.performances .performance__actions .action__buy,
 	.month ul.performances .performance__actions .action__buy{
 		background-color:transparent !important;
 		border: 1px solid $tw_gold !important;
@@ -1278,7 +1278,7 @@ section[class*="navigation__month"]{
     z-index: 5;
     border: 0;
 
-	
+
 		span{
 			//position:absolute;
 			//left:-999999999px;
@@ -1289,7 +1289,7 @@ section[class*="navigation__month"]{
 
 
 .slick-prev{
-	
+
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+73,ffffff+100&0.5+0,0.3+73,0+100 */
 background: -moz-linear-gradient(left, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.3) 73%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(left, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.3) 73%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -1324,210 +1324,210 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 // 		&
 // 	}
 // }
-
-.sidr{
-	background:$dark_gray;
-	padding:4em 0;
-
-	// @media($bp-larger-than-tablet){
-	// 	width:30% !important;
-
-	// 	&.left{
-	// 		left:-30% ;
-	// 	}
-	// }
-
-	.sidr-inner{
-		//text-align:center;
-		//padding-left:25%;
-	}
-
-	a{
-		text-decoration:none;
-		text-transform:uppercase;
-	}
-
-	.close{
-		font-size:2em;
-		color:$white;
-		cursor:pointer;
-		text-transform:uppercase;
-		font-weight:700;
-		margin-bottom:1em;
-		position:absolute;
-		right:1em;
-		top:1em;
-
-			&:hover,
-			&:active,
-			&:focus{
-				color:$champagne;
-			}
-
-		i{
-			color:$white;
-			&:hover,
-			&:active,
-			&:focus{
-				color:$black;
-			}
-		}
-	}
-
-	.open{
-		position:absolute;
-		//top:4px;
-		//top:50%;
-		margin:0 5px;
-		//height:100%;
-		font-size:1.4em;
-		font-weight:700;
-		text-transform:uppercase;
-		color:$tw_gold;
-	
-			color:$tw_gold;
-			font-size:1.4em;
-			margin:0 5px;
-			img{
-				width:15px;
-			}
-			&:hover,
-			&:active,
-			&:focus{
-				color:$white;
-			}
-		
-	}
-
-	//.gateway-nav{
-
-		ul.gateway{
-			padding:0;
-			margin:0;
-			padding-left:25%;
-			li{
-				list-style-type:none;
-				display:inline-block;
-				width:auto;
-				margin:0 1em;
-				padding-top:0;
-				//padding-left:25%;
-
-				&:hover,
-				&:focus,
-				&:active{
-					background-color:transparent;
-				}
-
-				a{
-					padding:0;			
-					img{
-						width:30px;
-					}
-
-					&:active,
-					&:focus,
-					&:hover{
-						opacity:.6;
-					}
-
-				}
-			}
-		}
-		// a{
-		// 	color:$white;
-		// 	&:active,
-		// 	&:focus,
-		// 	&:hover{
-		// 		color:$light_gray;
-		// 	}
-		// }
-	//
-//}
-
-	.ticket-cal{
-		//width:30px;
-		margin:2em 0;
-			color:$white;
-		display:inline-block;
-			&:active,
-			&:focus,
-			&:hover{
-				color:$champagne;
-			}
-		i{
-			
-		}
-	}
-
-	ul{
-		margin:0;
-		padding:0;
-
-
-		li{
-			list-style-type:none;
-			width:100%;
-			//text-align:center;
-			position:relative;
-			padding-top:2em;
-			margin:0;
-			line-height:1;
-
-			&:active,
-			&:focus,
-			&:hover{
-				//background-color:$champagne;
-				> a{opacity:.6;}
-			}
-
-			&.current-menu-item,
-			&.current-menu-parent{
-				// background-color:$champagne;
-				> a{opacity:.6;}
-			}
-
-			a{
-				font-size:1.4em;
-				font-weight:700;
-				color:$white;
-				text-decoration:none;
-				padding-bottom:2em;
-				display:inline-block;
-				padding-left:25%;
-			}
-
-			.sub-menu{
-				display:none;
-				background-color:$tw_gold;
-				margin:0;
-				padding:0;
-				li{
-					padding:2em 0;
-					margin:0;
-
-					&:hover,
-					&:focus,
-					&:active{
-						background-color:$champagne;
-						a{
-							opacity:1;
-						}
-					}
-
-					&.current-menu-item{
-						background-color:$champagne;
-						  a{opacity:1;}
-					}
-					a{
-						padding:0;
-						padding-left:25%;
-					}
-				}
-			}
-		}
-	}
-}
+// 
+// .sidr{
+// 	background:$dark_gray;
+// 	padding:4em 0;
+//
+// 	// @media($bp-larger-than-tablet){
+// 	// 	width:30% !important;
+//
+// 	// 	&.left{
+// 	// 		left:-30% ;
+// 	// 	}
+// 	// }
+//
+// 	.sidr-inner{
+// 		//text-align:center;
+// 		//padding-left:25%;
+// 	}
+//
+// 	a{
+// 		text-decoration:none;
+// 		text-transform:uppercase;
+// 	}
+//
+// 	.close{
+// 		font-size:2em;
+// 		color:$white;
+// 		cursor:pointer;
+// 		text-transform:uppercase;
+// 		font-weight:700;
+// 		margin-bottom:1em;
+// 		position:absolute;
+// 		right:1em;
+// 		top:1em;
+//
+// 			&:hover,
+// 			&:active,
+// 			&:focus{
+// 				color:$champagne;
+// 			}
+//
+// 		i{
+// 			color:$white;
+// 			&:hover,
+// 			&:active,
+// 			&:focus{
+// 				color:$black;
+// 			}
+// 		}
+// 	}
+//
+// 	.open{
+// 		position:absolute;
+// 		//top:4px;
+// 		//top:50%;
+// 		margin:0 5px;
+// 		//height:100%;
+// 		font-size:1.4em;
+// 		font-weight:700;
+// 		text-transform:uppercase;
+// 		color:$tw_gold;
+//
+// 			color:$tw_gold;
+// 			font-size:1.4em;
+// 			margin:0 5px;
+// 			img{
+// 				width:15px;
+// 			}
+// 			&:hover,
+// 			&:active,
+// 			&:focus{
+// 				color:$white;
+// 			}
+//
+// 	}
+//
+// 	//.gateway-nav{
+//
+// 		ul.gateway{
+// 			padding:0;
+// 			margin:0;
+// 			padding-left:25%;
+// 			li{
+// 				list-style-type:none;
+// 				display:inline-block;
+// 				width:auto;
+// 				margin:0 1em;
+// 				padding-top:0;
+// 				//padding-left:25%;
+//
+// 				&:hover,
+// 				&:focus,
+// 				&:active{
+// 					background-color:transparent;
+// 				}
+//
+// 				a{
+// 					padding:0;
+// 					img{
+// 						width:30px;
+// 					}
+//
+// 					&:active,
+// 					&:focus,
+// 					&:hover{
+// 						opacity:.6;
+// 					}
+//
+// 				}
+// 			}
+// 		}
+// 		// a{
+// 		// 	color:$white;
+// 		// 	&:active,
+// 		// 	&:focus,
+// 		// 	&:hover{
+// 		// 		color:$light_gray;
+// 		// 	}
+// 		// }
+// 	//
+// //}
+//
+// 	.ticket-cal{
+// 		//width:30px;
+// 		margin:2em 0;
+// 			color:$white;
+// 		display:inline-block;
+// 			&:active,
+// 			&:focus,
+// 			&:hover{
+// 				color:$champagne;
+// 			}
+// 		i{
+//
+// 		}
+// 	}
+//
+// 	ul{
+// 		margin:0;
+// 		padding:0;
+//
+//
+// 		li{
+// 			list-style-type:none;
+// 			width:100%;
+// 			//text-align:center;
+// 			position:relative;
+// 			padding-top:2em;
+// 			margin:0;
+// 			line-height:1;
+//
+// 			&:active,
+// 			&:focus,
+// 			&:hover{
+// 				//background-color:$champagne;
+// 				> a{opacity:.6;}
+// 			}
+//
+// 			&.current-menu-item,
+// 			&.current-menu-parent{
+// 				// background-color:$champagne;
+// 				> a{opacity:.6;}
+// 			}
+//
+// 			a{
+// 				font-size:1.4em;
+// 				font-weight:700;
+// 				color:$white;
+// 				text-decoration:none;
+// 				padding-bottom:2em;
+// 				display:inline-block;
+// 				padding-left:25%;
+// 			}
+//
+// 			.sub-menu{
+// 				display:none;
+// 				background-color:$tw_gold;
+// 				margin:0;
+// 				padding:0;
+// 				li{
+// 					padding:2em 0;
+// 					margin:0;
+//
+// 					&:hover,
+// 					&:focus,
+// 					&:active{
+// 						background-color:$champagne;
+// 						a{
+// 							opacity:1;
+// 						}
+// 					}
+//
+// 					&.current-menu-item{
+// 						background-color:$champagne;
+// 						  a{opacity:1;}
+// 					}
+// 					a{
+// 						padding:0;
+// 						padding-left:25%;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 //Carousels
 
@@ -1557,7 +1557,7 @@ div.scrollingHotSpotLeft
 div.scrollingHotSpotLeftVisible
 {
 	background-color: rgba(255,255,255, .2);
-	//background-image: url(../images/arrow_left.gif);				
+	//background-image: url(../images/arrow_left.gif);
 	//background-color: #fff;
 	//background-repeat: no-repeat;
 	//opacity: 0.35; /* Standard CSS3 opacity setting */

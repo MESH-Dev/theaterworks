@@ -23,13 +23,13 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 
 	<style>
-	
+
 	</style>
 
 	<!-- CSS
 	================================================== -->
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-	
+
 	<!-- Favicons
 	================================================== -->
 	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/img/apple-touch-icon.png">
@@ -42,7 +42,7 @@
 
 	<!-- Bugherd -->
 
-	<?php $bugherd = true; 
+	<?php $bugherd = true;
 
 	if ($bugherd == true){ ?>
 
@@ -68,7 +68,7 @@
 </head>
 
 <body <?php body_class(); ?>>
- 
+
 	<header class="site-header <?php if(is_front_page()){ echo 'is-home'; }?>">
 		<div class="">
 
@@ -83,7 +83,7 @@
 						<img alt="Theaterworks logo" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_ShortLogo@2x.png">
 					</a>
 				</div>
-				<?php } ?>	
+				<?php } ?>
 				<nav class="main-navigation" style="display:none;">
 					<div class="close">
 						<i class="fa fa-fw fa-times"></i>
@@ -114,8 +114,8 @@
 				<nav class="gateway-nav">
 					<ul class="gateway">
 						<li>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>seasons">
-								<img alt="Buy Tickets" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Get_Tickets.png">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>subscriber-form">
+								<img class="req" alt="Buy Tickets" src="<?php echo get_template_directory_uri(); ?>/img/Subscriber_Request_Icon.png">
 							</a>
 						</li>
 						<li>
@@ -128,5 +128,5 @@
 			</div>
 
 		</div>
-		
+
 	</header>
