@@ -15,12 +15,35 @@ if (function_exists('xdgp_load_all')) xdgp_load_all(array('connections' => true,
 // Display the cover image for the Event
 $cover_image = get_field('cover_image');
 $feature_image = get_field('the_featured_image');
+$v_ogg = get_field('video_ogg');
+$vo_url = $v_ogg['url'];
+$v_mp4 = get_field('video_mp4');
+$vm_url = $v_mp4['url'];
+$v_webm = get_field('video_webm');
+$vw_url = $v_webm['url'];
 // $feature_image_url = $feature_image['sizes']['background-fullscreen'];
 
 // Example using srcset for responsive images.
 //echo '<img class="img-responsive" src="'.$cover_image['url'].'" alt="" srcset="'.$cover_image['sizes']['medium'].' 300w, '.$cover_image['sizes']['large'].' 640w">';
 ?>
-<div class="banner has-background" style="background-image:url('<?php echo $cover_image['sizes']['event-banner']; ?>');"> </div>
+
+<!-- ================ -->
+   <!-- <img src="<//?php echo get_template_directory_uri(); ?>/img/everymothercounts_logo_primary_white_40in.png" alt=""> -->
+<?php if ($vm_url == '' || $vo_url == '' || $vw_url == ''){ ?>
+   <!-- <div class="welcome-gate-bg" style="background-image:url('<//?php echo $background_image_url; ?>');"></div> -->
+	<div class="banner has-background" style="background-image:url('<?php echo $cover_image['sizes']['event-banner']; ?>');"> </div>
+<?php } elseif ($vm_url != '' && $vo_url != '' && $vw_url != ""){ ?>
+		<div class="banner has-background has-video"> <!--welcome-gate interior-->
+	      <video placeholder="<?php echo $background_image_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
+	         <source src ="<?php echo $vm_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
+	         <source src ="<?php echo $vo_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
+	         <source src ="<?php echo $vw_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
+	      <video>
+		</div>
+   <?php } ?>
+<!-- ================ -->
+
+<!-- <div class="banner has-background" style="background-image:url('<//?php echo $cover_image['sizes']['event-banner']; ?>');"> </div> -->
 <div class="row">
 	<div class="title-row top">
     <div class="container">

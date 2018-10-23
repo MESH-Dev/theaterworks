@@ -1,4 +1,4 @@
-<?php 
+<?php
 /* Template Name: Listing Page Template*/
 get_header();
 echo get_template_part('/partials/banner');?>
@@ -6,7 +6,7 @@ echo get_template_part('/partials/banner');?>
 	<?php
 		// Here we go...
 
-		// Run a query of current shows by Season to get a list of 
+		// Run a query of current shows by Season to get a list of
 		// all season taxonomy values
 		$season_args = array(
 				'post_type' => array( 'mc_event' ),
@@ -16,15 +16,15 @@ echo get_template_part('/partials/banner');?>
 			);
 
 		$season_cnt = 0;
-		
-		// Take those values and loop through them via a foreach 
+
+		// Take those values and loop through them via a foreach
 		foreach(get_categories($season_args) as $season){
 			// $count= count($season);
 			// var_dump($count);
 			$season_cnt++;
 
 		?>
-		<?php //Create a label for each season, we'll use this for our 
+		<?php //Create a label for each season, we'll use this for our
 		      // accordion later
 		?>
 		<div class="season_wrap">
@@ -42,15 +42,35 @@ echo get_template_part('/partials/banner');?>
 			<?php if($season_cnt > 1) {?>
  			<div class="hz-shows scroller">
  			<?php } ?>
-		<?php 
+		<?php
 
+// Old Version=========
+		// $prim_args = array(
+		// 	'post_type' => array( 'mc_event' ),
+		// 	'tax_query' => array(
+		// 		array(
+		// 			'taxonomy' => 'event_type',
+		// 			'field'    => 'slug',
+		// 			'terms'    => 'tickets',
+		// 		),
+		// 		array(
+		// 			'taxonomy' => 'mc_season',
+		// 			'field'    => 'slug',
+		// 			'terms'    => $season,
+		// 		),
+		// 	),
+		// );
 		$prim_args = array(
 			'post_type' => array( 'mc_event' ),
+			'orderby' => 'post_date',
+			'order' => 'ASC',
 			'tax_query' => array(
 				array(
 					'taxonomy' => 'event_type',
 					'field'    => 'slug',
-					'terms'    => 'tickets',
+					//'terms'    => 'tickets',
+					'terms' => array('subscription'),
+					'operator' => 'NOT IN',
 				),
 				array(
 					'taxonomy' => 'mc_season',
@@ -68,10 +88,10 @@ echo get_template_part('/partials/banner');?>
 			// $prm_ctr = 0;
 			while ( $prim_query->have_posts() ) {
 				// $prim_ctr++;
-				$prim_query->the_post(); 
+				$prim_query->the_post();
 
 				$seasons = get_the_terms($post->ID, 'mc_season');
-				    
+
 		        $event_list_image = get_field('the_featured_image', $post);
 		        $el_image_url = $event_list_image['sizes']['short-banner'];
 		        $alt_img_url = $event_list_image['sizes']['large'];
@@ -82,10 +102,10 @@ echo get_template_part('/partials/banner');?>
 
 		        $toe = '';
 
-		        // Load the best Ticket URL for the situation to reduce user clicks.  
+		        // Load the best Ticket URL for the situation to reduce user clicks.
 		        //If a single performance, load the performance Ticket URL
 				  $post->ticket_url = xdgp_event_general_ticket_url($post);
-				   
+
 				  // Create the Buy Button based on event logic.
 				  // Default is .hidden-xs, replace that class for different formats.
 				  if (!empty($post->ticket_url) && $post->status != 'closed' && $post->status != 'sold-out') {
@@ -100,10 +120,10 @@ echo get_template_part('/partials/banner');?>
 			$callout = get_field('callout', $post->ID);
 			$now_playing = get_field('now_playing', $post->ID);
         ?>
- 	
+
 
     <article <?php if($season_cnt == 1){post_class('summary-mc_event first-row');}else{echo 'class="columns-4 hz-show grid-item"'; } ?> style="background-image:url(<?php echo $el_image_url; ?>);" >
-      		
+
       		<?php if ($now_playing == true){?>
 				<img class='playing' alt="Now Playing" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_NowPlaying.png">
 			<?php } ?>
@@ -116,7 +136,7 @@ echo get_template_part('/partials/banner');?>
           		</div>
           	<?php } ?>
           <div <?php if($season_cnt == 1){ echo 'class="content dark"';} ?>>
-          	
+
           	<?php if($season_cnt > 1){?>
 				<div class="gradient black" aria-hidden="true"></div>
           	<?php } ?>
@@ -128,28 +148,28 @@ echo get_template_part('/partials/banner');?>
             <?php } ?>
             <h3 class="entry-title">
               <!-- <a href="<?php echo get_permalink($post->ID); ?>"> -->
- 
+
                 <span class="title">
                   <?php echo the_title(); ?> <?php //echo $toe; ?>
                 </span>
- 
+
                 <span class="byline">
                   <?php //echo $post->byline; ?>
                 </span>
-       
-            </h3>    
- 
+
+            </h3>
+
           <div class="entry-summary">
-            
+
 
             <?php
            	if($season_cnt == 1){
            		echo '<p>';
-            	echo (!empty($post->short_desc)) ? $post->long_desc : ''; 
+            	echo (!empty($post->short_desc)) ? $post->long_desc : '';
             	echo '</p>';
         	}
         	?>
-            
+
             <?php if ($season_cnt == 1 ){ ?>
             <div class="horizontal button">
 				<?php echo str_replace('hidden-xs', 'visible-xs-inline-block', $buy_button_html) ; ?>
@@ -161,16 +181,16 @@ echo get_template_part('/partials/banner');?>
 			</div>
           	<?php } ?>
           </div> <!-- end entry-summary -->
- 	 
-    </div> 
+
+    </div>
 </div><!-- end columns-4 offset -->
- 
+
     </article>
-    
-		<?php 
+
+		<?php
 		}
 		}
-	
+
 		// Restore original Post Data
 		wp_reset_postdata(); ?>
 	</div></div>
