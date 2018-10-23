@@ -26,8 +26,8 @@ add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
 add_theme_support('post-thumbnails');
 add_image_size('background-fullscreen', 1800, 1200, true);
 add_image_size('short-banner', 1800, 800, true);
-add_image_size('listing-bg', 2000, 500, true); //Event Listing Background
-add_image_size('home-feature', 1920, 980, true); //Home page featured event
+add_image_size('listing-bg', 1800, 900, true); //Event Listing Background
+add_image_size('home-feature', 1800, 1200, true); //Home page featured event
 add_image_size('event-banner', 2000, 815, true); //Single Event Banner
 add_image_size('large', 700, '', true); // Large Thumbnail
 add_image_size('medium', 250, '', true); // Medium Thumbnail

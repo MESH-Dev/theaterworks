@@ -78,8 +78,8 @@ function xdgp_cover_image_dimensions( $field ) {
 
  // xdgp_console_debug($field,'fields');
 
- $field['instructions'] = "This image will be used for the banner on this show's page. Choose an image from your Media Library. Choose an image that is 1800px wide and 734px tall.";
- $field['min_height'] = 734;
+ $field['instructions'] = "This image will be used for the banner on this show's page. Choose an image from your Media Library. Choose an image that is 1800px wide and 1000px tall.";
+ $field['min_height'] = 1000;
  $field['min_width'] = 1800;
  $field['label'] = "Banner Image (formerly Cover Image)";
 
