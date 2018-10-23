@@ -17,7 +17,7 @@ function loadup_scripts() {
 
     wp_enqueue_style( 'slick-style', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', true );
     wp_enqueue_style( 'sidr-style', get_template_directory_uri().'/css/jquery.sidr.bare.css', true );
-    
+
     //wp_enqueue_style( 'slick-theme', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css', true );
 }
 add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
@@ -26,7 +26,9 @@ add_action( 'wp_enqueue_scripts', 'loadup_scripts' );
 add_theme_support('post-thumbnails');
 add_image_size('background-fullscreen', 1800, 1200, true);
 add_image_size('short-banner', 1800, 800, true);
-
+add_image_size('listing-bg', 1800, 900, true); //Event Listing Background
+add_image_size('home-feature', 1800, 1200, true); //Home page featured event
+add_image_size('event-banner', 2000, 815, true); //Single Event Banner
 add_image_size('large', 700, '', true); // Large Thumbnail
 add_image_size('medium', 250, '', true); // Medium Thumbnail
 add_image_size('small', 120, '', true); // Small Thumbnail

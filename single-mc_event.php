@@ -5,22 +5,22 @@
  * Template for displaying all single posts.
  */
 ?>
- 
+
 <!-- ENTER YOUR HEADER HTML HERE -->
- 
+
 <?php
 // Load Performances into your $post object for displaying the single calendar
 if (function_exists('xdgp_load_all')) xdgp_load_all(array('connections' => true, 'connection_meta' => true, 'connected_post_meta' => false));
- 
+
 // Display the cover image for the Event
 $cover_image = get_field('cover_image');
 $feature_image = get_field('the_featured_image');
-$feature_image_url = $feature_image['sizes']['background-fullscreen'];
- 
+// $feature_image_url = $feature_image['sizes']['background-fullscreen'];
+
 // Example using srcset for responsive images.
 //echo '<img class="img-responsive" src="'.$cover_image['url'].'" alt="" srcset="'.$cover_image['sizes']['medium'].' 300w, '.$cover_image['sizes']['large'].' 640w">';
 ?>
-<div class="banner has-background" style="background-image:url('<?php echo $cover_image['sizes']['short-banner']; ?>');height:80vh;"> </div>
+<div class="banner has-background" style="background-image:url('<?php echo $cover_image['sizes']['event-banner']; ?>');"> </div>
 <div class="row">
 	<div class="title-row top">
     <div class="container">
@@ -30,7 +30,7 @@ $feature_image_url = $feature_image['sizes']['background-fullscreen'];
   			</h1>
   		</div>
       <nav class="page-nav">
-        <?php 
+        <?php
 
           $synopsis = get_field('long_desc');
           $cast = get_field('cast_member');
@@ -75,19 +75,19 @@ $feature_image_url = $feature_image['sizes']['background-fullscreen'];
 <!-- <h2 class="event__title">
   <?php the_title();  ?>
 </h2> -->
- 
+
 <!-- Byline -->
 <!-- <div class="event__byline">
   <?php //the_field('byline') ?>
 </div> -->
- 
+
 <!-- Date Range -->
 <!-- <p class="event__dates">
   <?php //the_field('display_dates_long') ?>
 </p>
-           -->                 
+           -->
 <?php
- 
+
 // Display "Buy Tickets" link if a URL is set and the show hasn't closed yet ($post->status)
 $post->ticket_url = get_field('ticket_url');
 $event_id = $post->pm_event_id;
@@ -101,7 +101,7 @@ foreach($post->performances as $performance){
 	//echo $performance->ticket_url;
 }
 $post->status = xdgp_get_event_status($post);
- 
+
 // Calculate the ideal general ticket url for single performance, closed, or multi-performance events
 // Returns false when the event is closed
 // Returns Performance Ticket URL when the event only has one performance
@@ -115,19 +115,19 @@ if (!empty($ticket_url) && $post->status != 'closed'):
   <p><a class="btn btn-primary" href="<?php echo $ticket_url ?>">tickets</a></p>
   <?php
 endif; // endif tickets are on sale.
- 
+
 // Display Price range if a value is set
 // $post->price_range and other event fields is set by xdgp_load_all()
 echo (!empty($post->price_range)) ? '<p class="event__pricing">'.$post->price_range.'</p>' : '';
- 
+
 // Display Event notes, like Running time and Disclaimer, if values are set.
 echo (!empty($post->running_time)) ? '<p class="event__running-time">Running Time: '.$post->running_time.'</p>' : '';
- 
+
 echo (!empty($post->disclaimer)) ? '<p class="event__disclaimer">'.$post->disclaimer.'</p>' : '';
- 
+
  $quote = get_field('quote_text');
  $quote_attr = get_field('quote_attribution');
- 
+
 ?>
 
 	<div class="event__description" >
@@ -144,8 +144,8 @@ echo (!empty($post->disclaimer)) ? '<p class="event__disclaimer">'.$post->discla
   <div class="events-slide">
 <?php
 
-// This array is not in use at the moment, but it is the built in functionality provided by 
-// the groundplan plugin  
+// This array is not in use at the moment, but it is the built in functionality provided by
+// the groundplan plugin
 
 //echo ($post->status);
 //if ($post->status != 'closed') {
@@ -175,10 +175,10 @@ echo (!empty($post->disclaimer)) ? '<p class="event__disclaimer">'.$post->discla
     'priority' => 'tickets', // can be 'tickets' or 'details'
     'perfs' => false,  //override perfs array
     'sold_out_message' => $sold_out_message,
-    //'ticket_link' => 
+    //'ticket_link' =>
   );
- 
- 
+
+
   $calendar = new XDGPCalendar($args);
   //var_dump($calendar);
   //if($calendar != ''){
@@ -189,10 +189,10 @@ echo (!empty($post->disclaimer)) ? '<p class="event__disclaimer">'.$post->discla
 // foreach loop
 $this_perfs = array();
 
-//The event intances array from event posts needs to be done in two stages, 
+//The event intances array from event posts needs to be done in two stages,
 //  because each time the event post is updated, duplicates instances could be imported
 //  This array will feed into the following $unique array
-foreach($post->performances as $performance){ 
+foreach($post->performances as $performance){
 			$p_date= strtotime($performance->starttime);
 			$test_date = 'May 27, 2018';
 			//$test_date_STT = strtotime($test_date);
@@ -243,24 +243,24 @@ $unique = array_unique($this_perfs, SORT_REGULAR);
 // 	$p_date= strtotime($instance['performance_date']);
 
 // 	if($p_date > $today_STT && $message != 'Sold Out'){
- 
-	?>		
+
+	?>
 	<!-- <div class="event">
     <span class="instance-info horizontal">
-       <span class="date"><?php echo $instance['performance_date']; ?></span><br> 
+       <span class="date"><?php echo $instance['performance_date']; ?></span><br>
       <span class="time"><?php echo $instance['performance_time']; ?></span> <?php //echo $instance['ticket_message']; ?>
     </span>
     <span class="horizontal">
       <a class="btn btn-primary" href="<?php echo $instance['ticket_url']; ?>" target="_blank">Buy Tickets</a></br>
     </span>
   </div> -->
- 
-<?php //} 
+
+<?php //}
 //}else{?>
  <!--  <div class="event">
     <p>There are no current times for this event! </p>
   </div> -->
-<?php 
+<?php
 //}}
 //var_dump($this_perfs);
 
@@ -273,13 +273,13 @@ $unique = array_unique($this_perfs, SORT_REGULAR);
 
 </div>
 </section>
-  <?php 
-    
+  <?php
+
   if(have_rows('cast_member')): ?>
 <section class="cc-grid pane" id="cast">
   <div class="row">
     <h2 class="section-title">Cast &amp; Creatives</h2>
-  <?php 
+  <?php
         while(have_rows('cast_member')):the_row();
         $image = get_sub_field('image');
         $image_url = $image['sizes']['large'];
@@ -305,9 +305,9 @@ $unique = array_unique($this_perfs, SORT_REGULAR);
      <h2 class="section-title">Gallery</h2>
    </div>
    <div class="scroller">
-  <?php while (have_rows('e_gallery')):the_row(); 
+  <?php while (have_rows('e_gallery')):the_row();
     $g_image = get_sub_field('g_image');
-    
+
     $g_image_URL = $g_image['sizes']['large'];
     $g_image_alt = $g_image['alt'];
   ?>
@@ -330,9 +330,9 @@ $unique = array_unique($this_perfs, SORT_REGULAR);
       </div>
     </div>
   </div>
-<?php echo get_template_part('/partials/promo-row'); ?>	
+<?php echo get_template_part('/partials/promo-row'); ?>
 </div>
 <?php } ?>
-</main>   
-      
+</main>
+
 <?php get_footer(); ?>

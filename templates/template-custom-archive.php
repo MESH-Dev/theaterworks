@@ -1,17 +1,17 @@
-<?php 
+<?php
 /* Template Name: Curated Event Archive Template*/
 get_header();
 echo get_template_part('/partials/banner');?>
 <main id="content">
 	<?php
-		
+
 
 		?>
-		<?php //Create a label for each season, we'll use this for our 
+		<?php //Create a label for each season, we'll use this for our
 		      // accordion later
 		?>
 		<!-- <div class="season_wrap"> -->
-		<?php 
+		<?php
 		$title = get_field('title_bar_text');
 
 		$empty = '';
@@ -34,11 +34,11 @@ echo get_template_part('/partials/banner');?>
 	  		</div>
 		</div>
 	</div>
-		
-<div>
-<div class="row curated-listing">		
 
-	<?php 
+<div>
+<div class="row curated-listing">
+
+	<?php
 		//This is our upcoming events panel
 		// Pulls curated posts via ACF post objects
 
@@ -47,7 +47,7 @@ echo get_template_part('/partials/banner');?>
 		if(have_rows('event_item')):
 			$ctr=0;
 			while(have_rows('event_item')):the_row();
-				
+
 				//$cp_callout = get_sub_field('callout_text');
 				$event = get_sub_field('event');
 				//var_dump($event);
@@ -59,20 +59,20 @@ echo get_template_part('/partials/banner');?>
 				if($event){
 				$post = $event;
 				//var_dump($event);
-				
+
 				//foreach ($event as $post){
 					$ctr++;
 					setup_postdata($post);
 					$cp_background = get_field('the_cp_image', $post->ID);
 					$cp_bg_url = $cp_background['sizes']['large'];
-					$event_list_image = get_field('the_featured_image', $post->ID);
-		        	$el_image_url = $event_list_image['sizes']['short-banner'];
+					$event_list_image = get_field('listing_page_image', $post->ID);
+		        	$el_image_url = $event_list_image['sizes']['listing-bg'];
 		        	$alt_img_url = $event_list_image['sizes']['large'];
-					//$callout = get_field('ec_text', $post->ID);	
-					// Load the best Ticket URL for the situation to reduce user clicks.  
+					//$callout = get_field('ec_text', $post->ID);
+					// Load the best Ticket URL for the situation to reduce user clicks.
 		        //If a single performance, load the performance Ticket URL
 				  $post->ticket_url = xdgp_event_general_ticket_url($post);
-				   
+
 				  // Create the Buy Button based on event logic.
 				  // Default is .hidden-xs, replace that class for different formats.
 				  if (!empty($post->ticket_url) && $post->status != 'closed' && $post->status != 'sold-out') {
@@ -86,10 +86,10 @@ echo get_template_part('/partials/banner');?>
 				  }
 					$callout = get_field('callout', $post->ID);
 					$now_playing = get_field('now_playing', $post->ID);?>
- 	
+
 
     <article  class="summary-mc_event" style="background-image:url(<?php echo $el_image_url; ?>);" >
-      		
+
       		<?php if ($now_playing == true){?>
 				<img class='playing' alt="Now Playing" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_NowPlaying.png">
 			<?php } ?>
@@ -102,7 +102,7 @@ echo get_template_part('/partials/banner');?>
           		</div>
           	<?php //} ?>
           <div class="content dark">
-          	
+
           	<?php //if($season_cnt > 1){?>
 				<div class="gradient black" aria-hidden="true"></div>
           	<?php //} ?>
@@ -114,28 +114,28 @@ echo get_template_part('/partials/banner');?>
             <?php } ?>
             <h3 class="entry-title">
               <!-- <a href="<?php echo get_permalink($post->ID); ?>"> -->
- 
+
                 <span class="title">
                   <?php echo the_title(); ?> <?php //echo $toe; ?>
                 </span>
- 
+
                 <span class="byline">
                   <?php //echo $post->byline; ?>
                 </span>
-       
-            </h3>    
- 
+
+            </h3>
+
           <div class="entry-summary">
-            
+
 
             <?php
            	//if($season_cnt == 1){
            		echo '<p>';
-            	echo (!empty($post->short_desc)) ? $post->long_desc : ''; 
+            	echo (!empty($post->short_desc)) ? $post->long_desc : '';
             	echo '</p>';
         	//}
         	?>
-            
+
             <?php //if ($season_cnt == 1 ){ ?>
             <div class="horizontal button">
 				<?php echo str_replace('hidden-xs', 'visible-xs-inline-block', $buy_button_html) ; ?>
@@ -144,18 +144,18 @@ echo get_template_part('/partials/banner');?>
 			<div class="horizontal more">
 				<a href="<?php echo the_permalink(); ?>">More <!-- <img class="indicator sm" aria-hidden="true" alt="" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_Arrow.png">  --></a>
 			</div>
-          
+
           </div> <!-- end entry-summary -->
- 	 
-    </div> 
+
+    </div>
 </div><!-- end columns-4 offset -->
- 
+
     </article>
-    
-		<?php 
+
+		<?php
 		}
 		//}
-	
+
 		// Restore original Post Data
 		wp_reset_postdata(); endwhile; endif; ?>
 	<!-- </div></div> -->
