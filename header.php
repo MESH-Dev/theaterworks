@@ -80,7 +80,7 @@
 				<div class="logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<h1 class="site-title sr-only" ><?php bloginfo( 'name' ); ?></h1>
-						<img alt="Theaterworks logo" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_ShortLogo@2x.png">
+						<img alt="Theaterworks logo" src="<?php echo get_template_directory_uri(); ?>/img/tw-equal-bronze-01.png">
 					</a>
 				</div>
 				<?php } ?>
