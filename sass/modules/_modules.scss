@@ -89,7 +89,6 @@ img.indicator{
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		z-index: 300;
 		min-height: 100%;
 		min-width: 100%;
 		-ms-transform: translateX(-50%) translateY(-50%);
@@ -97,6 +96,11 @@ img.indicator{
 		-webkit-transform: translateX(-50%) translateY(-50%);
 		transform: translateX(-50%) translateY(-50%);
 		z-index: 0;
+		@media screen and ($bp-smaller-than-phablet){
+			height: 350px;
+			min-height: unset;
+			width: auto;
+		}
 	}
 }
 
