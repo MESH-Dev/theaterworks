@@ -875,7 +875,7 @@ header .logo:hover, header .logo:active, header .logo:focus {
 }
 /* line 47, sass/modules/_header.scss */
 header .logo img {
-  width: 50px;
+  width: 42px;
   height: auto;
 }
 /* line 55, sass/modules/_header.scss */

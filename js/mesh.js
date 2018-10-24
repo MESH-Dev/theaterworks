@@ -316,6 +316,10 @@ $('.close').click(
        //console.log("Sidr should be closed");
     });
 
+$('#sidr-main').mouseleave(function(){
+   $.sidr('close', 'sidr-main');
+});
+
 // Hide subnavs so that we can accordion them later
     $('.sidr ul.sub-menu').hide();
 
@@ -328,7 +332,7 @@ $('.close').click(
     //console.log($href);
 
     //Add a 'button' to just after the link in any top level li that has children
-    $('<span class="open"><img src="'+$theme+'/img/Theaterworks_Icons_Arrow_Heavy.png" alt="Click here to see more links"> </span>').insertAfter($topLink);
+    $('<span class="open"><img src="'+$theme+'/img/Theaterworks_Icons_Arrow_Heavy_White.png" alt="Click here to see more links"> </span>').insertAfter($topLink);
 
     //Now we get all of the peices together
 
