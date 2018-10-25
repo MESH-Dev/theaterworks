@@ -64,7 +64,7 @@ echo get_template_part('/partials/banner');?>
 					$ctr++;
 					setup_postdata($post);
 					$cp_background = get_field('the_cp_image', $post->ID);
-					$cp_bg_url = $cp_background['sizes']['large'];
+					$cp_bg_url = $cp_background['sizes']['square'];
 					$event_list_image = get_field('listing_page_image', $post->ID);
 		        	$el_image_url = $event_list_image['sizes']['listing-bg'];
 		        	$alt_img_url = $event_list_image['sizes']['large'];

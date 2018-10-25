@@ -94,7 +94,7 @@ echo get_template_part('/partials/banner');?>
 
 		        $event_list_image = get_field('the_featured_image', $post);
 		        $el_image_url = $event_list_image['sizes']['short-banner'];
-		        $alt_img_url = $event_list_image['sizes']['large'];
+		        $alt_img_url = $event_list_image['sizes']['square'];
 		        //var_dump($event_list_image);
 		        $event_types = get_the_terms($post->ID, 'event_type');
 		        $link_include = get_field('link_include', $post->ID);

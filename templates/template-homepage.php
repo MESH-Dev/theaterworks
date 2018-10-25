@@ -13,8 +13,14 @@ get_header();
 				//var_dump($wa_image);
 				$wa_img_url = $wa_image['sizes']['background-fullscreen'];
 				$we_statement = get_field('welcome_statement');
+				$v_ogg = get_field('video_ogg');
+				$vo_url = $v_ogg['url'];
+				$v_mp4 = get_field('video_mp4');
+				$vm_url = $v_mp4['url'];
+				$v_webm = get_field('video_webm');
+				$vw_url = $v_webm['url'];
 			?>
-			<section class="welcome panel" style="background-image:url('<?php echo $wa_img_url; ?>');">
+			<section class="welcome panel" style="background-image:url('<?php echo $wa_img_url; ?>'); position:relative;">
 				<div class="curtain" aria-hidden="true"></div>
 				<div class="wrapper">
 					<div class="content">
@@ -34,6 +40,15 @@ get_header();
 						</div>
 					</div>
 				</div>
+				<?php if ($vm_url != '' || $vo_url != '' || $vw_url != ''){ ?>
+				<div class="banner has-background has-video" style=""> <!--welcome-gate interior-->
+			      <video placeholder="<?php echo $background_image_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
+			         <source src ="<?php echo $vm_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
+			         <source src ="<?php echo $vo_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
+			         <source src ="<?php echo $vw_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
+			      <video>
+				</div>
+				<?php } ?>
 			</section>
 			<?php
 

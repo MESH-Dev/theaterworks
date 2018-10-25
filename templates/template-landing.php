@@ -44,7 +44,7 @@ echo get_template_part('/partials/banner');
 						if($background_image['subtype'] == 'gif'){
 							$background_image_url = $background_image['url'];	
 						}else{
-							$background_image_url = $background_image['sizes']['large'];
+							$background_image_url = $background_image['sizes']['square'];
 						}
 						
 						$callout = get_sub_field('callout_text');

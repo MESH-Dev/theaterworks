@@ -78,6 +78,31 @@ img.indicator{
 	}
 }
 
+.welcome.panel{
+	@media ($bp-smaller-than-tablet){
+		height:600px;
+		min-height:unset;
+	}
+	.has-video{
+		position:absolute; 
+		z-index:1; top:0; 
+		bottom:0; 
+		right:0; 
+		left:0; 
+		height:100%;
+		@media ($bp-smaller-than-tablet){
+		height:600px;
+	}
+	}
+	video{
+		height:100%;
+		@media ($bp-smaller-than-tablet){
+		height:600px;
+	}
+	}
+}
+
+
 .has-background{
 	background-size:cover;
 	background-repeat:no-repeat;

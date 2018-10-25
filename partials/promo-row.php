@@ -25,7 +25,7 @@
 					$ctr++;
 					setup_postdata($post);
 					$cp_background = get_field('the_cp_image', $post->ID);
-					$cp_bg_url = $cp_background['sizes']['large'];
+					$cp_bg_url = $cp_background['sizes']['square'];
 					$callout = get_field('ec_text', $post->ID);
 	?>
 	<div class="grid-item columns-5 no-padding promo-slide slider has-background <?php if ($crt == 1){echo 'starter'; }?>" style="background-image:url('<?php echo $cp_bg_url; ?>')">

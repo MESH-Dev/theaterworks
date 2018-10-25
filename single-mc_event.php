@@ -305,7 +305,7 @@ $unique = array_unique($this_perfs, SORT_REGULAR);
   <?php
         while(have_rows('cast_member')):the_row();
         $image = get_sub_field('image');
-        $image_url = $image['sizes']['large'];
+        $image_url = $image['sizes']['square'];
         $image_alt = $image['alt'];
         $cm_title = get_sub_field('cast_member_title');
         $cm_name = get_sub_field('cast_member_name');
