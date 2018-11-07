@@ -1009,10 +1009,9 @@ header .ticket-cal:active, header .ticket-cal:focus, header .ticket-cal:hover {
 /* line 199, sass/modules/_header.scss */
 .sidr .open {
   position: absolute;
-  font-size: 2.8em;
+  font-size: 2.2em;
   font-weight: 700;
   text-transform: uppercase;
-  color: #AD9573;
   color: #AD9573;
   font-size: 1.4em;
   margin: 8px 5px 8px 15px;
@@ -1101,7 +1100,7 @@ header .ticket-cal:active, header .ticket-cal:focus, header .ticket-cal:hover {
 }
 /* line 322, sass/modules/_header.scss */
 .sidr ul li a {
-  font-size: 2.8em;
+  font-size: 2.2em;
   font-weight: 700;
   color: #FFFFFF;
   text-decoration: none;

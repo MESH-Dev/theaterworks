@@ -42,7 +42,7 @@ get_header();
 				</div>
 				<?php if ($vm_url != '' || $vo_url != '' || $vw_url != ''){ ?>
 				<div class="banner has-background has-video" style=""> <!--welcome-gate interior-->
-			      <video placeholder="<?php echo $background_image_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
+			      <video placeholder="<?php echo $wa_img_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
 			         <source src ="<?php echo $vm_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
 			         <source src ="<?php echo $vo_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
 			         <source src ="<?php echo $vw_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
@@ -75,6 +75,7 @@ get_header();
 			if ($the_query->have_posts()):
 				while($the_query->have_posts()) : $the_query->the_post();
 				$cover_image = get_field('the_featured_image');
+				
 				$ci_URL = $cover_image['sizes']['home-feature'];
 				$callout=get_field('ec_text');
 

@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Curated Event Archive Template*/
+/* Template Name: Curated Event Template*/
 get_header();
 echo get_template_part('/partials/banner');?>
 <main id="content">
@@ -96,9 +96,7 @@ echo get_template_part('/partials/banner');?>
 
       		<?php //if($season_cnt == 1){ ?>
           		<div class="show-img" style="background-image:url('<?php echo $alt_img_url; ?>');" >
-					<?php if ($now_playing == true){?>
-					<!-- <img alt="Now Playing" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_NowPlaying.png"> -->
-					<?php } ?>
+					
           		</div>
           	<?php //} ?>
           <div class="content dark">

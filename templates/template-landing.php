@@ -51,6 +51,7 @@ echo get_template_part('/partials/banner');
 						$block_title = get_sub_field('block_title');
 						$desc = get_sub_field('description');
 						$link = get_sub_field('block_link');
+						$link_text = get_sub_field('block_link_text');
 						$external = get_sub_field('external');
 
 						$target="";
@@ -68,7 +69,7 @@ echo get_template_part('/partials/banner');
 								<p class="desc"><?php echo $desc; ?></p>
 								<?php } ?>
 								<?php if($link){ ?>
-						<a class="more-link" href="<?php echo $link; ?>" <?php echo $target; ?>> More </a>
+						<a class="more-link" href="<?php echo $link; ?>" <?php echo $target; ?>> <?php echo $link_text; ?></a>
 						<?php } ?>
 							</div>
 						</div>

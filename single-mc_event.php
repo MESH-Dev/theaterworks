@@ -34,7 +34,7 @@ $vw_url = $v_webm['url'];
 	<div class="banner has-background" style="background-image:url('<?php echo $cover_image['sizes']['event-banner']; ?>');"> </div>
 <?php } elseif ($vm_url != '' && $vo_url != '' && $vw_url != ""){ ?>
 		<div class="banner has-background has-video"> <!--welcome-gate interior-->
-	      <video placeholder="<?php echo $background_image_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
+	      <video placeholder="<?php echo $cover_image['sizes']['event-banner']; ?>; ?>" autoplay="true" loop="true" muted="true" playsinline>
 	         <source src ="<?php echo $vm_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
 	         <source src ="<?php echo $vo_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
 	         <source src ="<?php echo $vw_url; ?>" autoplay="true" loop="true" muted="true" playsinline>
@@ -164,132 +164,163 @@ echo (!empty($post->disclaimer)) ? '<p class="event__disclaimer">'.$post->discla
 </div> <!-- end columns-7 -->
 <div class="columns-4 offset-by-1 boxoffice" >
   <h3>Upcoming Times</h3>
-  <div class="events-slide">
-<?php
+  <?php
+  
+  // This array is not in use at the moment, but it is the built in functionality provided by
+  // the groundplan plugin
+  
+  //echo ($post->status);
+  //if ($post->status != 'closed') {
+    //echo '<h3>Upcoming Times</h3>';
+    // Display a "single" style calendar for only this show.
+    // For full configuration options, refer to https://nickxd.atlassian.net/wiki/x/IYBpAg
+    $sold_out_message = (!empty($post->sold_out_message)) ? $post->sold_out_message : 'Sold Out';
+    $args = array(
+      'format' => 'F Y',
+      'week_start' => 0,
+      'display_date' => $today,
+      //'show_genre' => false,
+      //'genre_taxonomy' => 'xdgp_genre',
+      //'wrapper_class' => 'example-calendar-class',  // Modify this class to set CSS styles for the calendar in your theme
+      'show_all' => false,
+      //'event_ids' => $event_id,
+      //'event_post' => true,
+      'type' => 'mini', // 'single', 'all', or 'agenda'
+      //'performances' => $post->performances[0]->ticket_url,
+      //'pad' => false,
+       //'paginate_by' => 'month',
+      //'show_days' => 7,
+      //'first_date' => true,
+      //'last_date' => false,
+      'buy_text' => 'Buy Tickets',
+      //'fast_forward' => true,
+      'priority' => 'tickets', // can be 'tickets' or 'details'
+      'perfs' => false,  //override perfs array
+      'sold_out_message' => $sold_out_message,
+      //'ticket_link' =>
+    );
+  
+  
+    $calendar = new XDGPCalendar($args);
+    //var_dump($calendar);
+    //if($calendar != ''){
+    $terms = get_the_terms(get_the_id(), 'event_type');
+    //$ta = [];
+    $ta = '';
+    foreach($terms as $term){
+      $ta .= $term->slug.' ';
+    }
 
-// This array is not in use at the moment, but it is the built in functionality provided by
-// the groundplan plugin
+    //$ta = str_replace($remove,'', $f_desc);
+  $ta = explode(' ', addslashes($ta));
+  //$f_desc = array_unique($f_desc);
 
-//echo ($post->status);
-//if ($post->status != 'closed') {
-  //echo '<h3>Upcoming Times</h3>';
-  // Display a "single" style calendar for only this show.
-  // For full configuration options, refer to https://nickxd.atlassian.net/wiki/x/IYBpAg
-  $sold_out_message = (!empty($post->sold_out_message)) ? $post->sold_out_message : 'Sold Out';
-  $args = array(
-    'format' => 'F Y',
-    'week_start' => 0,
-    'display_date' => $today,
-    //'show_genre' => false,
-    //'genre_taxonomy' => 'xdgp_genre',
-    //'wrapper_class' => 'example-calendar-class',  // Modify this class to set CSS styles for the calendar in your theme
-    'show_all' => false,
-    //'event_ids' => $event_id,
-    //'event_post' => true,
-    'type' => 'mini', // 'single', 'all', or 'agenda'
-    //'performances' => $post->performances[0]->ticket_url,
-    //'pad' => false,
-   	//'paginate_by' => 'month',
-    //'show_days' => 7,
-    //'first_date' => true,
-    //'last_date' => false,
-    'buy_text' => 'Buy Tickets',
-    //'fast_forward' => true,
-    'priority' => 'tickets', // can be 'tickets' or 'details'
-    'perfs' => false,  //override perfs array
-    'sold_out_message' => $sold_out_message,
-    //'ticket_link' =>
-  );
+    //var_dump($ta);
 
+    //var_dump(has_term('event_type'));
 
-  $calendar = new XDGPCalendar($args);
-  //var_dump($calendar);
-  //if($calendar != ''){
-  	echo $calendar->xdgp_display_calendar();
+    // if(!has_term('passsed', 'event_type', $post->ID)){
+    //   echo $calendar->xdgp_display_calendar();
+    // }elseif(has_term('passsed', 'event_type', $post->ID)){
+    //   echo '<h4>Tickets for this event are no longer for sale</h4>';
+    // }
+
+    if(!in_array('passed', $ta)){
+      echo $calendar->xdgp_display_calendar();
+    }else{
+      echo '<h4>Tickets for this event are no longer for sale</h4>';
+    };
+    // if($post->status !='closed'){
+    //   echo $calendar->xdgp_display_calendar();
+    // }elseif($post->status == 'closed'){
+    //   echo '<h4>Tickets for this event are no longer for sale</h4>';
+    // }elseif($post->status =='sold-out'){
+    //   echo '<h4>This event is sold out</h4>';
+    // }
+  
+    //var_dump($post->status);
+    //}
   //}
-//}
-// Create a performance array to hold our performance instances from the immediately proceeding
-// foreach loop
-$this_perfs = array();
-
-//The event intances array from event posts needs to be done in two stages,
-//  because each time the event post is updated, duplicates instances could be imported
-//  This array will feed into the following $unique array
-foreach($post->performances as $performance){
-			$p_date= strtotime($performance->starttime);
-			$test_date = 'May 27, 2018';
-			//$test_date_STT = strtotime($test_date);
-			//$today = date('F j, Y');
-			$today_STT = strtotime($today);
-			$nice_date = date('F j, Y',$p_date);
-			$p_time = date('g:i a', $p_date);
-      // The ticket URL value is the single intance for this event, not all events
-			$tickets = $performance->ticket_url;
-      //This value serves two purposes:
-      // __ 1) Is the event a Performance or some other event type?
-      // __ 2) Is the event sold out?  We want to attempt to either
-      // __--  a) Change the Buy button to a sold out notification
-      // __--  b) Exclude sold out events
-			$message = $performance->eventtype;
-      //var_dump($performance);
-
-			//Need something to account for events that are sold out
-
-	$a=[
-			'performance_date' => $nice_date,
-			'performance_time' => $p_time,
-			'ticket_url' => $tickets,
-			'ticket_message' => $message,
-		];
-
-	array_push(($this_perfs), $a);
-
-	//$unique = array_unique($this_perfs);
-
-	//var_dump($this_perfs);
-}
-$unique = array_unique($this_perfs, SORT_REGULAR);
-//var_dump($unique);
-//var_dump($unique);
-//$unique = array();
-//array_push ($unique,array_unique($this_perfs));
-//var_dump($unique);
-// var_dump($unique);
-//if($unique !=""){
-
-//Prints out each event by day(s)
-// foreach ($unique as $instance){
-//   //Get the ticket
-// 	$message = $instance['ticket_message'];
-// 	$today = date('F j, Y');
-// 	$today_STT = strtotime($today);
-// 	$p_date= strtotime($instance['performance_date']);
-
-// 	if($p_date > $today_STT && $message != 'Sold Out'){
-
-	?>
-	<!-- <div class="event">
-    <span class="instance-info horizontal">
-       <span class="date"><?php echo $instance['performance_date']; ?></span><br>
-      <span class="time"><?php echo $instance['performance_time']; ?></span> <?php //echo $instance['ticket_message']; ?>
-    </span>
-    <span class="horizontal">
-      <a class="btn btn-primary" href="<?php echo $instance['ticket_url']; ?>" target="_blank">Buy Tickets</a></br>
-    </span>
-  </div> -->
-
-<?php //}
-//}else{?>
- <!--  <div class="event">
-    <p>There are no current times for this event! </p>
-  </div> -->
-<?php
-//}}
-//var_dump($this_perfs);
-
-?>
-
-</div>
+  // Create a performance array to hold our performance instances from the immediately proceeding
+  // foreach loop
+  $this_perfs = array();
+  
+  //The event intances array from event posts needs to be done in two stages,
+  //  because each time the event post is updated, duplicates instances could be imported
+  //  This array will feed into the following $unique array
+  foreach($post->performances as $performance){
+        $p_date= strtotime($performance->starttime);
+        $test_date = 'May 27, 2018';
+        //$test_date_STT = strtotime($test_date);
+        //$today = date('F j, Y');
+        $today_STT = strtotime($today);
+        $nice_date = date('F j, Y',$p_date);
+        $p_time = date('g:i a', $p_date);
+        // The ticket URL value is the single intance for this event, not all events
+        $tickets = $performance->ticket_url;
+        //This value serves two purposes:
+        // __ 1) Is the event a Performance or some other event type?
+        // __ 2) Is the event sold out?  We want to attempt to either
+        // __--  a) Change the Buy button to a sold out notification
+        // __--  b) Exclude sold out events
+        $message = $performance->eventtype;
+        //var_dump($performance);
+  
+        //Need something to account for events that are sold out
+  
+    $a=[
+        'performance_date' => $nice_date,
+        'performance_time' => $p_time,
+        'ticket_url' => $tickets,
+        'ticket_message' => $message,
+      ];
+  
+    array_push(($this_perfs), $a);
+  
+    //$unique = array_unique($this_perfs);
+  
+    //var_dump($this_perfs);
+  }
+  $unique = array_unique($this_perfs, SORT_REGULAR);
+  //var_dump($unique);
+  //var_dump($unique);
+  //$unique = array();
+  //array_push ($unique,array_unique($this_perfs));
+  //var_dump($unique);
+  // var_dump($unique);
+  //if($unique !=""){
+  
+  //Prints out each event by day(s)
+  // foreach ($unique as $instance){
+  //   //Get the ticket
+  //   $message = $instance['ticket_message'];
+  //   $today = date('F j, Y');
+  //   $today_STT = strtotime($today);
+  //   $p_date= strtotime($instance['performance_date']);
+  
+  //   if($p_date > $today_STT && $message != 'Sold Out'){
+  
+    ?>
+    <!-- <div class="event">
+      <span class="instance-info horizontal">
+         <span class="date"><?php echo $instance['performance_date']; ?></span><br>
+        <span class="time"><?php echo $instance['performance_time']; ?></span> <?php //echo $instance['ticket_message']; ?>
+      </span>
+      <span class="horizontal">
+        <a class="btn btn-primary" href="<?php echo $instance['ticket_url']; ?>" target="_blank">Buy Tickets</a></br>
+      </span>
+    </div> -->
+  
+  <?php //}
+  //}else{?>
+   <!--  <div class="event">
+      <p>There are no current times for this event! </p>
+    </div> -->
+  <?php
+  //}}
+  //var_dump($this_perfs);
+  
+  ?>
 <!-- Nav for individual tickets -->
 <div class='events-nav'></div>
 </div>

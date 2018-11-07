@@ -92,9 +92,11 @@ echo get_template_part('/partials/banner');?>
 
 				$seasons = get_the_terms($post->ID, 'mc_season');
 
-		        $event_list_image = get_field('the_featured_image', $post);
-		        $el_image_url = $event_list_image['sizes']['short-banner'];
-		        $alt_img_url = $event_list_image['sizes']['square'];
+		        $event_list_image = get_field('the_featured_image', $post->ID);
+		        $square_list_image = get_field('the_cp_image', $post->ID);
+		        $el_image_url = $event_list_image['sizes']['listing-bg'];
+		        $alt_img_url = $square_list_image['sizes']['square'];
+		        
 		        //var_dump($event_list_image);
 		        $event_types = get_the_terms($post->ID, 'event_type');
 		        $link_include = get_field('link_include', $post->ID);
@@ -122,17 +124,15 @@ echo get_template_part('/partials/banner');?>
         ?>
 
 
-    <article <?php if($season_cnt == 1){post_class('summary-mc_event first-row');}else{echo 'class="columns-4 hz-show grid-item"'; } ?> style="background-image:url(<?php echo $el_image_url; ?>);" >
+    <article data-src="<?php echo $el_image_url; ?>" <?php if($season_cnt == 1){post_class('summary-mc_event first-row');}else{echo 'class="columns-4 hz-show has-background grid-item"'; } ?> <?php if ($season_cnt == 1){ echo 'style="background-image:url('.$el_image_url.')"';}else{echo 'style="display:block; background-image:url('.$alt_img_url.')"';}?> >
 
       		<?php if ($now_playing == true){?>
 				<img class='playing' alt="Now Playing" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_NowPlaying.png">
 			<?php } ?>
 
       		<?php if($season_cnt == 1){ ?>
-          		<div class="show-img" style="background-image:url('<?php echo $alt_img_url; ?>');" >
-					<?php if ($now_playing == true){?>
-					<!-- <img alt="Now Playing" src="<?php echo get_template_directory_uri(); ?>/img/Theaterworks_Icons_NowPlaying.png"> -->
-					<?php } ?>
+          		<div class="show-img" style="background-image:url('<?php echo $el_img_url; ?>');" >
+					
           		</div>
           	<?php } ?>
           <div <?php if($season_cnt == 1){ echo 'class="content dark"';} ?>>
@@ -200,7 +200,15 @@ echo get_template_part('/partials/banner');?>
  	<?php } ?>
 <?php }
 	?>
-
+<script>
+[].forEach.call(document.querySelectorAll('article[data-src]'),    function(img) {
+  //img.setAttribute("style", "background-image:'+img.getAttribute('data-src')+'");
+  img.style.backgroundImage = img.getAttribute('data-src');
+  article.onload = function() {
+    img.removeAttribute('data-src');
+  };
+});
+</script>
 </main><!-- End of Content -->
 
 <?php get_footer(); ?>
