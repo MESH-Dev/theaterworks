@@ -135,7 +135,7 @@ header{
 
 .sidr#sidr-main{
 	@media screen and (min-width: 900px){
-		width: 30%;
+		width: 25%;
 	}
 	@media screen and (max-width: 900px){
 		width: 260px;
@@ -150,7 +150,7 @@ header{
 .sidr{
 	background:$dark_gray;
 	padding:4em 0;
-	width: 30%;
+	width: 25%;
 	// @media($bp-larger-than-tablet){
 	// 	width:30% !important;
 

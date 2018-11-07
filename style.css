@@ -953,7 +953,7 @@ header .ticket-cal:active, header .ticket-cal:focus, header .ticket-cal:hover {
 @media screen and (min-width: 900px) {
   /* line 136, sass/modules/_header.scss */
   .sidr#sidr-main {
-    width: 30%;
+    width: 25%;
   }
 }
 @media screen and (max-width: 900px) {
@@ -975,7 +975,7 @@ header .ticket-cal:active, header .ticket-cal:focus, header .ticket-cal:hover {
 .sidr {
   background: #C3BFBC;
   padding: 4em 0;
-  width: 30%;
+  width: 25%;
 }
 /* line 167, sass/modules/_header.scss */
 .sidr a {
